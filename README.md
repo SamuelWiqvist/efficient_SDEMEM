@@ -1,10 +1,12 @@
 # Code for the paper: "Efficient inference for stochastic differential mixed-effects models using correlated particles pseudo-marginal algorithms"
 
+**Add link to arxiv here**
+
 ### File structure
 
 /src/SDEMEM OU process: source code for the Ornstein-Uhlenbeck SDEMEM
 
-/src/SDEMEM tumor growth: source code for Tumor growth SDEMEM
+/src/SDEMEM tumor growth: source code for tumor growth SDEMEM
 
 /analyses: notebooks and scripts used to analyse the results for the Ornstein-Uhlenbeck SDEMEM
 
@@ -12,12 +14,10 @@
 
 /data/SDEMEM OU: Simulation results Ornstein-Uhlenbeck SDEMEM (this folder is empty but the simulation results can be generated from the code)
 
-### Software 
+### Software
 
-The algorithms in the paper are implemented in `Julia 1.0.0` (for the Ornstein-Uhlenbeck SDEMEM), and in `R xyz` (for the Tumor growth SDEMEM).
+The algorithms in the paper are implemented in `Julia 1.0.0` (for the Ornstein-Uhlenbeck SDEMEM), and in `R xyz` (for the tumor growth SDEMEM).
 
-### Data 
+### Data
 
-The data used for two experiments can be generated from the code. 
-
-
+The data used for two experiments can be generated from the code.
