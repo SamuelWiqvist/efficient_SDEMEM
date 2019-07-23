@@ -1,7 +1,5 @@
 # Code for the paper: "Efficient inference for stochastic differential mixed-effects models using correlated particles pseudo-marginal algorithms"
 
-**privet in-progress repo**
-
 ### File structure
 
 /src/SDEMEM OU process: source code for the Ornstein-Uhlenbeck SDEMEM
