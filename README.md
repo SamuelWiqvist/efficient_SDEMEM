@@ -16,7 +16,7 @@
 
 ### Software
 
-The algorithms in the paper are implemented in `Julia 1.0.0` (for the Ornstein-Uhlenbeck SDEMEM), and in `R xyz` (for the tumor growth SDEMEM).
+The algorithms in the paper are implemented in `Julia` (for the Ornstein-Uhlenbeck SDEMEM), and in `R` (for the tumor growth SDEMEM).
 
 ### Data
 
