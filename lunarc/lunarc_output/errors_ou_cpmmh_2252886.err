@@ -1,0 +1,18 @@
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for DataStreams [9a8bc11e-79be-5b39-94d7-1ccc349a1a85]
+│   exception = Required dependency WeakRefStrings [ea10d353-3f73-51f8-a26c-33c1cb351aa5] failed to load from a cache file.
+└ @ Base loading.jl:963
+┌ Warning: Module DataStreams with build ID 2655686693778049 is missing from the cache.
+│ This may mean DataStreams [9a8bc11e-79be-5b39-94d7-1ccc349a1a85] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:941
+ERROR: LoadError: ArgumentError: invalid base 10 digit '.' in "0.99"
+Stacktrace:
+ [1] tryparse_internal(::Type{Int64}, ::String, ::Int64, ::Int64, ::Int64, ::Bool) at ./parse.jl:118
+ [2] #parse#334(::Nothing, ::Function, ::Type{Int64}, ::String) at ./parse.jl:217
+ [3] parse(::Type{Int64}, ::String) at ./parse.jl:217
+ [4] top-level scope at none:0
+ [5] include at ./boot.jl:317 [inlined]
+ [6] include_relative(::Module, ::String) at ./loading.jl:1038
+ [7] include(::Module, ::String) at ./sysimg.jl:29
+ [8] exec_options(::Base.JLOptions) at ./client.jl:229
+ [9] _start() at ./client.jl:421
+in expression starting at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU process/run_script_cpmmh.jl:15

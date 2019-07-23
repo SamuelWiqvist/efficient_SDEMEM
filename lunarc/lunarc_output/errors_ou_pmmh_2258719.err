@@ -1,0 +1,12 @@
+┌ Warning: Module Compat with build ID 2859086880645795 is missing from the cache.
+│ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:941
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for DataStreams [9a8bc11e-79be-5b39-94d7-1ccc349a1a85]
+│   exception = Required dependency WeakRefStrings [ea10d353-3f73-51f8-a26c-33c1cb351aa5] failed to load from a cache file.
+└ @ Base loading.jl:963
+┌ Warning: Module DataFrames with build ID 2859108318620408 is missing from the cache.
+│ This may mean DataFrames [a93c6f00-e57d-5684-b7b6-d8193f3e46c0] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:941
+┌ Warning: The call to compilecache failed to create a usable precompiled cache file for DataFrames [a93c6f00-e57d-5684-b7b6-d8193f3e46c0]
+│   exception = Required dependency Compat [34da2185-b29b-5c13-b0c7-acf172513d20] failed to load from a cache file.
+└ @ Base loading.jl:963

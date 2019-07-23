@@ -1,0 +1,9 @@
+*.jlprof
+*.csv
+*.png
+*.pdf
+*.eps
+*.tar.gz
+*.dat
+
+.Rproj.user
