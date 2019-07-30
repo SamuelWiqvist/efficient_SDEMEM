@@ -1,6 +1,9 @@
 # Code for the paper: "Efficient inference for stochastic differential mixed-effects models using correlated particles pseudo-marginal algorithms"
 
-**Add link to arxiv here**
+Link to paper paper: https://arxiv.org/abs/1907.09851
+
+
+N.B.: The results in the pre-print at arXiv are computed using the version of the code at tag preprint_v1.
 
 ### File structure
 
