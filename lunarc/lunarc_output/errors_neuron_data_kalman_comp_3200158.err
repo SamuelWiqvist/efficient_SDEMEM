@@ -1,0 +1,15 @@
+ERROR: LoadError: ArgumentError: "data/SDEMEM OU neuron data/comp/posterior_mean_sigma_epsilon_and_phi.csv" is not a valid file
+Stacktrace:
+ [1] #Source#22(::String, ::CSV.Options{Nothing}, ::Int64, ::Int64, ::Array{Type,1}, ::Symbol, ::Nothing, ::Bool, ::Nothing, ::Symbol, ::Int64, ::Int64, ::Int64, ::Bool, ::Type) at /home/samwiq/.julia/packages/CSV/tT4Xy/src/Source.jl:59
+ [2] Type at ./none:0 [inlined]
+ [3] #Source#21(::UInt8, ::UInt8, ::UInt8, ::String, ::Nothing, ::Int64, ::Int64, ::Array{Type,1}, ::Symbol, ::Nothing, ::Nothing, ::UInt8, ::String, ::String, ::Bool, ::Nothing, ::Symbol, ::Int64, ::Int64, ::Int64, ::Bool, ::Type, ::String) at /home/samwiq/.julia/packages/CSV/tT4Xy/src/Source.jl:31
+ [4] Type at /home/samwiq/.julia/packages/CSV/tT4Xy/src/Source.jl:28 [inlined]
+ [5] #read#39(::Bool, ::Dict{Int64,Function}, ::Bool, ::Base.Iterators.Pairs{Union{},Union{},Tuple{},NamedTuple{(),Tuple{}}}, ::Function, ::String, ::Type) at /home/samwiq/.julia/packages/CSV/tT4Xy/src/Source.jl:347
+ [6] read at /home/samwiq/.julia/packages/CSV/tT4Xy/src/Source.jl:347 [inlined] (repeats 2 times)
+ [7] top-level scope at none:0
+ [8] include at ./boot.jl:317 [inlined]
+ [9] include_relative(::Module, ::String) at ./loading.jl:1038
+ [10] include(::Module, ::String) at ./sysimg.jl:29
+ [11] exec_options(::Base.JLOptions) at ./client.jl:229
+ [12] _start() at ./client.jl:421
+in expression starting at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU neuron data/run_script_kalman_comp.jl:28

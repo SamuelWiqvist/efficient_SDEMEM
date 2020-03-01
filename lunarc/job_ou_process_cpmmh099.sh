@@ -4,19 +4,18 @@
 # Set up for run:
 
 # need this since I use a LU project
+# #SBATCH -A snic2019-3-630
+
 #SBATCH -A lu2019-2-19
 #SBATCH -p lu
 
 # use gpu nodes
 #SBATCH -N 1
-# #SBATCH -n 1
+#SBATCH -n 1
 #SBATCH --exclusive
 
-# #SBATCH --mem-per-cpu=11000
-# #SBATCH -C mem256GB
-
 # time consumption HH:MM:SS
-#SBATCH -t 150:00:00
+#SBATCH -t 10:00:00
 
 # name for script
 #SBATCH -J ou_cpmmh
@@ -39,6 +38,9 @@ ml load julia/1.0.0
 pwd
 cd ..
 pwd
+
+export JULIA_NUM_THREADS=1
+
 
 # run program
 julia /home/samwiq/'SDEMEM and CPMMH'/SDEMEM_and_CPMMH/src/'SDEMEM OU process'/run_script_cpmmh.jl 100 0.99 $1 # M_mixtures N_time nbr_particles correlation seed

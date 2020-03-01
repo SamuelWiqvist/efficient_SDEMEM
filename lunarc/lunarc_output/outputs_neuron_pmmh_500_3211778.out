@@ -1,0 +1,146 @@
+/home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/lunarc
+/home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH
+start run script for cpmmh
+  2.990580 seconds (4.24 M allocations: 2.137 GiB, 49.15% gc time)
+Starting Gibbs sampler using CPMMH.
+-------------
+Percentage done:  2.86 %
+Accaptance rate on 1 to 1001 for ϕ: 22.15 %:
+Accaptance rate on 1 to 1001 for σ_ϵ: 30.50 %:
+-------------
+Percentage done:  5.72 %
+Accaptance rate on 1001 to 2001 for ϕ: 16.78 %:
+Accaptance rate on 1001 to 2001 for σ_ϵ: 24.20 %:
+-------------
+Percentage done:  8.57 %
+Accaptance rate on 2001 to 3001 for ϕ: 27.50 %:
+Accaptance rate on 2001 to 3001 for σ_ϵ: 24.70 %:
+-------------
+Percentage done:  11.43 %
+Accaptance rate on 3001 to 4001 for ϕ: 25.84 %:
+Accaptance rate on 3001 to 4001 for σ_ϵ: 22.50 %:
+-------------
+Percentage done:  14.29 %
+Accaptance rate on 4001 to 5001 for ϕ: 26.18 %:
+Accaptance rate on 4001 to 5001 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  17.15 %
+Accaptance rate on 5001 to 6001 for ϕ: 28.19 %:
+Accaptance rate on 5001 to 6001 for σ_ϵ: 28.20 %:
+-------------
+Percentage done:  20.00 %
+Accaptance rate on 6001 to 7001 for ϕ: 16.91 %:
+Accaptance rate on 6001 to 7001 for σ_ϵ: 18.30 %:
+-------------
+Percentage done:  22.86 %
+Accaptance rate on 7001 to 8001 for ϕ: 18.13 %:
+Accaptance rate on 7001 to 8001 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  25.72 %
+Accaptance rate on 8001 to 9001 for ϕ: 24.63 %:
+Accaptance rate on 8001 to 9001 for σ_ϵ: 22.50 %:
+-------------
+Percentage done:  28.57 %
+Accaptance rate on 9001 to 10001 for ϕ: 14.38 %:
+Accaptance rate on 9001 to 10001 for σ_ϵ: 17.60 %:
+-------------
+Percentage done:  31.43 %
+Accaptance rate on 10001 to 11001 for ϕ: 9.71 %:
+Accaptance rate on 10001 to 11001 for σ_ϵ: 15.80 %:
+-------------
+Percentage done:  34.29 %
+Accaptance rate on 11001 to 12001 for ϕ: 30.32 %:
+Accaptance rate on 11001 to 12001 for σ_ϵ: 16.50 %:
+-------------
+Percentage done:  37.15 %
+Accaptance rate on 12001 to 13001 for ϕ: 30.96 %:
+Accaptance rate on 12001 to 13001 for σ_ϵ: 21.20 %:
+-------------
+Percentage done:  40.00 %
+Accaptance rate on 13001 to 14001 for ϕ: 31.76 %:
+Accaptance rate on 13001 to 14001 for σ_ϵ: 28.50 %:
+-------------
+Percentage done:  42.86 %
+Accaptance rate on 14001 to 15001 for ϕ: 29.02 %:
+Accaptance rate on 14001 to 15001 for σ_ϵ: 31.70 %:
+-------------
+Percentage done:  45.72 %
+Accaptance rate on 15001 to 16001 for ϕ: 20.48 %:
+Accaptance rate on 15001 to 16001 for σ_ϵ: 22.30 %:
+-------------
+Percentage done:  48.57 %
+Accaptance rate on 16001 to 17001 for ϕ: 17.33 %:
+Accaptance rate on 16001 to 17001 for σ_ϵ: 21.60 %:
+-------------
+Percentage done:  51.43 %
+Accaptance rate on 17001 to 18001 for ϕ: 29.29 %:
+Accaptance rate on 17001 to 18001 for σ_ϵ: 25.30 %:
+-------------
+Percentage done:  54.29 %
+Accaptance rate on 18001 to 19001 for ϕ: 29.80 %:
+Accaptance rate on 18001 to 19001 for σ_ϵ: 25.60 %:
+-------------
+Percentage done:  57.15 %
+Accaptance rate on 19001 to 20001 for ϕ: 26.20 %:
+Accaptance rate on 19001 to 20001 for σ_ϵ: 30.40 %:
+-------------
+Percentage done:  60.00 %
+Accaptance rate on 20001 to 21001 for ϕ: 25.47 %:
+Accaptance rate on 20001 to 21001 for σ_ϵ: 29.70 %:
+-------------
+Percentage done:  62.86 %
+Accaptance rate on 21001 to 22001 for ϕ: 24.27 %:
+Accaptance rate on 21001 to 22001 for σ_ϵ: 26.90 %:
+-------------
+Percentage done:  65.72 %
+Accaptance rate on 22001 to 23001 for ϕ: 14.69 %:
+Accaptance rate on 22001 to 23001 for σ_ϵ: 15.90 %:
+-------------
+Percentage done:  68.57 %
+Accaptance rate on 23001 to 24001 for ϕ: 19.61 %:
+Accaptance rate on 23001 to 24001 for σ_ϵ: 22.50 %:
+-------------
+Percentage done:  71.43 %
+Accaptance rate on 24001 to 25001 for ϕ: 29.97 %:
+Accaptance rate on 24001 to 25001 for σ_ϵ: 21.70 %:
+-------------
+Percentage done:  74.29 %
+Accaptance rate on 25001 to 26001 for ϕ: 20.42 %:
+Accaptance rate on 25001 to 26001 for σ_ϵ: 21.70 %:
+-------------
+Percentage done:  77.15 %
+Accaptance rate on 26001 to 27001 for ϕ: 15.39 %:
+Accaptance rate on 26001 to 27001 for σ_ϵ: 17.60 %:
+-------------
+Percentage done:  80.00 %
+Accaptance rate on 27001 to 28001 for ϕ: 33.55 %:
+Accaptance rate on 27001 to 28001 for σ_ϵ: 19.50 %:
+-------------
+Percentage done:  82.86 %
+Accaptance rate on 28001 to 29001 for ϕ: 24.71 %:
+Accaptance rate on 28001 to 29001 for σ_ϵ: 18.60 %:
+-------------
+Percentage done:  85.72 %
+Accaptance rate on 29001 to 30001 for ϕ: 25.36 %:
+Accaptance rate on 29001 to 30001 for σ_ϵ: 24.10 %:
+-------------
+Percentage done:  88.57 %
+Accaptance rate on 30001 to 31001 for ϕ: 18.61 %:
+Accaptance rate on 30001 to 31001 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  91.43 %
+Accaptance rate on 31001 to 32001 for ϕ: 23.95 %:
+Accaptance rate on 31001 to 32001 for σ_ϵ: 22.70 %:
+-------------
+Percentage done:  94.29 %
+Accaptance rate on 32001 to 33001 for ϕ: 8.69 %:
+Accaptance rate on 32001 to 33001 for σ_ϵ: 16.10 %:
+-------------
+Percentage done:  97.15 %
+Accaptance rate on 33001 to 34001 for ϕ: 20.67 %:
+Accaptance rate on 33001 to 34001 for σ_ϵ: 18.80 %:
+Ending Gibbs sampler using CPMMH.
+91015.164470847
+0.23172571428571428
+0.22457142857142856
+1.0

@@ -26,42 +26,33 @@ PyPlot.plot(Array(x'))
 PyPlot.figure()
 PyPlot.plot(Array(y'))
 
-@time loglik_kalman, partial_loglik_sum_kalman = kalman(y, σ_ϵ, ϕ, dt, false, true)
+@time loglik_kalman, path_kalman = kalman(y, σ_ϵ, ϕ, dt, true)
 
-@time loglik_pf, w, x, partial_loglik_sum_pf = cpf(y, σ_ϵ, ϕ, dt, randn(nbr_particles_cpf,N_time+1,M_subjects), randn(N_time,2,M_subjects), nbr_particles_pf, false, true, true)
+@time loglik_pf, path_pf = cpf(y, σ_ϵ, ϕ, dt, randn(nbr_particles_cpf,N_time+1,M_subjects), randn(N_time,2,M_subjects), nbr_particles_pf, false, true)
 
-@time loglik_corr_pf, w_corr_pf, x_corr_pf, partial_loglik_sum_corr_pf = cpf(y, σ_ϵ, ϕ, dt, randn(nbr_particles_cpf,N_time+1,M_subjects), randn(N_time,2,M_subjects), nbr_particles_cpf, true, true, true)
-
-
-loglik_kalman
-
-loglik_pf
-
-loglik_corr_pf
+@time loglik_corr_pf, path_corr_pf = cpf(y, σ_ϵ, ϕ, dt, randn(nbr_particles_cpf,N_time+1,M_subjects), randn(N_time,2,M_subjects), nbr_particles_cpf, true, true)
 
 
-partial_loglik_sum_kalman
+sum(loglik_kalman)
 
-partial_loglik_sum_pf
+sum(loglik_pf)
 
-partial_loglik_sum_corr_pf
+sum(loglik_corr_pf)
 
-
-idx = 25
+subject = rand(1:M_subjects)
 
 PyPlot.figure()
-PyPlot.plot(partial_loglik_sum_pf[idx,:], "r")
-PyPlot.plot(partial_loglik_sum_kalman[idx,:], "b")
-PyPlot.plot(partial_loglik_sum_corr_pf[idx,:], "--r")
-
-partial_loglik_kalman = diff(partial_loglik_sum_kalman,dims=2)
-partial_loglik_pf = diff(partial_loglik_sum_pf,dims=2)
-partial_loglik_cpf = diff(partial_loglik_sum_corr_pf,dims=2)
+PyPlot.plot(path_kalman[subject], "r")
+PyPlot.plot(y[subject,:], "g")
 
 PyPlot.figure()
-PyPlot.plot(partial_loglik_pf[idx,:], "r")
-PyPlot.plot(partial_loglik_kalman[idx,:], "b")
-PyPlot.plot(partial_loglik_cpf[idx,:], "--r")
+PyPlot.plot(path_pf[subject][:,:]', "r")
+PyPlot.plot(y[subject,:], "g")
+
+
+PyPlot.figure()
+PyPlot.plot(path_corr_pf[subject][:,:]', "r")
+PyPlot.plot(y[subject,:], "g")
 
 
 loglik_pf_m = zeros(M_subjects,100)
@@ -88,6 +79,10 @@ mean(loglik_pf_m,dims=2)
 
 mean(loglik_cpf_m,dims=2)
 
+#=
+
+
+# old stuff test for different parameter values
 
 
 loglik_pg_dist = kde(loglik_pf_m[:])

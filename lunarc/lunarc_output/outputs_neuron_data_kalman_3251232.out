@@ -1,0 +1,12 @@
+/home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/lunarc
+/home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH
+start run script for kalman
+  0.333593 seconds (576.27 k allocations: 30.435 MiB, 3.27% gc time)
+Starting Gibbs sampler using Kalman.
+Ending Gibbs sampler using Kalman.
+29.781790623
+0.27541
+0.383
+1.0
+1
+end run script

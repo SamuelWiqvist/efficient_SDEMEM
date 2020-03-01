@@ -1,6 +1,8 @@
 using Pkg
 using LinearAlgebra
 using DataFrames
+using Printf
+using Random
 
 println("test corr-pf")
 
@@ -21,7 +23,9 @@ nbr_pf_eval_corr = 50
 ll1 = zeros(nbr_pf_eval_corr)
 ll2 = zeros(nbr_pf_eval_corr)
 
-ρ = 0.999
+ρ = 0.99
+
+Random.seed!(1)
 
 for i = 1:nbr_pf_eval_corr
 
@@ -43,17 +47,55 @@ end
 
 corr_ll = cor(ll1,ll2)
 
-var_loglik = 2.16^2/(1-corr_ll^2)
+var_loglik_target = 2.16^2/(1-corr_ll^2)
 
-nbr_pf_eval = 100
+#nbr_pf_eval = 100
+#nbr_particles = 50
 
-nbr_particles = 50
 
-ll = zeros(nbr_pf_eval)
+function loglik_est(nbr_particles, nbr_pf_eval=100)
 
-for i = 1:nbr_pf_eval
-    ll[i] = sum(cpf(y, σ_ϵ, ϕ, dt, randn(nbr_particles,N_time + 1,M_subjects), randn(N_time,2,M_subjects), nbr_particles, true))
+    ll = zeros(nbr_pf_eval)
+
+    for i = 1:nbr_pf_eval
+        ll[i] = sum(cpf(y, σ_ϵ, ϕ, dt, randn(nbr_particles,N_time + 1,M_subjects), randn(N_time,2,M_subjects), nbr_particles, true))
+    end
+
+    return ll
+
 end
 
-mean(ll)
-var(ll)
+
+nbr_pf_eval = 100
+nbr_particles = [20,50,100,150,200,250,500]
+
+loglik_matrix = zeros(nbr_pf_eval, length(nbr_particles))
+run_times = zeros(length(nbr_particles))
+
+run_times[1]  = @elapsed loglik_matrix[:,1] = loglik_est(nbr_particles[1], nbr_pf_eval)
+
+for i in 1:length(nbr_particles)
+    @printf "Current nbr of particels: %.2f\n" nbr_particles[i]
+    run_times[i]  = @elapsed loglik_matrix[:,i]  = loglik_est(nbr_particles[i], nbr_pf_eval)
+end
+
+using PyPlot
+
+PyPlot.figure(figsize=(20,10))
+PyPlot.plot(nbr_particles, mean(loglik_matrix, dims = 1)[:], "--*")
+PyPlot.xlabel("Nbr particles.")
+PyPlot.ylabel("Avg. loglik est. val.")
+PyPlot.savefig("figures/avg_loglik_val_vs_nbr_particels_cpf_099.png")
+
+PyPlot.figure(figsize=(20,10))
+PyPlot.plot(nbr_particles, var(loglik_matrix, dims = 1)[:], "--*")
+PyPlot.plot(nbr_particles, var_loglik_target*ones(length(nbr_particles),1), "k")
+PyPlot.xlabel("Nbr particles.")
+PyPlot.ylabel("Var of loglik est.")
+PyPlot.savefig("figures/loglik_var_vs_nbr_particles_cpf_099.png")
+
+PyPlot.figure(figsize=(20,10))
+PyPlot.plot(nbr_particles, run_times/100, "--*")
+PyPlot.xlabel("Nbr particles.")
+PyPlot.ylabel("Run time (sec)")
+PyPlot.savefig("figures/run_time_vs_nbr_particls_cpf_099.png")

@@ -1,0 +1,15 @@
+ERROR: LoadError: DimensionMismatch("tried to assign 6-element array to 25×1 destination")
+Stacktrace:
+ [1] throw_setindex_mismatch(::Array{Float64,1}, ::Tuple{Int64,Int64}) at ./indices.jl:144
+ [2] setindex_shape_check at ./indices.jl:196 [inlined]
+ [3] macro expansion at ./multidimensional.jl:641 [inlined]
+ [4] _unsafe_setindex!(::IndexLinear, ::Array{Float64,2}, ::Array{Float64,1}, ::Base.Slice{Base.OneTo{Int64}}, ::Int64) at ./multidimensional.jl:636
+ [5] _setindex! at ./multidimensional.jl:631 [inlined]
+ [6] setindex!(::Array{Float64,2}, ::Array{Float64,1}, ::Function, ::Int64) at ./abstractarray.jl:998
+ [7] top-level scope at none:0
+ [8] include at ./boot.jl:317 [inlined]
+ [9] include_relative(::Module, ::String) at ./loading.jl:1038
+ [10] include(::Module, ::String) at ./sysimg.jl:29
+ [11] exec_options(::Base.JLOptions) at ./client.jl:229
+ [12] _start() at ./client.jl:421
+in expression starting at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU neuron data/tune_nbr_particles_bridge.jl:96

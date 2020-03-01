@@ -1,0 +1,10 @@
+/home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/lunarc
+/home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH
+start run script for cpmmh
+  9.461709 seconds (5.38 M allocations: 11.736 GiB, 22.26% gc time)
+Starting Gibbs sampler using CPMMH.
+Ending Gibbs sampler using CPMMH.
+4501.522226308
+0.2917
+0.164
+1.0

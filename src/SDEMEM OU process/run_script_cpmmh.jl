@@ -20,13 +20,12 @@ y,x,t_vec,dt,η,σ_ϵ,ϕ,prior_parameters_η,prior_parameters_σ_ϵ = set_up(M=M
 
 # run MH-Gibbs
 
-R = 15000 #15000 #10000
-burn_in = 5000
+R = 60000 #15000 #10000
+burn_in = 10000
 
 job = string(M_subjects)*"_"*string(N_time)*"_"*string(nbr_particles)*"_"*string(ρ)
 
-cov_ϕ = [0.04;0.08;0.04]
-cov_σ_ϵ = 0.02
+
 
 
 # hard coded start values
@@ -43,8 +42,25 @@ for j = 1:3
 
 end
 
-startval_σ_ϵ = 0.5
+startval_σ_ϵ = 0.2
 
+Σ_i_σ_ϵ = 0.02^2
+
+Σ_i_ϕ = Matrix{Float64}[]
+for i in 1:M_subjects; push!(Σ_i_ϕ, [0.06 0 0;0 0.1 0;0 0 0.06]); end
+
+
+γ_ϕ_0 = 1.
+γ_σ_ϵ_0 = 1.
+μ_i_ϕ = startval_ϕ
+μ_i_σ_ϵ = startval_σ_ϵ
+α_star_ϕ = 0.25
+α_star_σ_ϵ = 0.25
+log_λ_i_ϕ = log.(2.4/sqrt(3)*ones(M_subjects))
+log_λ_i_σ_ϵ = log(2.4)
+update_interval = 1
+α_power = 0.7
+start_update = 100
 
 # estimate parameters using exact Gibbs sampling
 
@@ -54,8 +70,19 @@ Random.seed!(seed)
 run_time_cpmmh = @elapsed chain_ϕ_cpmmh, chain_σ_ϵ_cpmmh, chain_η_cpmmh, accept_vec_cpmmh = gibbs_cpmmh(R,
                                                                                                         y,
                                                                                                         dt,
-                                                                                                        cov_ϕ,
-                                                                                                        cov_σ_ϵ,
+                                                                                                        Σ_i_σ_ϵ,
+                                                                                                        Σ_i_ϕ,
+                                                                                                        γ_ϕ_0,
+                                                                                                        γ_σ_ϵ_0,
+                                                                                                        μ_i_ϕ,
+                                                                                                        μ_i_σ_ϵ,
+                                                                                                        α_star_ϕ,
+                                                                                                        α_star_σ_ϵ,
+                                                                                                        log_λ_i_ϕ,
+                                                                                                        log_λ_i_σ_ϵ,
+                                                                                                        update_interval,
+                                                                                                        start_update,
+                                                                                                        α_power,
                                                                                                         startval_ϕ,
                                                                                                         startval_σ_ϵ,
                                                                                                         prior_parameters_η,

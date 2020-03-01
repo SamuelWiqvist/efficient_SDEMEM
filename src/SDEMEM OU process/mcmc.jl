@@ -12,23 +12,24 @@ using StatsBase
 ################################################################################
 
 """
-    gibbs_exact(R::Int,
-                y::Array,
-                dt::Real,
-                cov_ϕ::Array,
-                cov_σ_ϵ::Real,
-                startval_ϕ::Array,
-                startval_σ_ϵ::Real,
-                prior_parameters_η::Array,
-                prior_parameters_σ_ϵ::Array)
-
 Gibbs sampler using Kalman filter for the OU SDEMEM model.
 """
 function gibbs_exact(R::Int,
                      y::Array,
                      dt::Real,
-                     cov_ϕ::Array,
-                     cov_σ_ϵ::Real,
+                     Σ_i_σ_ϵ::Real,
+                     Σ_i_ϕ::Array,
+                     γ_ϕ_0::Real,
+                     γ_σ_ϵ_0::Real,
+                     μ_i_ϕ::Array,
+                     μ_i_σ_ϵ::Real,
+                     α_star_ϕ::Real,
+                     α_star_σ_ϵ::Real,
+                     log_λ_i_ϕ::Vector,
+                     log_λ_i_σ_ϵ::Real,
+                     update_interval::Real,
+                     start_update::Real,
+                     α_power::Real,
                      startval_ϕ::Array,
                      startval_σ_ϵ::Real,
                      prior_parameters_η::Array,
@@ -50,6 +51,7 @@ function gibbs_exact(R::Int,
     # first iteration
     chain_ϕ[:,:,1] = startval_ϕ
     chain_σ_ϵ[1] = startval_σ_ϵ
+    print_interval = 1000
 
     # sample star values for η
     for j = 1:3
@@ -64,19 +66,18 @@ function gibbs_exact(R::Int,
 
     accept_vec[:,1] = [M;1;3] # we accapt the start values
 
+    α_prob_accept_σ_ϵ = 0.
+    α_prob_accept_ϕ = zeros(M)
+
     # compute likelihood value
     loglik_old_y = kalman(y, startval_σ_ϵ, startval_ϕ, dt)
 
     # main loop
     for r = 2:R
 
-        print_progress(r, R, 1000)
-
         # first gibbs stage, update \phi
         for m = 1:M
-            ϕ_star[m,1] = chain_ϕ[m,1,r-1] + cov_ϕ[1]*randn()
-            ϕ_star[m,2] = chain_ϕ[m,2,r-1] + cov_ϕ[2]*randn()
-            ϕ_star[m,3] = chain_ϕ[m,3,r-1] + cov_ϕ[3]*randn()
+            ϕ_star[m,:] = chain_ϕ[m,:,r-1] + cholesky(exp(log_λ_i_ϕ[m])*Σ_i_ϕ[m]).U*randn(3)
         end
 
         loglik_star_y = kalman(y, chain_σ_ϵ[r-1], ϕ_star, dt)
@@ -90,8 +91,16 @@ function gibbs_exact(R::Int,
             jacobian_star = sum(ϕ_star[m,:])
 
             log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] - jacobian_old)
+            α_prob_accept_ϕ[m] = min(1, exp(log_α))
+
+
+            if any(isnan,ϕ_star[m,:]) == true || loglik_star_y[m] == NaN
+                log_α = log(0)
+                α_prob_accept_ϕ[m] = min(1, exp(log_α))
+            end
 
             accept = log(rand()) < log_α
+
 
             if accept
                 chain_ϕ[m,:,r] = ϕ_star[m,:]
@@ -104,7 +113,7 @@ function gibbs_exact(R::Int,
         end
 
         # secound gibbs stage, update σ_ϵ
-        σ_ϵ_star = chain_σ_ϵ[r-1] + cov_σ_ϵ*randn()
+        σ_ϵ_star = chain_σ_ϵ[r-1] + sqrt(exp(log_λ_i_σ_ϵ)*Σ_i_σ_ϵ)*randn()
 
         loglik_star_y = kalman(y, σ_ϵ_star, chain_ϕ[:,:,r], dt)
 
@@ -112,6 +121,14 @@ function gibbs_exact(R::Int,
         prior_star_σ_ϵ = gammalogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],σ_ϵ_star)
 
         log_α = (sum(loglik_star_y) + prior_star_σ_ϵ) - (sum(loglik_old_y) + prior_star_σ_ϵ)
+        α_prob_accept_σ_ϵ = min(1, exp(log_α))
+
+        # correct if we have  NaNs
+        if any(isnan,loglik_star_y) == true || σ_ϵ_star == NaN
+            log_α = log(0)
+            α_prob_accept_σ_ϵ = min(1, exp(log_α))
+        end
+
 
         accept = log(rand()) < log_α
 
@@ -150,29 +167,23 @@ function gibbs_exact(R::Int,
 
         end
 
+        print_progress(r,print_interval,accept_vec,M)
+
+        log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ = adaptive_update_σ_ϵ(r,update_interval,start_update,log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ,γ_σ_ϵ_0,α_power,chain_σ_ϵ,α_prob_accept_σ_ϵ)
+        adaptive_update_ϕ!(r,update_interval,start_update,log_λ_i_ϕ,μ_i_ϕ,Σ_i_ϕ,γ_ϕ_0,α_power,M,chain_ϕ,α_prob_accept_ϕ)
+
     end
 
     println("Ending Gibbs sampler using Kalman.")
 
     return chain_ϕ, chain_σ_ϵ, chain_η, accept_vec
 
+
 end
 
 
 
 """
-    naive_gibbs_cpmmh(R::Int,
-                y::Array,
-                dt::Real,
-                cov_ϕ::Array,
-                cov_σ_ϵ::Real,
-                startval_ϕ::Array,
-                startval_σ_ϵ::Real,
-                prior_parameters_η::Array,
-                prior_parameters_σ_ϵ::Array,
-                nbr_particles::Int,
-                ρ::Real)
-
 Gibbs sampler using CPMMH for the OU SDEMEM model.
 
 The naive version of the Gibbs scheme (Gibbs scheme #1) where we do not integrate out the random numbers.
@@ -180,8 +191,19 @@ The naive version of the Gibbs scheme (Gibbs scheme #1) where we do not integrat
 function naive_gibbs_cpmmh(R::Int,
                            y::Array,
                            dt::Real,
-                           cov_ϕ::Array,
-                           cov_σ_ϵ::Real,
+                           Σ_i_σ_ϵ::Real,
+                           Σ_i_ϕ::Array,
+                           γ_ϕ_0::Real,
+                           γ_σ_ϵ_0::Real,
+                           μ_i_ϕ::Array,
+                           μ_i_σ_ϵ::Real,
+                           α_star_ϕ::Real,
+                           α_star_σ_ϵ::Real,
+                           log_λ_i_ϕ::Vector,
+                           log_λ_i_σ_ϵ::Real,
+                           update_interval::Real,
+                           start_update::Real,
+                           α_power::Real,
                            startval_ϕ::Array,
                            startval_σ_ϵ::Real,
                            prior_parameters_η::Array,
@@ -226,6 +248,10 @@ function naive_gibbs_cpmmh(R::Int,
 
     accept_vec[:,1] = [M;1;3] # we accapt the start values
 
+    α_prob_accept_σ_ϵ = 0.
+    α_prob_accept_ϕ = zeros(M)
+
+    print_interval = 100
     # TODO check if the random numbers are correct, now, we have ONE set of random numbers
     # but they are updated for each block
 
@@ -239,14 +265,11 @@ function naive_gibbs_cpmmh(R::Int,
     # main loop
     for r = 2:R
 
-        print_progress(r, R, 1000)
-
         # first gibbs stage, update \phi
         for m = 1:M
-            ϕ_star[m,1] = chain_ϕ[m,1,r-1] + cov_ϕ[1]*randn()
-            ϕ_star[m,2] = chain_ϕ[m,2,r-1] + cov_ϕ[2]*randn()
-            ϕ_star[m,3] = chain_ϕ[m,3,r-1] + cov_ϕ[3]*randn()
+            ϕ_star[m,:] = chain_ϕ[m,:,r-1] + cholesky(exp(log_λ_i_ϕ[m])*Σ_i_ϕ[m]).U*randn(3)
         end
+
 
         # update random numbers for block 1
         u_prop_new_block_1 = randn(nbr_particles,N+1,M)
@@ -266,8 +289,15 @@ function naive_gibbs_cpmmh(R::Int,
             jacobian_star = sum(ϕ_star[m,:])
 
             log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] - jacobian_old)
+            α_prob_accept_ϕ[m] = min(1, exp(log_α))
+
+            if any(isnan,ϕ_star[m,:]) == true || loglik_star_y[m] == NaN
+                log_α = log(0)
+                α_prob_accept_ϕ[m] = min(1, exp(log_α))
+            end
 
             accept = log(rand()) < log_α
+
 
             if accept
                 chain_ϕ[m,:,r] = ϕ_star[m,:]
@@ -282,7 +312,7 @@ function naive_gibbs_cpmmh(R::Int,
         end
 
         # secound gibbs stage, update σ_ϵ
-        σ_ϵ_star = chain_σ_ϵ[r-1] + cov_σ_ϵ*randn()
+        σ_ϵ_star = chain_σ_ϵ[r-1] + sqrt(exp(log_λ_i_σ_ϵ)*Σ_i_σ_ϵ)*randn()
 
         # update random numbers for block 2
         u_prop_new_block_2 = randn(nbr_particles,N+1,M)
@@ -298,6 +328,13 @@ function naive_gibbs_cpmmh(R::Int,
         prior_star_σ_ϵ = gammalogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],σ_ϵ_star)
 
         log_α = (sum(loglik_star_y) + prior_star_σ_ϵ) - (sum(loglik_old_y) + prior_star_σ_ϵ)
+        α_prob_accept_σ_ϵ = min(1, exp(log_α))
+
+        # correct if we have  NaNs
+        if any(isnan,loglik_star_y) == true || σ_ϵ_star == NaN
+            log_α = log(0)
+            α_prob_accept_σ_ϵ = min(1, exp(log_α))
+        end
 
         accept = log(rand()) < log_α
 
@@ -338,6 +375,12 @@ function naive_gibbs_cpmmh(R::Int,
 
         end
 
+        print_progress(r,print_interval,accept_vec,M)
+
+        log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ = adaptive_update_σ_ϵ(r,update_interval,start_update,log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ,γ_σ_ϵ_0,α_power,chain_σ_ϵ,α_prob_accept_σ_ϵ)
+        adaptive_update_ϕ!(r,update_interval,start_update,log_λ_i_ϕ,μ_i_ϕ,Σ_i_ϕ,γ_ϕ_0,α_power,M,chain_ϕ,α_prob_accept_ϕ)
+
+
 
     end
 
@@ -349,18 +392,6 @@ end
 
 
 """
-    gibbs_cpmmh(R::Int,
-                y::Array,
-                dt::Real,
-                cov_ϕ::Array,
-                cov_σ_ϵ::Real,
-                startval_ϕ::Array,
-                startval_σ_ϵ::Real,
-                prior_parameters_η::Array,
-                prior_parameters_σ_ϵ::Array,
-                nbr_particles::Int,
-                ρ::Real)
-
 Gibbs sampler using CPMMH for the OU SDEMEM model.
 
 Gibbs scheme #2 where we integrate out the random numbers.
@@ -368,8 +399,19 @@ Gibbs scheme #2 where we integrate out the random numbers.
 function gibbs_cpmmh(R::Int,
                      y::Array,
                      dt::Real,
-                     cov_ϕ::Array,
-                     cov_σ_ϵ::Real,
+                     Σ_i_σ_ϵ::Real,
+                     Σ_i_ϕ::Array,
+                     γ_ϕ_0::Real,
+                     γ_σ_ϵ_0::Real,
+                     μ_i_ϕ::Array,
+                     μ_i_σ_ϵ::Real,
+                     α_star_ϕ::Real,
+                     α_star_σ_ϵ::Real,
+                     log_λ_i_ϕ::Vector,
+                     log_λ_i_σ_ϵ::Real,
+                     update_interval::Real,
+                     start_update::Real,
+                     α_power::Real,
                      startval_ϕ::Array,
                      startval_σ_ϵ::Real,
                      prior_parameters_η::Array,
@@ -414,6 +456,11 @@ function gibbs_cpmmh(R::Int,
 
     accept_vec[:,1] = [M;1;3] # we accapt the start values
 
+    α_prob_accept_σ_ϵ = 0.
+    α_prob_accept_ϕ = zeros(M)
+
+    print_interval = 100
+
     # set random numbers
     u_prop_old = randn(nbr_particles,N+1,M)
     u_resample_old = randn(N,2,M)
@@ -424,13 +471,8 @@ function gibbs_cpmmh(R::Int,
     # main loop
     for r = 2:R
 
-        print_progress(r, R, 1000)
-
-        # first gibbs stage, update \phi
         for m = 1:M
-            ϕ_star[m,1] = chain_ϕ[m,1,r-1] + cov_ϕ[1]*randn()
-            ϕ_star[m,2] = chain_ϕ[m,2,r-1] + cov_ϕ[2]*randn()
-            ϕ_star[m,3] = chain_ϕ[m,3,r-1] + cov_ϕ[3]*randn()
+            ϕ_star[m,:] = chain_ϕ[m,:,r-1] + cholesky(exp(log_λ_i_ϕ[m])*Σ_i_ϕ[m]).U*randn(3)
         end
 
         u_prop_new = randn(nbr_particles,N+1,M)
@@ -450,6 +492,12 @@ function gibbs_cpmmh(R::Int,
             jacobian_star = sum(ϕ_star[m,:])
 
             log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] - jacobian_old)
+            α_prob_accept_ϕ[m] = min(1, exp(log_α))
+
+            if any(isnan,ϕ_star[m,:]) == true || loglik_star_y[m] == NaN
+                log_α = log(0)
+                α_prob_accept_ϕ[m] = min(1, exp(log_α))
+            end
 
             accept = log(rand()) < log_α
 
@@ -466,7 +514,7 @@ function gibbs_cpmmh(R::Int,
         end
 
         # secound gibbs stage, update σ_ϵ
-        σ_ϵ_star = chain_σ_ϵ[r-1] + cov_σ_ϵ*randn()
+        σ_ϵ_star = chain_σ_ϵ[r-1] + sqrt(exp(log_λ_i_σ_ϵ)*Σ_i_σ_ϵ)*randn()
 
         loglik_star_y = cpf(y, σ_ϵ_star, chain_ϕ[:,:,r], dt, u_prop_old, u_resample_old,  nbr_particles, run_sort)
 
@@ -474,6 +522,14 @@ function gibbs_cpmmh(R::Int,
         prior_star_σ_ϵ = gammalogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],σ_ϵ_star)
 
         log_α = (sum(loglik_star_y) + prior_star_σ_ϵ) - (sum(loglik_old_y) + prior_star_σ_ϵ)
+        α_prob_accept_σ_ϵ = min(1, exp(log_α))
+
+        # correct if we have  NaNs
+        if any(isnan,loglik_star_y) == true || σ_ϵ_star == NaN
+            log_α = log(0)
+            α_prob_accept_σ_ϵ = min(1, exp(log_α))
+        end
+
 
         accept = log(rand()) < log_α
 
@@ -513,6 +569,11 @@ function gibbs_cpmmh(R::Int,
         end
 
 
+        print_progress(r,print_interval,accept_vec,M)
+
+        log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ = adaptive_update_σ_ϵ(r,update_interval,start_update,log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ,γ_σ_ϵ_0,α_power,chain_σ_ϵ,α_prob_accept_σ_ϵ)
+        adaptive_update_ϕ!(r,update_interval,start_update,log_λ_i_ϕ,μ_i_ϕ,Σ_i_ϕ,γ_ϕ_0,α_power,M,chain_ϕ,α_prob_accept_ϕ)
+
     end
 
     println("Ending Gibbs sampler using CPMMH.")
@@ -526,14 +587,61 @@ end
 # help functions for Gibbs algorithms
 ################################################################################
 
+# print progress to consol
+function print_progress(r::Int,print_interval::Int,accept_vec::Array,M::Int)
 
-function print_progress(i::Int, N::Int, print_interval::Int=10000)
-    if mod(i,print_interval) == 0
-        @printf("Percentage done:  %.2f %%\n", i/N*100)
+    if mod(r-1,print_interval) == 0
+        println("-------------")
+        @printf "Percentage done:  %.2f %%\n" r/R*100
+        @printf "Accaptance rate on %.0f to %.0f for ϕ: %.2f %%:\n" r-print_interval r sum(accept_vec[1,r-print_interval:r])/(M*print_interval)*100
+        @printf "Accaptance rate on %.0f to %.0f for σ_ϵ: %.2f %%:\n" r-print_interval r sum(accept_vec[2,r-print_interval:r])/print_interval*100
     end
+
+end
+
+# Generlized AM adaptaton for the sigma_epsilon parameter,
+# algorithm 4 in https://people.eecs.berkeley.edu/~jordan/sail/readings/andrieu-thoms.pdf)
+function adaptive_update_σ_ϵ(r::Int,update_interval::Int,start_update::Int,
+    log_λ_i_σ_ϵ::Real,μ_i_σ_ϵ::Real,Σ_i_σ_ϵ::Real,γ_σ_ϵ_0::Real,α_power::Real,
+    chain_σ_ϵ::Array,α_prob_accept_σ_ϵ::Real)
+
+    if mod(r-1,update_interval) == 0 && r-1 >= start_update
+
+        γ = γ_σ_ϵ_0/r^α_power
+
+        log_λ_i_σ_ϵ = log_λ_i_σ_ϵ + γ*(α_prob_accept_σ_ϵ - α_star_σ_ϵ)
+        μ_i_σ_ϵ = μ_i_σ_ϵ + γ*(chain_σ_ϵ[r] - μ_i_σ_ϵ)
+        Σ_i_σ_ϵ = Σ_i_σ_ϵ + γ*((chain_σ_ϵ[r]-μ_i_σ_ϵ)^2 - Σ_i_σ_ϵ)
+
+    end
+
+    return log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ
 end
 
 
+# Generlized AM adaptaton for the random effects ϕ,
+# algorithm 4 in https://people.eecs.berkeley.edu/~jordan/sail/readings/andrieu-thoms.pdf)
+function adaptive_update_ϕ!(r::Int,update_interval::Int,start_update::Int,
+    log_λ_i_ϕ::Vector,μ_i_ϕ::Array,Σ_i_ϕ::Array,γ_ϕ_0::Real,α_power::Real,
+    M::Int,chain_ϕ::Array,α_prob_accept_ϕ::Vector)
+
+    if mod(r-1,update_interval) == 0 && r-1 >= start_update
+
+        γ = γ_ϕ_0/r^α_power
+
+        for m in 1:M
+            Σ_i_ϕ_tmp = Σ_i_ϕ[m]
+            log_λ_i_ϕ[m] =  log_λ_i_ϕ[m]  + γ*(α_prob_accept_ϕ[m] - α_star_ϕ)
+            μ_i_ϕ[m,:] = μ_i_ϕ[m,:] + γ*(chain_ϕ[m,:,r] - μ_i_ϕ[m,:])
+            Σ_i_ϕ_tmp = Σ_i_ϕ_tmp + γ*((chain_ϕ[m,:,r]-μ_i_ϕ[m,:])*(chain_ϕ[m,:,r]-μ_i_ϕ[m,:])' - Σ_i_ϕ_tmp)
+            Σ_i_ϕ[m] = (Σ_i_ϕ_tmp + Σ_i_ϕ_tmp')/2 # add the transpose and diviade by 2 for numerical stability (to make sure that Σ_i_ϕ[m] is symmertic)
+        end
+
+    end
+
+end
+
+# calc loglik for ϕ
 function calc_loglik_ϕ(ϕ, η)
 
     loglik = zeros(size(ϕ,1))
@@ -548,9 +656,7 @@ function calc_loglik_ϕ(ϕ, η)
 
 end
 
-
-# sample from Gamma(α,1)
-# code adapted from https://www.cs.toronto.edu/~radford/csc2541.F04/gamma.html
+# Sample from Gamma(α,1), code adapted from https://www.cs.toronto.edu/~radford/csc2541.F04/gamma.html
 function rand_gamma(α::Real)
 
     x = 0
@@ -569,198 +675,189 @@ end
 # Kalman/pf
 ################################################################################
 
+# TODO rewrite the kalman and cpf in the same "style" as for the neuronal data model, to see if parallelization works
+
+
 """
-    kalman(y::Array, σ_ϵ::Real, ϕ::Array, τ_s::Real, return_path_est::Bool=false, return_partial_loglik::Bool=false)
-
-
-Estimate the likelihood for the OU process (LTI) system. The code follows the notation in "Grey-box pharmacokinetic/pharmacodynamic modelling of euglycaemic clamp study".
+Parallel Kalman filter
 """
-function kalman(y::Array, σ_ϵ::Real, ϕ::Array, τ_s::Real, return_path_est::Bool=false, return_partial_loglik::Bool=false)
+function kalman(y_full::Array, σ_ϵ::Real, ϕ::Array, τ_s::Real, diagnostics::Bool=false)
 
-    M, N = size(y)
-
-    x_hat_kalman = zeros(size(y))
-    y_hat_kalman = zeros(size(y))
-    residuals = zeros(size(y))
+    M = size(y_full,1)
 
     loglik_est = zeros(M)
 
-    if return_partial_loglik
-        partial_loglik = zeros(M,N+1)
-    end
+    if diagnostics; path = Vector{Float64}[]; end #[zeros(length(100))]; end
 
-    for m = 1:M
-
-        #println(loglik_est[m])
-        θ_1 = exp(ϕ[m,1])
-        θ_2 = exp(ϕ[m,2])
-        θ_3 = exp(ϕ[m,3])
-
-        # set model
-        B = θ_1*θ_2
-        A = -θ_1
-        σ = θ_3
-        C = 1
-        S = σ_ϵ^2
-
-        # start values for the kalman filter
-        P_start = var(y[m,:])
-        x_hat_start = 0 # TODO: This is not correct we can fix this by sampling the start values form N(0, σ_ϵ)
-
-        P_k = P_start
-        x_k = x_hat_start
-
-        # main loop
-        for k = 1:N
-
-            if k == 1
-                # dont update
-            else
-                x_k = exp(A*τ_s)*x_k + (1/A)*(exp(τ_s*A)-1)*B
-                P_k = exp(A*τ_s)*P_k*exp(A*τ_s) + σ^2*(1/(2*A))*(exp(2*A*τ_s)-1)
-            end
-
-            ϵ_k = y[m,k]-C*x_k
-            R_k = C*P_k*C + S
-            K = P_k*C*inv(R_k)
-            x_k = x_k + K*ϵ_k
-            P_k = P_k - K*R_k*K
-
-            y_hat_kalman[m,k] = C*x_k
-            x_hat_kalman[m,k] = x_k
-
-            # calc loglik
-            #loglik_est[m] = loglik_est[m] - log(det(R_k)) - ϵ_k*inv(R_k)*ϵ_k
-            loglik_est[m] = loglik_est[m]-0.5*(log(det(R_k)) + ϵ_k*inv(R_k)*ϵ_k)
-
-            if return_partial_loglik
-                partial_loglik[m,k+1] = loglik_est[m] #-0.5*(log(det(R_k)) + ϵ_k*inv(R_k)*ϵ_k)
-            end
-
-            #println(loglik_est[m])
-
-            residuals[m,k] = ϵ_k
-        end
-
-
-    end
-
-    if return_path_est
-        return loglik_est, y_hat_kalman, x_hat_kalman, residuals
-    elseif return_partial_loglik
-        return loglik_est, partial_loglik
-    else
-        return loglik_est
-    end
-
-end
-
-"""
-    cpf(y::Array, σ_ϵ::Real, ϕ::Array, dt::Real, u_prop::Array, u_resample::Array, N::Int = 1000, return_path_est::Bool=false, return_partial_loglik::Bool=false)
-
-
-Estimates the loglikelihood using the correlated pf.
-"""
-function cpf(y::Array, σ_ϵ::Real, ϕ::Array, dt::Real, u_prop::Array, u_resample::Array, N::Int, run_sort::Bool, return_path_est::Bool=false, return_partial_loglik::Bool=false)
-
-    # pre-allocation
-    M, T = size(y)
-    loglik = zeros(M)
-    u_resample_calc = zeros(T)
-
-    if return_path_est
-        x_return = zeros(M,N,T)
-        w_return = zeros(M,N,T)
-        residuals = zeros(size(y))
-    end
-
-    if return_partial_loglik
-        partial_loglik = zeros(M,T+1)
-    end
 
     for m in 1:M
 
-        θ_1 = exp(ϕ[m,1]) # set model parameters
-        θ_2 = exp(ϕ[m,2])
-        θ_3 = exp(ϕ[m,3])
-
-        # convert standard normal to standard uniforms
-        u_resample_temp = u_resample[:,:,m]
-        u_prop_temp = u_prop[:,2:end,m]
-        u_prop_temp_init = u_prop[:,1,m]
-
-        for i in 1:T
-          u_resample_calc[i] = exp(-(u_resample_temp[i,1]^2+u_resample_temp[i,2]^2)/2)
+        if diagnostics
+            loglik_est[m],x = kalman_filter(y_full[m,:], σ_ϵ, ϕ[m,:], τ_s,diagnostics)
+            append!(path,[x])
+        else
+            loglik_est[m] = kalman_filter(y_full[m,:], σ_ϵ, ϕ[m,:], τ_s,diagnostics)
         end
 
-        # pre-allocation
-        x = zeros(N,T) # particels
-        w = zeros(N,T) # weigts
-
-        # set start values
-        xinit = zeros(N) + std(y[m,:])*u_prop_temp_init #(std(y[m,:]) + σ_ϵ)*randn(N)
-
-        for t in 1:T
-
-            if t == 1 # first iteration
-
-              x[:,1] = xinit
-
-              # propagate particelsend
-              #x[:,1] = stateprop(xinit, θ_1, θ_2, θ_3, dt)
-              #for i = 1:N; w[i,1] = 1/N; end;
-              #x[:,1] = stateprop(xinit, θ_1, θ_2, θ_3, dt)
-
-            else
-
-                # sort particles and weigths
-                # alg=RadixSort
-                if run_sort == true
-                    sorted_idx = sortperm(x[:,t-1]; alg = QuickSort) # ensure that we use QuickSort
-                    w[:,t-1] = w[sorted_idx,t-1]
-                    x[:,t-1] = x[sorted_idx,t-1]
-                end
-
-                # resample particels using systematic resampling
-                ind = sysresample2(w[:,t-1],N,u_resample_calc[t])
-                x_resample = x[ind,t-1]
-
-                # propagate particels
-                x[:,t] = stateprop(x_resample, θ_1, θ_2, θ_3, dt, u_prop_temp[:,t]) #r*x_resample.*exp.(-x_resample .+ e[:,t])
-
-            end
-
-            # calc weigths and update loglik
-            if return_path_est
-                residuals[m,t] = y[m,t] - mean(x[:,t])
-            end
-
-            calc_weigths!(w,loglik,x[:,t],y[m,t],σ_ϵ,m,t)
-
-            if return_partial_loglik
-                partial_loglik[m,t+1] = loglik[m]
-            end
-
-
-        end
-
-        if return_path_est
-            x_return[m,:,:] = x
-            w_return[m,:,:] = w
-        end
     end
 
-    if return_partial_loglik && return_path_est
-        println("test")
-        return loglik, w_return, x_return, partial_loglik
-    elseif return_path_est
-        return loglik, w_return, x_return, residuals
-    elseif return_partial_loglik
-        return loglik, partial_loglik
-    else
-        return loglik
+    diagnostics == true ? (return loglik_est, path) : (return loglik_est)
+
+
+end
+
+# Kalman filter. Estimate the likelihood for the OU process (LTI) system. The code follows the notation in "Grey-box pharmacokinetic/pharmacodynamic modelling of euglycaemic clamp study".
+function kalman_filter(y::Vector, σ_ϵ::Real, ϕ::Vector, τ_s::Real, diagnostics::Bool=false)
+
+    T = length(y)
+
+    if diagnostics; x_hat_kalman = zeros(T); end
+
+    #println(loglik_est[m])
+    θ_1 = exp(ϕ[1])
+    θ_2 = exp(ϕ[2])
+    θ_3 = exp(ϕ[3])
+
+    # set model
+    B = θ_1*θ_2
+    A = -θ_1
+    σ = θ_3
+    C = 1
+    S = σ_ϵ^2
+
+
+    # start values for the kalman filter
+    P_start = var(y)
+    x_hat_start = 0 # TODO: This is not correct we can fix this by sampling the start values form N(0, σ_ϵ)
+
+    P_k = P_start
+    x_k = x_hat_start
+
+    loglik_est = 0.
+
+
+    # main loop
+    for k = 1:T
+
+        x_k = exp(A*τ_s)*x_k + (1/A)*(exp(τ_s*A)-1)*B
+        P_k = exp(A*τ_s)*P_k*exp(A*τ_s) + σ^2*(1/(2*A))*(exp(2*A*τ_s)-1)
+
+        ϵ_k = y[k]-C*x_k
+        R_k = C*P_k*C + S
+        K = P_k*C*inv(R_k)
+        x_k = x_k + K*ϵ_k
+        P_k = P_k - K*R_k*K
+
+        loglik_est = loglik_est -0.5*(log(det(R_k)) + ϵ_k*inv(R_k)*ϵ_k)
+
+        if diagnostics; x_hat_kalman[k] = x_k; end
+
+
     end
 
+    diagnostics == true ? (return loglik_est, x_hat_kalman) : (return loglik_est)
+
+
+end
+
+
+
+"""
+Parallel cpf
+"""
+function cpf(y_full::Array, σ_ϵ::Real, ϕ::Array, dt::Real, u_prop::Array, u_resample::Array, N::Int, run_sort::Bool,diagnostics::Bool=false)
+
+    M = size(y_full,1)
+
+    loglik_est = zeros(M)
+
+    if diagnostics; path = Matrix{Float64}[]; end
+
+    for m in 1:M
+
+        if diagnostics
+            loglik_est[m],x = particlefilter(y_full[m,:], σ_ϵ, ϕ[m,:], dt, u_prop[:, :, m], u_resample[:, :, m], N, run_sort, diagnostics)
+            push!(path, x)
+        else
+            loglik_est[m] = particlefilter(y_full[m,:], σ_ϵ, ϕ[m,:], dt, u_prop[:, :, m], u_resample[:, :, m], N, run_sort, diagnostics)
+        end
+
+    end
+
+    diagnostics == true ? (return loglik_est, path) : (return loglik_est)
+
+end
+
+
+# Estimates the loglikelihood using the correlated pf.
+function particlefilter(y::Vector, σ_ϵ::Real, ϕ::Array, dt::Real, u_prop::Array, u_resample_temp::Array, N::Real, run_sort::Bool, diagnostics::Bool=false)
+
+    # pre-allocation
+
+    loglik = 0.
+
+    T = length(y)
+    u_resample_calc = zeros(T)
+
+    θ_1 = exp(ϕ[1]) # set model parameters
+    θ_2 = exp(ϕ[2])
+    θ_3 = exp(ϕ[3])
+
+    # convert standard normal to standard uniforms
+    #u_resample_temp = u_resample
+    u_prop_temp = u_prop[:,2:end]
+    #u_prop_temp_init = u_prop[:,1]
+
+    for i in 1:T
+      u_resample_calc[i] = exp(-(u_resample_temp[i,1]^2+u_resample_temp[i,2]^2)/2)
+    end
+
+    # pre-allocation
+    x = zeros(N,T) # particels
+    w = zeros(N,T) # weigts
+
+    # set start values
+    xinit = zeros(N) + std(y)*u_prop[:,1] #(std(y[m,:]) + σ_ϵ)*randn(N)
+
+    for t in 1:T
+
+        if t == 1 # first iteration
+
+          #x[:,1] = xinit
+
+          # propagate particelsend
+          #x[:,1] = stateprop(xinit, θ_1, θ_2, θ_3, dt)
+          #for i = 1:N; w[i,1] = 1/N; end;
+          #x[:,1] = stateprop(xinit, θ_1, θ_2, θ_3, dt)
+
+          # propagate particels
+          x[:,t] = stateprop(xinit, θ_1, θ_2, θ_3, dt, u_prop_temp[:,t]) #r*x_resample.*exp.(-x_resample .+ e[:,t])
+
+        else
+
+            # sort particles and weigths
+            # alg=RadixSort
+            if run_sort == true
+                sorted_idx = sortperm(x[:,t-1]; alg = QuickSort) # ensure that we use QuickSort
+                w[:,t-1] = w[sorted_idx,t-1]
+                x[:,t-1] = x[sorted_idx,t-1]
+            end
+
+            # resample particels using systematic resampling
+            ind = sysresample2(w[:,t-1],N,u_resample_calc[t])
+            x_resample = x[ind,t-1]
+
+            # propagate particels
+            x[:,t] = stateprop(x_resample, θ_1, θ_2, θ_3, dt, u_prop_temp[:,t]) #r*x_resample.*exp.(-x_resample .+ e[:,t])
+
+        end
+
+        # calc weigths and update loglik
+        loglik = loglik + calc_weigths(w,x[:,t],y[t],σ_ϵ,t)
+
+    end
+
+    diagnostics == true ? (return loglik, x) : (return loglik)
 
 end
 
@@ -784,6 +881,43 @@ function stateprop(x_old::Vector, θ_1::Real, θ_2::Real, θ_3::Real, dt::Real, 
     return x_prop
 
 end
+
+
+
+# calc weigths and update loglik
+function calc_weigths(w::Array, x::Array, y::Real, σ_ϵ::Real, t::Int)
+
+
+    N = length(x) # nbr particels
+    logw = zeros(N)
+    w_temp = zeros(N)
+
+    # calc w
+    for i in 1:N; logw[i] = log_normalpdf(x[i], σ_ϵ, y); end
+
+    # find largets wegith
+    constant = maximum(logw)
+
+    # subtract largets weigth
+    for i in 1:N; w_temp[i] = exp(logw[i] - constant); end
+
+    # calc sum of weigths
+    w_sum = sum(w_temp)
+
+    # update loglik
+    #loglik =  loglik + constant + log(w_sum) - log(N)
+
+    # normalize weigths
+    for i in 1:N; w_temp[i] = w_temp[i]/w_sum; end
+
+    w[:,t] = w_temp
+
+    # return loglik
+    return constant + log(w_sum) - log(N)
+
+
+end
+
 
 # calc weigths and update loglik
 function calc_weigths!(w::Array, loglik::Array, x::Array, y::Real, σ_ϵ::Real, m::Int, t::Int)
@@ -816,7 +950,7 @@ function calc_weigths!(w::Array, loglik::Array, x::Array, y::Real, σ_ϵ::Real, 
 
 end
 
-
+# Log-pdf for the normal distribution
 function log_normalpdf(μ::Real, σ::Real, x::Real)
 
   R = σ^2

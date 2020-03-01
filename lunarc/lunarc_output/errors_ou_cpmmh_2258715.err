@@ -1,7 +1,0 @@
-┌ Warning: The call to compilecache failed to create a usable precompiled cache file for StatsBase [2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91]
-│   exception = Required dependency DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] failed to load from a cache file.
-└ @ Base loading.jl:963
-┌ Warning: Module DataFrames with build ID 2859108075266703 is missing from the cache.
-│ This may mean DataFrames [a93c6f00-e57d-5684-b7b6-d8193f3e46c0] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:941
-slurmstepd: error: *** JOB 2258715 ON au219 CANCELLED AT 2019-05-05T00:51:19 ***

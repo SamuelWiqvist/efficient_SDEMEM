@@ -1,0 +1,2 @@
+/var/spool/slurm/job3251255/slurm_script: line 45: 115968 Killed                  julia /home/samwiq/'SDEMEM and CPMMH'/SDEMEM_and_CPMMH/src/'SDEMEM OU neuron data'/tune_nbr_particles_bridge_cpf.jl
+slurmstepd: error: Exceeded step memory limit at some point.
