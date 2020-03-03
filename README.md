@@ -3,7 +3,7 @@
 Link to paper: https://arxiv.org/abs/1907.09851
 
 
-N.B.: The results in the pre-print at arXiv are computed using the version of the code at tag preprint_v1.
+N.B.: The results in the pre-print v2 at arXiv are computed using the version of the code at tag preprint_v2.
 
 ### File structure
 
