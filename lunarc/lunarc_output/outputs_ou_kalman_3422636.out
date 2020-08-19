@@ -1,0 +1,46 @@
+/home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/lunarc
+/home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH
+start run script for kalman
+Starting Gibbs sampler using Kalman.
+-------------
+Percentage done:  10.01 %
+Accaptance rate on 1 to 1001 for ϕ: 36.03 %:
+Accaptance rate on 1 to 1001 for σ_ϵ: 31.90 %:
+-------------
+Percentage done:  20.01 %
+Accaptance rate on 1001 to 2001 for ϕ: 23.97 %:
+Accaptance rate on 1001 to 2001 for σ_ϵ: 27.70 %:
+-------------
+Percentage done:  30.01 %
+Accaptance rate on 2001 to 3001 for ϕ: 24.48 %:
+Accaptance rate on 2001 to 3001 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  40.01 %
+Accaptance rate on 3001 to 4001 for ϕ: 24.58 %:
+Accaptance rate on 3001 to 4001 for σ_ϵ: 24.10 %:
+-------------
+Percentage done:  50.01 %
+Accaptance rate on 4001 to 5001 for ϕ: 24.11 %:
+Accaptance rate on 4001 to 5001 for σ_ϵ: 26.50 %:
+-------------
+Percentage done:  60.01 %
+Accaptance rate on 5001 to 6001 for ϕ: 24.40 %:
+Accaptance rate on 5001 to 6001 for σ_ϵ: 25.80 %:
+-------------
+Percentage done:  70.01 %
+Accaptance rate on 6001 to 7001 for ϕ: 24.18 %:
+Accaptance rate on 6001 to 7001 for σ_ϵ: 26.10 %:
+-------------
+Percentage done:  80.01 %
+Accaptance rate on 7001 to 8001 for ϕ: 24.87 %:
+Accaptance rate on 7001 to 8001 for σ_ϵ: 24.50 %:
+-------------
+Percentage done:  90.01 %
+Accaptance rate on 8001 to 9001 for ϕ: 25.27 %:
+Accaptance rate on 8001 to 9001 for σ_ϵ: 24.70 %:
+Ending Gibbs sampler using Kalman.
+15.819284658
+0.2565675
+0.2642
+1.0
+end run script

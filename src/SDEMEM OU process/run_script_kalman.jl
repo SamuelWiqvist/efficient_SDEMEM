@@ -20,7 +20,7 @@ job = string(M_subjects)*"_"*string(N_time)
 
 # run MH-Gibbs
 R = 60000 #15
-burn_in = 10000
+burn_in = 2000
 
 startval_ϕ = ones(M_subjects,3)
 
@@ -52,8 +52,12 @@ update_interval = 1
 α_power = 0.7
 start_update = 100
 
+
+# estimate parameters using exact Gibbs sampling
+
+
 # set random numbers
-seed_inference = parse(Int,ARGS[1])
+seed_inference = seed_gen_data #parse(Int,ARGS[1])
 Random.seed!(seed_inference)
 
 run_time_kalman = @elapsed chain_ϕ_kalman, chain_σ_ϵ_kalman, chain_η_kalman, accept_vec_kalman = gibbs_exact(R,

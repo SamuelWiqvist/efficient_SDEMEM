@@ -607,7 +607,8 @@ function adaptive_update_σ_ϵ(r::Int,update_interval::Int,start_update::Int,
 
     if mod(r-1,update_interval) == 0 && r-1 >= start_update
 
-        γ = γ_σ_ϵ_0/r^α_power
+        #γ = γ_σ_ϵ_0/(r-start_update)^α_power
+        γ = γ_σ_ϵ_0/(r)^α_power
 
         log_λ_i_σ_ϵ = log_λ_i_σ_ϵ + γ*(α_prob_accept_σ_ϵ - α_star_σ_ϵ)
         μ_i_σ_ϵ = μ_i_σ_ϵ + γ*(chain_σ_ϵ[r] - μ_i_σ_ϵ)
@@ -627,7 +628,8 @@ function adaptive_update_ϕ!(r::Int,update_interval::Int,start_update::Int,
 
     if mod(r-1,update_interval) == 0 && r-1 >= start_update
 
-        γ = γ_ϕ_0/r^α_power
+        #γ = γ_ϕ_0/(r-start_update)^α_power
+        γ = γ_ϕ_0/(r)^α_power
 
         for m in 1:M
             Σ_i_ϕ_tmp = Σ_i_ϕ[m]

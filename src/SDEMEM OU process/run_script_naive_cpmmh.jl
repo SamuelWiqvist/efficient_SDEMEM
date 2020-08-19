@@ -22,7 +22,7 @@ y,x,t_vec,dt,η,σ_ϵ,ϕ,prior_parameters_η,prior_parameters_σ_ϵ = set_up(M=M
 # run MH-Gibbs
 
 R = 60000
-burn_in = 10000
+burn_in = 20000
 
 job = string(M_subjects)*"_"*string(N_time)*"_"*string(nbr_particles)*"_"*string(ρ)
 
@@ -42,12 +42,10 @@ end
 
 startval_σ_ϵ = 0.2
 
-
 Σ_i_σ_ϵ = 0.02^2
 
 Σ_i_ϕ = Matrix{Float64}[]
 for i in 1:M_subjects; push!(Σ_i_ϕ, [0.06 0 0;0 0.1 0;0 0 0.06]); end
-
 
 γ_ϕ_0 = 1.
 γ_σ_ϵ_0 = 1.

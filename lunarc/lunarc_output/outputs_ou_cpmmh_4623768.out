@@ -1,0 +1,2405 @@
+/home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/lunarc
+/home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH
+start run script
+Starting Gibbs sampler using CPMMH.
+-------------
+Percentage done:  0.17 %
+Accaptance rate on 1 to 101 for ϕ: 6.17 %:
+Accaptance rate on 1 to 101 for σ_ϵ: 6.00 %:
+-------------
+Percentage done:  0.34 %
+Accaptance rate on 101 to 201 for ϕ: 14.80 %:
+Accaptance rate on 101 to 201 for σ_ϵ: 4.00 %:
+-------------
+Percentage done:  0.50 %
+Accaptance rate on 201 to 301 for ϕ: 26.10 %:
+Accaptance rate on 201 to 301 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  0.67 %
+Accaptance rate on 301 to 401 for ϕ: 27.13 %:
+Accaptance rate on 301 to 401 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  0.83 %
+Accaptance rate on 401 to 501 for ϕ: 26.75 %:
+Accaptance rate on 401 to 501 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  1.00 %
+Accaptance rate on 501 to 601 for ϕ: 27.22 %:
+Accaptance rate on 501 to 601 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  1.17 %
+Accaptance rate on 601 to 701 for ϕ: 23.08 %:
+Accaptance rate on 601 to 701 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  1.33 %
+Accaptance rate on 701 to 801 for ϕ: 24.93 %:
+Accaptance rate on 701 to 801 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  1.50 %
+Accaptance rate on 801 to 901 for ϕ: 24.73 %:
+Accaptance rate on 801 to 901 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  1.67 %
+Accaptance rate on 901 to 1001 for ϕ: 24.88 %:
+Accaptance rate on 901 to 1001 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  1.84 %
+Accaptance rate on 1001 to 1101 for ϕ: 26.07 %:
+Accaptance rate on 1001 to 1101 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  2.00 %
+Accaptance rate on 1101 to 1201 for ϕ: 22.20 %:
+Accaptance rate on 1101 to 1201 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  2.17 %
+Accaptance rate on 1201 to 1301 for ϕ: 23.93 %:
+Accaptance rate on 1201 to 1301 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  2.33 %
+Accaptance rate on 1301 to 1401 for ϕ: 23.30 %:
+Accaptance rate on 1301 to 1401 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  2.50 %
+Accaptance rate on 1401 to 1501 for ϕ: 21.45 %:
+Accaptance rate on 1401 to 1501 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  2.67 %
+Accaptance rate on 1501 to 1601 for ϕ: 22.95 %:
+Accaptance rate on 1501 to 1601 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  2.83 %
+Accaptance rate on 1601 to 1701 for ϕ: 23.43 %:
+Accaptance rate on 1601 to 1701 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  3.00 %
+Accaptance rate on 1701 to 1801 for ϕ: 19.82 %:
+Accaptance rate on 1701 to 1801 for σ_ϵ: 5.00 %:
+-------------
+Percentage done:  3.17 %
+Accaptance rate on 1801 to 1901 for ϕ: 21.63 %:
+Accaptance rate on 1801 to 1901 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  3.33 %
+Accaptance rate on 1901 to 2001 for ϕ: 20.65 %:
+Accaptance rate on 1901 to 2001 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  3.50 %
+Accaptance rate on 2001 to 2101 for ϕ: 22.48 %:
+Accaptance rate on 2001 to 2101 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  3.67 %
+Accaptance rate on 2101 to 2201 for ϕ: 22.78 %:
+Accaptance rate on 2101 to 2201 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  3.84 %
+Accaptance rate on 2201 to 2301 for ϕ: 22.25 %:
+Accaptance rate on 2201 to 2301 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  4.00 %
+Accaptance rate on 2301 to 2401 for ϕ: 23.03 %:
+Accaptance rate on 2301 to 2401 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  4.17 %
+Accaptance rate on 2401 to 2501 for ϕ: 24.55 %:
+Accaptance rate on 2401 to 2501 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  4.33 %
+Accaptance rate on 2501 to 2601 for ϕ: 22.43 %:
+Accaptance rate on 2501 to 2601 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  4.50 %
+Accaptance rate on 2601 to 2701 for ϕ: 23.63 %:
+Accaptance rate on 2601 to 2701 for σ_ϵ: 9.00 %:
+-------------
+Percentage done:  4.67 %
+Accaptance rate on 2701 to 2801 for ϕ: 22.85 %:
+Accaptance rate on 2701 to 2801 for σ_ϵ: 10.00 %:
+-------------
+Percentage done:  4.83 %
+Accaptance rate on 2801 to 2901 for ϕ: 23.72 %:
+Accaptance rate on 2801 to 2901 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  5.00 %
+Accaptance rate on 2901 to 3001 for ϕ: 23.50 %:
+Accaptance rate on 2901 to 3001 for σ_ϵ: 9.00 %:
+-------------
+Percentage done:  5.17 %
+Accaptance rate on 3001 to 3101 for ϕ: 22.88 %:
+Accaptance rate on 3001 to 3101 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  5.33 %
+Accaptance rate on 3101 to 3201 for ϕ: 24.45 %:
+Accaptance rate on 3101 to 3201 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  5.50 %
+Accaptance rate on 3201 to 3301 for ϕ: 23.25 %:
+Accaptance rate on 3201 to 3301 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  5.67 %
+Accaptance rate on 3301 to 3401 for ϕ: 22.50 %:
+Accaptance rate on 3301 to 3401 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  5.83 %
+Accaptance rate on 3401 to 3501 for ϕ: 25.35 %:
+Accaptance rate on 3401 to 3501 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  6.00 %
+Accaptance rate on 3501 to 3601 for ϕ: 23.10 %:
+Accaptance rate on 3501 to 3601 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  6.17 %
+Accaptance rate on 3601 to 3701 for ϕ: 21.25 %:
+Accaptance rate on 3601 to 3701 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  6.33 %
+Accaptance rate on 3701 to 3801 for ϕ: 21.40 %:
+Accaptance rate on 3701 to 3801 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  6.50 %
+Accaptance rate on 3801 to 3901 for ϕ: 21.45 %:
+Accaptance rate on 3801 to 3901 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  6.67 %
+Accaptance rate on 3901 to 4001 for ϕ: 21.98 %:
+Accaptance rate on 3901 to 4001 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  6.83 %
+Accaptance rate on 4001 to 4101 for ϕ: 22.93 %:
+Accaptance rate on 4001 to 4101 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  7.00 %
+Accaptance rate on 4101 to 4201 for ϕ: 21.18 %:
+Accaptance rate on 4101 to 4201 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  7.17 %
+Accaptance rate on 4201 to 4301 for ϕ: 21.22 %:
+Accaptance rate on 4201 to 4301 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  7.33 %
+Accaptance rate on 4301 to 4401 for ϕ: 21.73 %:
+Accaptance rate on 4301 to 4401 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  7.50 %
+Accaptance rate on 4401 to 4501 for ϕ: 21.50 %:
+Accaptance rate on 4401 to 4501 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  7.67 %
+Accaptance rate on 4501 to 4601 for ϕ: 21.82 %:
+Accaptance rate on 4501 to 4601 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  7.83 %
+Accaptance rate on 4601 to 4701 for ϕ: 21.57 %:
+Accaptance rate on 4601 to 4701 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  8.00 %
+Accaptance rate on 4701 to 4801 for ϕ: 22.13 %:
+Accaptance rate on 4701 to 4801 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  8.17 %
+Accaptance rate on 4801 to 4901 for ϕ: 21.85 %:
+Accaptance rate on 4801 to 4901 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  8.33 %
+Accaptance rate on 4901 to 5001 for ϕ: 23.45 %:
+Accaptance rate on 4901 to 5001 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  8.50 %
+Accaptance rate on 5001 to 5101 for ϕ: 22.57 %:
+Accaptance rate on 5001 to 5101 for σ_ϵ: 12.00 %:
+-------------
+Percentage done:  8.67 %
+Accaptance rate on 5101 to 5201 for ϕ: 20.13 %:
+Accaptance rate on 5101 to 5201 for σ_ϵ: 10.00 %:
+-------------
+Percentage done:  8.83 %
+Accaptance rate on 5201 to 5301 for ϕ: 23.20 %:
+Accaptance rate on 5201 to 5301 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  9.00 %
+Accaptance rate on 5301 to 5401 for ϕ: 24.85 %:
+Accaptance rate on 5301 to 5401 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  9.17 %
+Accaptance rate on 5401 to 5501 for ϕ: 23.88 %:
+Accaptance rate on 5401 to 5501 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  9.34 %
+Accaptance rate on 5501 to 5601 for ϕ: 24.18 %:
+Accaptance rate on 5501 to 5601 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  9.50 %
+Accaptance rate on 5601 to 5701 for ϕ: 24.22 %:
+Accaptance rate on 5601 to 5701 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  9.67 %
+Accaptance rate on 5701 to 5801 for ϕ: 23.72 %:
+Accaptance rate on 5701 to 5801 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  9.84 %
+Accaptance rate on 5801 to 5901 for ϕ: 24.77 %:
+Accaptance rate on 5801 to 5901 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  10.00 %
+Accaptance rate on 5901 to 6001 for ϕ: 23.00 %:
+Accaptance rate on 5901 to 6001 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  10.17 %
+Accaptance rate on 6001 to 6101 for ϕ: 22.57 %:
+Accaptance rate on 6001 to 6101 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  10.33 %
+Accaptance rate on 6101 to 6201 for ϕ: 22.95 %:
+Accaptance rate on 6101 to 6201 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  10.50 %
+Accaptance rate on 6201 to 6301 for ϕ: 21.82 %:
+Accaptance rate on 6201 to 6301 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  10.67 %
+Accaptance rate on 6301 to 6401 for ϕ: 24.05 %:
+Accaptance rate on 6301 to 6401 for σ_ϵ: 10.00 %:
+-------------
+Percentage done:  10.84 %
+Accaptance rate on 6401 to 6501 for ϕ: 23.25 %:
+Accaptance rate on 6401 to 6501 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  11.00 %
+Accaptance rate on 6501 to 6601 for ϕ: 22.60 %:
+Accaptance rate on 6501 to 6601 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  11.17 %
+Accaptance rate on 6601 to 6701 for ϕ: 23.50 %:
+Accaptance rate on 6601 to 6701 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  11.34 %
+Accaptance rate on 6701 to 6801 for ϕ: 22.05 %:
+Accaptance rate on 6701 to 6801 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  11.50 %
+Accaptance rate on 6801 to 6901 for ϕ: 22.48 %:
+Accaptance rate on 6801 to 6901 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  11.67 %
+Accaptance rate on 6901 to 7001 for ϕ: 22.27 %:
+Accaptance rate on 6901 to 7001 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  11.83 %
+Accaptance rate on 7001 to 7101 for ϕ: 25.47 %:
+Accaptance rate on 7001 to 7101 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  12.00 %
+Accaptance rate on 7101 to 7201 for ϕ: 22.45 %:
+Accaptance rate on 7101 to 7201 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  12.17 %
+Accaptance rate on 7201 to 7301 for ϕ: 22.38 %:
+Accaptance rate on 7201 to 7301 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  12.34 %
+Accaptance rate on 7301 to 7401 for ϕ: 23.52 %:
+Accaptance rate on 7301 to 7401 for σ_ϵ: 11.00 %:
+-------------
+Percentage done:  12.50 %
+Accaptance rate on 7401 to 7501 for ϕ: 21.80 %:
+Accaptance rate on 7401 to 7501 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  12.67 %
+Accaptance rate on 7501 to 7601 for ϕ: 22.05 %:
+Accaptance rate on 7501 to 7601 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  12.83 %
+Accaptance rate on 7601 to 7701 for ϕ: 22.55 %:
+Accaptance rate on 7601 to 7701 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  13.00 %
+Accaptance rate on 7701 to 7801 for ϕ: 20.57 %:
+Accaptance rate on 7701 to 7801 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  13.17 %
+Accaptance rate on 7801 to 7901 for ϕ: 24.30 %:
+Accaptance rate on 7801 to 7901 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  13.33 %
+Accaptance rate on 7901 to 8001 for ϕ: 23.13 %:
+Accaptance rate on 7901 to 8001 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  13.50 %
+Accaptance rate on 8001 to 8101 for ϕ: 22.15 %:
+Accaptance rate on 8001 to 8101 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  13.67 %
+Accaptance rate on 8101 to 8201 for ϕ: 23.90 %:
+Accaptance rate on 8101 to 8201 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  13.84 %
+Accaptance rate on 8201 to 8301 for ϕ: 23.63 %:
+Accaptance rate on 8201 to 8301 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  14.00 %
+Accaptance rate on 8301 to 8401 for ϕ: 22.95 %:
+Accaptance rate on 8301 to 8401 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  14.17 %
+Accaptance rate on 8401 to 8501 for ϕ: 24.25 %:
+Accaptance rate on 8401 to 8501 for σ_ϵ: 40.00 %:
+-------------
+Percentage done:  14.34 %
+Accaptance rate on 8501 to 8601 for ϕ: 24.90 %:
+Accaptance rate on 8501 to 8601 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  14.50 %
+Accaptance rate on 8601 to 8701 for ϕ: 25.07 %:
+Accaptance rate on 8601 to 8701 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  14.67 %
+Accaptance rate on 8701 to 8801 for ϕ: 25.27 %:
+Accaptance rate on 8701 to 8801 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  14.84 %
+Accaptance rate on 8801 to 8901 for ϕ: 22.78 %:
+Accaptance rate on 8801 to 8901 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  15.00 %
+Accaptance rate on 8901 to 9001 for ϕ: 22.55 %:
+Accaptance rate on 8901 to 9001 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  15.17 %
+Accaptance rate on 9001 to 9101 for ϕ: 24.07 %:
+Accaptance rate on 9001 to 9101 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  15.33 %
+Accaptance rate on 9101 to 9201 for ϕ: 23.82 %:
+Accaptance rate on 9101 to 9201 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  15.50 %
+Accaptance rate on 9201 to 9301 for ϕ: 24.65 %:
+Accaptance rate on 9201 to 9301 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  15.67 %
+Accaptance rate on 9301 to 9401 for ϕ: 23.47 %:
+Accaptance rate on 9301 to 9401 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  15.83 %
+Accaptance rate on 9401 to 9501 for ϕ: 22.82 %:
+Accaptance rate on 9401 to 9501 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  16.00 %
+Accaptance rate on 9501 to 9601 for ϕ: 24.25 %:
+Accaptance rate on 9501 to 9601 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  16.17 %
+Accaptance rate on 9601 to 9701 for ϕ: 21.85 %:
+Accaptance rate on 9601 to 9701 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  16.34 %
+Accaptance rate on 9701 to 9801 for ϕ: 24.05 %:
+Accaptance rate on 9701 to 9801 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  16.50 %
+Accaptance rate on 9801 to 9901 for ϕ: 22.73 %:
+Accaptance rate on 9801 to 9901 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  16.67 %
+Accaptance rate on 9901 to 10001 for ϕ: 22.70 %:
+Accaptance rate on 9901 to 10001 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  16.84 %
+Accaptance rate on 10001 to 10101 for ϕ: 25.32 %:
+Accaptance rate on 10001 to 10101 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  17.00 %
+Accaptance rate on 10101 to 10201 for ϕ: 25.35 %:
+Accaptance rate on 10101 to 10201 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  17.17 %
+Accaptance rate on 10201 to 10301 for ϕ: 25.05 %:
+Accaptance rate on 10201 to 10301 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  17.34 %
+Accaptance rate on 10301 to 10401 for ϕ: 25.25 %:
+Accaptance rate on 10301 to 10401 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  17.50 %
+Accaptance rate on 10401 to 10501 for ϕ: 22.78 %:
+Accaptance rate on 10401 to 10501 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  17.67 %
+Accaptance rate on 10501 to 10601 for ϕ: 24.43 %:
+Accaptance rate on 10501 to 10601 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  17.84 %
+Accaptance rate on 10601 to 10701 for ϕ: 26.65 %:
+Accaptance rate on 10601 to 10701 for σ_ϵ: 35.00 %:
+-------------
+Percentage done:  18.00 %
+Accaptance rate on 10701 to 10801 for ϕ: 27.00 %:
+Accaptance rate on 10701 to 10801 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  18.17 %
+Accaptance rate on 10801 to 10901 for ϕ: 26.00 %:
+Accaptance rate on 10801 to 10901 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  18.34 %
+Accaptance rate on 10901 to 11001 for ϕ: 23.33 %:
+Accaptance rate on 10901 to 11001 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  18.50 %
+Accaptance rate on 11001 to 11101 for ϕ: 22.43 %:
+Accaptance rate on 11001 to 11101 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  18.67 %
+Accaptance rate on 11101 to 11201 for ϕ: 23.90 %:
+Accaptance rate on 11101 to 11201 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  18.83 %
+Accaptance rate on 11201 to 11301 for ϕ: 22.35 %:
+Accaptance rate on 11201 to 11301 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  19.00 %
+Accaptance rate on 11301 to 11401 for ϕ: 23.90 %:
+Accaptance rate on 11301 to 11401 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  19.17 %
+Accaptance rate on 11401 to 11501 for ϕ: 23.90 %:
+Accaptance rate on 11401 to 11501 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  19.34 %
+Accaptance rate on 11501 to 11601 for ϕ: 22.05 %:
+Accaptance rate on 11501 to 11601 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  19.50 %
+Accaptance rate on 11601 to 11701 for ϕ: 21.95 %:
+Accaptance rate on 11601 to 11701 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  19.67 %
+Accaptance rate on 11701 to 11801 for ϕ: 21.13 %:
+Accaptance rate on 11701 to 11801 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  19.84 %
+Accaptance rate on 11801 to 11901 for ϕ: 21.63 %:
+Accaptance rate on 11801 to 11901 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  20.00 %
+Accaptance rate on 11901 to 12001 for ϕ: 22.32 %:
+Accaptance rate on 11901 to 12001 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  20.17 %
+Accaptance rate on 12001 to 12101 for ϕ: 22.38 %:
+Accaptance rate on 12001 to 12101 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  20.34 %
+Accaptance rate on 12101 to 12201 for ϕ: 23.65 %:
+Accaptance rate on 12101 to 12201 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  20.50 %
+Accaptance rate on 12201 to 12301 for ϕ: 24.32 %:
+Accaptance rate on 12201 to 12301 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  20.67 %
+Accaptance rate on 12301 to 12401 for ϕ: 24.50 %:
+Accaptance rate on 12301 to 12401 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  20.84 %
+Accaptance rate on 12401 to 12501 for ϕ: 24.27 %:
+Accaptance rate on 12401 to 12501 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  21.00 %
+Accaptance rate on 12501 to 12601 for ϕ: 23.80 %:
+Accaptance rate on 12501 to 12601 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  21.17 %
+Accaptance rate on 12601 to 12701 for ϕ: 22.65 %:
+Accaptance rate on 12601 to 12701 for σ_ϵ: 35.00 %:
+-------------
+Percentage done:  21.34 %
+Accaptance rate on 12701 to 12801 for ϕ: 22.73 %:
+Accaptance rate on 12701 to 12801 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  21.50 %
+Accaptance rate on 12801 to 12901 for ϕ: 21.73 %:
+Accaptance rate on 12801 to 12901 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  21.67 %
+Accaptance rate on 12901 to 13001 for ϕ: 23.63 %:
+Accaptance rate on 12901 to 13001 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  21.83 %
+Accaptance rate on 13001 to 13101 for ϕ: 22.78 %:
+Accaptance rate on 13001 to 13101 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  22.00 %
+Accaptance rate on 13101 to 13201 for ϕ: 20.47 %:
+Accaptance rate on 13101 to 13201 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  22.17 %
+Accaptance rate on 13201 to 13301 for ϕ: 20.80 %:
+Accaptance rate on 13201 to 13301 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  22.34 %
+Accaptance rate on 13301 to 13401 for ϕ: 20.47 %:
+Accaptance rate on 13301 to 13401 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  22.50 %
+Accaptance rate on 13401 to 13501 for ϕ: 21.32 %:
+Accaptance rate on 13401 to 13501 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  22.67 %
+Accaptance rate on 13501 to 13601 for ϕ: 24.07 %:
+Accaptance rate on 13501 to 13601 for σ_ϵ: 38.00 %:
+-------------
+Percentage done:  22.84 %
+Accaptance rate on 13601 to 13701 for ϕ: 19.20 %:
+Accaptance rate on 13601 to 13701 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  23.00 %
+Accaptance rate on 13701 to 13801 for ϕ: 21.32 %:
+Accaptance rate on 13701 to 13801 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  23.17 %
+Accaptance rate on 13801 to 13901 for ϕ: 19.63 %:
+Accaptance rate on 13801 to 13901 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  23.34 %
+Accaptance rate on 13901 to 14001 for ϕ: 21.05 %:
+Accaptance rate on 13901 to 14001 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  23.50 %
+Accaptance rate on 14001 to 14101 for ϕ: 23.57 %:
+Accaptance rate on 14001 to 14101 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  23.67 %
+Accaptance rate on 14101 to 14201 for ϕ: 22.15 %:
+Accaptance rate on 14101 to 14201 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  23.84 %
+Accaptance rate on 14201 to 14301 for ϕ: 20.95 %:
+Accaptance rate on 14201 to 14301 for σ_ϵ: 12.00 %:
+-------------
+Percentage done:  24.00 %
+Accaptance rate on 14301 to 14401 for ϕ: 22.57 %:
+Accaptance rate on 14301 to 14401 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  24.17 %
+Accaptance rate on 14401 to 14501 for ϕ: 21.00 %:
+Accaptance rate on 14401 to 14501 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  24.34 %
+Accaptance rate on 14501 to 14601 for ϕ: 21.70 %:
+Accaptance rate on 14501 to 14601 for σ_ϵ: 12.00 %:
+-------------
+Percentage done:  24.50 %
+Accaptance rate on 14601 to 14701 for ϕ: 23.55 %:
+Accaptance rate on 14601 to 14701 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  24.67 %
+Accaptance rate on 14701 to 14801 for ϕ: 23.60 %:
+Accaptance rate on 14701 to 14801 for σ_ϵ: 10.00 %:
+-------------
+Percentage done:  24.83 %
+Accaptance rate on 14801 to 14901 for ϕ: 22.85 %:
+Accaptance rate on 14801 to 14901 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  25.00 %
+Accaptance rate on 14901 to 15001 for ϕ: 22.15 %:
+Accaptance rate on 14901 to 15001 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  25.17 %
+Accaptance rate on 15001 to 15101 for ϕ: 22.10 %:
+Accaptance rate on 15001 to 15101 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  25.34 %
+Accaptance rate on 15101 to 15201 for ϕ: 20.18 %:
+Accaptance rate on 15101 to 15201 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  25.50 %
+Accaptance rate on 15201 to 15301 for ϕ: 20.63 %:
+Accaptance rate on 15201 to 15301 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  25.67 %
+Accaptance rate on 15301 to 15401 for ϕ: 20.38 %:
+Accaptance rate on 15301 to 15401 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  25.84 %
+Accaptance rate on 15401 to 15501 for ϕ: 21.77 %:
+Accaptance rate on 15401 to 15501 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  26.00 %
+Accaptance rate on 15501 to 15601 for ϕ: 24.13 %:
+Accaptance rate on 15501 to 15601 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  26.17 %
+Accaptance rate on 15601 to 15701 for ϕ: 22.07 %:
+Accaptance rate on 15601 to 15701 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  26.33 %
+Accaptance rate on 15701 to 15801 for ϕ: 22.15 %:
+Accaptance rate on 15701 to 15801 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  26.50 %
+Accaptance rate on 15801 to 15901 for ϕ: 23.43 %:
+Accaptance rate on 15801 to 15901 for σ_ϵ: 9.00 %:
+-------------
+Percentage done:  26.67 %
+Accaptance rate on 15901 to 16001 for ϕ: 23.08 %:
+Accaptance rate on 15901 to 16001 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  26.83 %
+Accaptance rate on 16001 to 16101 for ϕ: 23.38 %:
+Accaptance rate on 16001 to 16101 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  27.00 %
+Accaptance rate on 16101 to 16201 for ϕ: 21.05 %:
+Accaptance rate on 16101 to 16201 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  27.17 %
+Accaptance rate on 16201 to 16301 for ϕ: 24.05 %:
+Accaptance rate on 16201 to 16301 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  27.33 %
+Accaptance rate on 16301 to 16401 for ϕ: 22.40 %:
+Accaptance rate on 16301 to 16401 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  27.50 %
+Accaptance rate on 16401 to 16501 for ϕ: 22.57 %:
+Accaptance rate on 16401 to 16501 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  27.67 %
+Accaptance rate on 16501 to 16601 for ϕ: 21.82 %:
+Accaptance rate on 16501 to 16601 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  27.83 %
+Accaptance rate on 16601 to 16701 for ϕ: 21.40 %:
+Accaptance rate on 16601 to 16701 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  28.00 %
+Accaptance rate on 16701 to 16801 for ϕ: 23.60 %:
+Accaptance rate on 16701 to 16801 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  28.17 %
+Accaptance rate on 16801 to 16901 for ϕ: 23.47 %:
+Accaptance rate on 16801 to 16901 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  28.34 %
+Accaptance rate on 16901 to 17001 for ϕ: 23.65 %:
+Accaptance rate on 16901 to 17001 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  28.50 %
+Accaptance rate on 17001 to 17101 for ϕ: 20.77 %:
+Accaptance rate on 17001 to 17101 for σ_ϵ: 12.00 %:
+-------------
+Percentage done:  28.67 %
+Accaptance rate on 17101 to 17201 for ϕ: 22.45 %:
+Accaptance rate on 17101 to 17201 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  28.84 %
+Accaptance rate on 17201 to 17301 for ϕ: 23.57 %:
+Accaptance rate on 17201 to 17301 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  29.00 %
+Accaptance rate on 17301 to 17401 for ϕ: 21.80 %:
+Accaptance rate on 17301 to 17401 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  29.17 %
+Accaptance rate on 17401 to 17501 for ϕ: 24.10 %:
+Accaptance rate on 17401 to 17501 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  29.34 %
+Accaptance rate on 17501 to 17601 for ϕ: 22.23 %:
+Accaptance rate on 17501 to 17601 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  29.50 %
+Accaptance rate on 17601 to 17701 for ϕ: 23.93 %:
+Accaptance rate on 17601 to 17701 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  29.67 %
+Accaptance rate on 17701 to 17801 for ϕ: 24.38 %:
+Accaptance rate on 17701 to 17801 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  29.84 %
+Accaptance rate on 17801 to 17901 for ϕ: 23.08 %:
+Accaptance rate on 17801 to 17901 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  30.00 %
+Accaptance rate on 17901 to 18001 for ϕ: 25.45 %:
+Accaptance rate on 17901 to 18001 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  30.17 %
+Accaptance rate on 18001 to 18101 for ϕ: 25.55 %:
+Accaptance rate on 18001 to 18101 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  30.34 %
+Accaptance rate on 18101 to 18201 for ϕ: 24.55 %:
+Accaptance rate on 18101 to 18201 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  30.50 %
+Accaptance rate on 18201 to 18301 for ϕ: 26.50 %:
+Accaptance rate on 18201 to 18301 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  30.67 %
+Accaptance rate on 18301 to 18401 for ϕ: 24.60 %:
+Accaptance rate on 18301 to 18401 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  30.84 %
+Accaptance rate on 18401 to 18501 for ϕ: 23.93 %:
+Accaptance rate on 18401 to 18501 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  31.00 %
+Accaptance rate on 18501 to 18601 for ϕ: 24.35 %:
+Accaptance rate on 18501 to 18601 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  31.17 %
+Accaptance rate on 18601 to 18701 for ϕ: 22.10 %:
+Accaptance rate on 18601 to 18701 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  31.34 %
+Accaptance rate on 18701 to 18801 for ϕ: 24.77 %:
+Accaptance rate on 18701 to 18801 for σ_ϵ: 36.00 %:
+-------------
+Percentage done:  31.50 %
+Accaptance rate on 18801 to 18901 for ϕ: 20.90 %:
+Accaptance rate on 18801 to 18901 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  31.67 %
+Accaptance rate on 18901 to 19001 for ϕ: 21.93 %:
+Accaptance rate on 18901 to 19001 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  31.84 %
+Accaptance rate on 19001 to 19101 for ϕ: 24.13 %:
+Accaptance rate on 19001 to 19101 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  32.00 %
+Accaptance rate on 19101 to 19201 for ϕ: 25.00 %:
+Accaptance rate on 19101 to 19201 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  32.17 %
+Accaptance rate on 19201 to 19301 for ϕ: 23.75 %:
+Accaptance rate on 19201 to 19301 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  32.34 %
+Accaptance rate on 19301 to 19401 for ϕ: 25.50 %:
+Accaptance rate on 19301 to 19401 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  32.50 %
+Accaptance rate on 19401 to 19501 for ϕ: 22.95 %:
+Accaptance rate on 19401 to 19501 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  32.67 %
+Accaptance rate on 19501 to 19601 for ϕ: 24.30 %:
+Accaptance rate on 19501 to 19601 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  32.84 %
+Accaptance rate on 19601 to 19701 for ϕ: 24.68 %:
+Accaptance rate on 19601 to 19701 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  33.00 %
+Accaptance rate on 19701 to 19801 for ϕ: 25.17 %:
+Accaptance rate on 19701 to 19801 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  33.17 %
+Accaptance rate on 19801 to 19901 for ϕ: 24.63 %:
+Accaptance rate on 19801 to 19901 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  33.34 %
+Accaptance rate on 19901 to 20001 for ϕ: 23.88 %:
+Accaptance rate on 19901 to 20001 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  33.50 %
+Accaptance rate on 20001 to 20101 for ϕ: 24.18 %:
+Accaptance rate on 20001 to 20101 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  33.67 %
+Accaptance rate on 20101 to 20201 for ϕ: 24.57 %:
+Accaptance rate on 20101 to 20201 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  33.84 %
+Accaptance rate on 20201 to 20301 for ϕ: 24.80 %:
+Accaptance rate on 20201 to 20301 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  34.00 %
+Accaptance rate on 20301 to 20401 for ϕ: 22.45 %:
+Accaptance rate on 20301 to 20401 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  34.17 %
+Accaptance rate on 20401 to 20501 for ϕ: 22.02 %:
+Accaptance rate on 20401 to 20501 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  34.34 %
+Accaptance rate on 20501 to 20601 for ϕ: 21.52 %:
+Accaptance rate on 20501 to 20601 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  34.50 %
+Accaptance rate on 20601 to 20701 for ϕ: 20.75 %:
+Accaptance rate on 20601 to 20701 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  34.67 %
+Accaptance rate on 20701 to 20801 for ϕ: 21.57 %:
+Accaptance rate on 20701 to 20801 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  34.84 %
+Accaptance rate on 20801 to 20901 for ϕ: 21.52 %:
+Accaptance rate on 20801 to 20901 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  35.00 %
+Accaptance rate on 20901 to 21001 for ϕ: 23.50 %:
+Accaptance rate on 20901 to 21001 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  35.17 %
+Accaptance rate on 21001 to 21101 for ϕ: 23.00 %:
+Accaptance rate on 21001 to 21101 for σ_ϵ: 34.00 %:
+-------------
+Percentage done:  35.34 %
+Accaptance rate on 21101 to 21201 for ϕ: 22.85 %:
+Accaptance rate on 21101 to 21201 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  35.50 %
+Accaptance rate on 21201 to 21301 for ϕ: 21.95 %:
+Accaptance rate on 21201 to 21301 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  35.67 %
+Accaptance rate on 21301 to 21401 for ϕ: 21.63 %:
+Accaptance rate on 21301 to 21401 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  35.84 %
+Accaptance rate on 21401 to 21501 for ϕ: 22.25 %:
+Accaptance rate on 21401 to 21501 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  36.00 %
+Accaptance rate on 21501 to 21601 for ϕ: 23.67 %:
+Accaptance rate on 21501 to 21601 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  36.17 %
+Accaptance rate on 21601 to 21701 for ϕ: 22.35 %:
+Accaptance rate on 21601 to 21701 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  36.34 %
+Accaptance rate on 21701 to 21801 for ϕ: 24.25 %:
+Accaptance rate on 21701 to 21801 for σ_ϵ: 9.00 %:
+-------------
+Percentage done:  36.50 %
+Accaptance rate on 21801 to 21901 for ϕ: 23.25 %:
+Accaptance rate on 21801 to 21901 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  36.67 %
+Accaptance rate on 21901 to 22001 for ϕ: 22.00 %:
+Accaptance rate on 21901 to 22001 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  36.84 %
+Accaptance rate on 22001 to 22101 for ϕ: 24.82 %:
+Accaptance rate on 22001 to 22101 for σ_ϵ: 12.00 %:
+-------------
+Percentage done:  37.00 %
+Accaptance rate on 22101 to 22201 for ϕ: 22.80 %:
+Accaptance rate on 22101 to 22201 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  37.17 %
+Accaptance rate on 22201 to 22301 for ϕ: 22.90 %:
+Accaptance rate on 22201 to 22301 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  37.34 %
+Accaptance rate on 22301 to 22401 for ϕ: 23.93 %:
+Accaptance rate on 22301 to 22401 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  37.50 %
+Accaptance rate on 22401 to 22501 for ϕ: 24.02 %:
+Accaptance rate on 22401 to 22501 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  37.67 %
+Accaptance rate on 22501 to 22601 for ϕ: 22.25 %:
+Accaptance rate on 22501 to 22601 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  37.84 %
+Accaptance rate on 22601 to 22701 for ϕ: 23.67 %:
+Accaptance rate on 22601 to 22701 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  38.00 %
+Accaptance rate on 22701 to 22801 for ϕ: 23.95 %:
+Accaptance rate on 22701 to 22801 for σ_ϵ: 11.00 %:
+-------------
+Percentage done:  38.17 %
+Accaptance rate on 22801 to 22901 for ϕ: 24.45 %:
+Accaptance rate on 22801 to 22901 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  38.34 %
+Accaptance rate on 22901 to 23001 for ϕ: 26.05 %:
+Accaptance rate on 22901 to 23001 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  38.50 %
+Accaptance rate on 23001 to 23101 for ϕ: 23.67 %:
+Accaptance rate on 23001 to 23101 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  38.67 %
+Accaptance rate on 23101 to 23201 for ϕ: 23.82 %:
+Accaptance rate on 23101 to 23201 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  38.83 %
+Accaptance rate on 23201 to 23301 for ϕ: 25.15 %:
+Accaptance rate on 23201 to 23301 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  39.00 %
+Accaptance rate on 23301 to 23401 for ϕ: 24.55 %:
+Accaptance rate on 23301 to 23401 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  39.17 %
+Accaptance rate on 23401 to 23501 for ϕ: 24.45 %:
+Accaptance rate on 23401 to 23501 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  39.34 %
+Accaptance rate on 23501 to 23601 for ϕ: 24.22 %:
+Accaptance rate on 23501 to 23601 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  39.50 %
+Accaptance rate on 23601 to 23701 for ϕ: 24.80 %:
+Accaptance rate on 23601 to 23701 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  39.67 %
+Accaptance rate on 23701 to 23801 for ϕ: 24.82 %:
+Accaptance rate on 23701 to 23801 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  39.84 %
+Accaptance rate on 23801 to 23901 for ϕ: 23.67 %:
+Accaptance rate on 23801 to 23901 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  40.00 %
+Accaptance rate on 23901 to 24001 for ϕ: 22.18 %:
+Accaptance rate on 23901 to 24001 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  40.17 %
+Accaptance rate on 24001 to 24101 for ϕ: 22.13 %:
+Accaptance rate on 24001 to 24101 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  40.34 %
+Accaptance rate on 24101 to 24201 for ϕ: 21.70 %:
+Accaptance rate on 24101 to 24201 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  40.50 %
+Accaptance rate on 24201 to 24301 for ϕ: 23.97 %:
+Accaptance rate on 24201 to 24301 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  40.67 %
+Accaptance rate on 24301 to 24401 for ϕ: 24.18 %:
+Accaptance rate on 24301 to 24401 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  40.84 %
+Accaptance rate on 24401 to 24501 for ϕ: 23.00 %:
+Accaptance rate on 24401 to 24501 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  41.00 %
+Accaptance rate on 24501 to 24601 for ϕ: 25.40 %:
+Accaptance rate on 24501 to 24601 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  41.17 %
+Accaptance rate on 24601 to 24701 for ϕ: 24.77 %:
+Accaptance rate on 24601 to 24701 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  41.34 %
+Accaptance rate on 24701 to 24801 for ϕ: 25.45 %:
+Accaptance rate on 24701 to 24801 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  41.50 %
+Accaptance rate on 24801 to 24901 for ϕ: 23.47 %:
+Accaptance rate on 24801 to 24901 for σ_ϵ: 33.00 %:
+-------------
+Percentage done:  41.67 %
+Accaptance rate on 24901 to 25001 for ϕ: 23.65 %:
+Accaptance rate on 24901 to 25001 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  41.84 %
+Accaptance rate on 25001 to 25101 for ϕ: 24.82 %:
+Accaptance rate on 25001 to 25101 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  42.00 %
+Accaptance rate on 25101 to 25201 for ϕ: 25.97 %:
+Accaptance rate on 25101 to 25201 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  42.17 %
+Accaptance rate on 25201 to 25301 for ϕ: 24.15 %:
+Accaptance rate on 25201 to 25301 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  42.34 %
+Accaptance rate on 25301 to 25401 for ϕ: 22.63 %:
+Accaptance rate on 25301 to 25401 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  42.50 %
+Accaptance rate on 25401 to 25501 for ϕ: 23.50 %:
+Accaptance rate on 25401 to 25501 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  42.67 %
+Accaptance rate on 25501 to 25601 for ϕ: 21.75 %:
+Accaptance rate on 25501 to 25601 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  42.84 %
+Accaptance rate on 25601 to 25701 for ϕ: 22.75 %:
+Accaptance rate on 25601 to 25701 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  43.00 %
+Accaptance rate on 25701 to 25801 for ϕ: 24.52 %:
+Accaptance rate on 25701 to 25801 for σ_ϵ: 33.00 %:
+-------------
+Percentage done:  43.17 %
+Accaptance rate on 25801 to 25901 for ϕ: 22.10 %:
+Accaptance rate on 25801 to 25901 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  43.34 %
+Accaptance rate on 25901 to 26001 for ϕ: 21.02 %:
+Accaptance rate on 25901 to 26001 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  43.50 %
+Accaptance rate on 26001 to 26101 for ϕ: 25.67 %:
+Accaptance rate on 26001 to 26101 for σ_ϵ: 35.00 %:
+-------------
+Percentage done:  43.67 %
+Accaptance rate on 26101 to 26201 for ϕ: 23.23 %:
+Accaptance rate on 26101 to 26201 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  43.84 %
+Accaptance rate on 26201 to 26301 for ϕ: 24.90 %:
+Accaptance rate on 26201 to 26301 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  44.00 %
+Accaptance rate on 26301 to 26401 for ϕ: 22.53 %:
+Accaptance rate on 26301 to 26401 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  44.17 %
+Accaptance rate on 26401 to 26501 for ϕ: 25.85 %:
+Accaptance rate on 26401 to 26501 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  44.34 %
+Accaptance rate on 26501 to 26601 for ϕ: 24.35 %:
+Accaptance rate on 26501 to 26601 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  44.50 %
+Accaptance rate on 26601 to 26701 for ϕ: 23.52 %:
+Accaptance rate on 26601 to 26701 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  44.67 %
+Accaptance rate on 26701 to 26801 for ϕ: 23.08 %:
+Accaptance rate on 26701 to 26801 for σ_ϵ: 12.00 %:
+-------------
+Percentage done:  44.84 %
+Accaptance rate on 26801 to 26901 for ϕ: 24.38 %:
+Accaptance rate on 26801 to 26901 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  45.00 %
+Accaptance rate on 26901 to 27001 for ϕ: 24.57 %:
+Accaptance rate on 26901 to 27001 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  45.17 %
+Accaptance rate on 27001 to 27101 for ϕ: 22.30 %:
+Accaptance rate on 27001 to 27101 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  45.34 %
+Accaptance rate on 27101 to 27201 for ϕ: 24.20 %:
+Accaptance rate on 27101 to 27201 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  45.50 %
+Accaptance rate on 27201 to 27301 for ϕ: 25.57 %:
+Accaptance rate on 27201 to 27301 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  45.67 %
+Accaptance rate on 27301 to 27401 for ϕ: 24.57 %:
+Accaptance rate on 27301 to 27401 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  45.84 %
+Accaptance rate on 27401 to 27501 for ϕ: 23.13 %:
+Accaptance rate on 27401 to 27501 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  46.00 %
+Accaptance rate on 27501 to 27601 for ϕ: 23.03 %:
+Accaptance rate on 27501 to 27601 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  46.17 %
+Accaptance rate on 27601 to 27701 for ϕ: 24.22 %:
+Accaptance rate on 27601 to 27701 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  46.34 %
+Accaptance rate on 27701 to 27801 for ϕ: 23.63 %:
+Accaptance rate on 27701 to 27801 for σ_ϵ: 32.00 %:
+-------------
+Percentage done:  46.50 %
+Accaptance rate on 27801 to 27901 for ϕ: 25.20 %:
+Accaptance rate on 27801 to 27901 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  46.67 %
+Accaptance rate on 27901 to 28001 for ϕ: 23.38 %:
+Accaptance rate on 27901 to 28001 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  46.84 %
+Accaptance rate on 28001 to 28101 for ϕ: 25.62 %:
+Accaptance rate on 28001 to 28101 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  47.00 %
+Accaptance rate on 28101 to 28201 for ϕ: 24.38 %:
+Accaptance rate on 28101 to 28201 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  47.17 %
+Accaptance rate on 28201 to 28301 for ϕ: 23.05 %:
+Accaptance rate on 28201 to 28301 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  47.34 %
+Accaptance rate on 28301 to 28401 for ϕ: 24.07 %:
+Accaptance rate on 28301 to 28401 for σ_ϵ: 32.00 %:
+-------------
+Percentage done:  47.50 %
+Accaptance rate on 28401 to 28501 for ϕ: 22.18 %:
+Accaptance rate on 28401 to 28501 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  47.67 %
+Accaptance rate on 28501 to 28601 for ϕ: 24.45 %:
+Accaptance rate on 28501 to 28601 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  47.84 %
+Accaptance rate on 28601 to 28701 for ϕ: 25.60 %:
+Accaptance rate on 28601 to 28701 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  48.00 %
+Accaptance rate on 28701 to 28801 for ϕ: 24.15 %:
+Accaptance rate on 28701 to 28801 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  48.17 %
+Accaptance rate on 28801 to 28901 for ϕ: 24.05 %:
+Accaptance rate on 28801 to 28901 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  48.34 %
+Accaptance rate on 28901 to 29001 for ϕ: 23.95 %:
+Accaptance rate on 28901 to 29001 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  48.50 %
+Accaptance rate on 29001 to 29101 for ϕ: 23.10 %:
+Accaptance rate on 29001 to 29101 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  48.67 %
+Accaptance rate on 29101 to 29201 for ϕ: 24.98 %:
+Accaptance rate on 29101 to 29201 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  48.84 %
+Accaptance rate on 29201 to 29301 for ϕ: 24.43 %:
+Accaptance rate on 29201 to 29301 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  49.00 %
+Accaptance rate on 29301 to 29401 for ϕ: 24.68 %:
+Accaptance rate on 29301 to 29401 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  49.17 %
+Accaptance rate on 29401 to 29501 for ϕ: 23.55 %:
+Accaptance rate on 29401 to 29501 for σ_ϵ: 32.00 %:
+-------------
+Percentage done:  49.34 %
+Accaptance rate on 29501 to 29601 for ϕ: 22.85 %:
+Accaptance rate on 29501 to 29601 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  49.50 %
+Accaptance rate on 29601 to 29701 for ϕ: 24.22 %:
+Accaptance rate on 29601 to 29701 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  49.67 %
+Accaptance rate on 29701 to 29801 for ϕ: 24.63 %:
+Accaptance rate on 29701 to 29801 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  49.84 %
+Accaptance rate on 29801 to 29901 for ϕ: 25.42 %:
+Accaptance rate on 29801 to 29901 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  50.00 %
+Accaptance rate on 29901 to 30001 for ϕ: 25.67 %:
+Accaptance rate on 29901 to 30001 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  50.17 %
+Accaptance rate on 30001 to 30101 for ϕ: 23.97 %:
+Accaptance rate on 30001 to 30101 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  50.33 %
+Accaptance rate on 30101 to 30201 for ϕ: 23.65 %:
+Accaptance rate on 30101 to 30201 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  50.50 %
+Accaptance rate on 30201 to 30301 for ϕ: 23.65 %:
+Accaptance rate on 30201 to 30301 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  50.67 %
+Accaptance rate on 30301 to 30401 for ϕ: 22.10 %:
+Accaptance rate on 30301 to 30401 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  50.83 %
+Accaptance rate on 30401 to 30501 for ϕ: 22.30 %:
+Accaptance rate on 30401 to 30501 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  51.00 %
+Accaptance rate on 30501 to 30601 for ϕ: 23.72 %:
+Accaptance rate on 30501 to 30601 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  51.17 %
+Accaptance rate on 30601 to 30701 for ϕ: 22.18 %:
+Accaptance rate on 30601 to 30701 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  51.33 %
+Accaptance rate on 30701 to 30801 for ϕ: 21.15 %:
+Accaptance rate on 30701 to 30801 for σ_ϵ: 32.00 %:
+-------------
+Percentage done:  51.50 %
+Accaptance rate on 30801 to 30901 for ϕ: 23.35 %:
+Accaptance rate on 30801 to 30901 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  51.67 %
+Accaptance rate on 30901 to 31001 for ϕ: 22.65 %:
+Accaptance rate on 30901 to 31001 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  51.84 %
+Accaptance rate on 31001 to 31101 for ϕ: 23.35 %:
+Accaptance rate on 31001 to 31101 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  52.00 %
+Accaptance rate on 31101 to 31201 for ϕ: 22.25 %:
+Accaptance rate on 31101 to 31201 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  52.17 %
+Accaptance rate on 31201 to 31301 for ϕ: 21.57 %:
+Accaptance rate on 31201 to 31301 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  52.34 %
+Accaptance rate on 31301 to 31401 for ϕ: 23.80 %:
+Accaptance rate on 31301 to 31401 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  52.50 %
+Accaptance rate on 31401 to 31501 for ϕ: 24.10 %:
+Accaptance rate on 31401 to 31501 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  52.67 %
+Accaptance rate on 31501 to 31601 for ϕ: 24.18 %:
+Accaptance rate on 31501 to 31601 for σ_ϵ: 41.00 %:
+-------------
+Percentage done:  52.84 %
+Accaptance rate on 31601 to 31701 for ϕ: 21.07 %:
+Accaptance rate on 31601 to 31701 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  53.00 %
+Accaptance rate on 31701 to 31801 for ϕ: 24.05 %:
+Accaptance rate on 31701 to 31801 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  53.17 %
+Accaptance rate on 31801 to 31901 for ϕ: 24.15 %:
+Accaptance rate on 31801 to 31901 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  53.34 %
+Accaptance rate on 31901 to 32001 for ϕ: 23.60 %:
+Accaptance rate on 31901 to 32001 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  53.50 %
+Accaptance rate on 32001 to 32101 for ϕ: 24.25 %:
+Accaptance rate on 32001 to 32101 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  53.67 %
+Accaptance rate on 32101 to 32201 for ϕ: 24.85 %:
+Accaptance rate on 32101 to 32201 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  53.84 %
+Accaptance rate on 32201 to 32301 for ϕ: 24.63 %:
+Accaptance rate on 32201 to 32301 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  54.00 %
+Accaptance rate on 32301 to 32401 for ϕ: 25.45 %:
+Accaptance rate on 32301 to 32401 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  54.17 %
+Accaptance rate on 32401 to 32501 for ϕ: 25.85 %:
+Accaptance rate on 32401 to 32501 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  54.34 %
+Accaptance rate on 32501 to 32601 for ϕ: 23.75 %:
+Accaptance rate on 32501 to 32601 for σ_ϵ: 39.00 %:
+-------------
+Percentage done:  54.50 %
+Accaptance rate on 32601 to 32701 for ϕ: 20.45 %:
+Accaptance rate on 32601 to 32701 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  54.67 %
+Accaptance rate on 32701 to 32801 for ϕ: 23.88 %:
+Accaptance rate on 32701 to 32801 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  54.84 %
+Accaptance rate on 32801 to 32901 for ϕ: 25.02 %:
+Accaptance rate on 32801 to 32901 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  55.00 %
+Accaptance rate on 32901 to 33001 for ϕ: 24.15 %:
+Accaptance rate on 32901 to 33001 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  55.17 %
+Accaptance rate on 33001 to 33101 for ϕ: 23.77 %:
+Accaptance rate on 33001 to 33101 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  55.34 %
+Accaptance rate on 33101 to 33201 for ϕ: 22.75 %:
+Accaptance rate on 33101 to 33201 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  55.50 %
+Accaptance rate on 33201 to 33301 for ϕ: 21.75 %:
+Accaptance rate on 33201 to 33301 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  55.67 %
+Accaptance rate on 33301 to 33401 for ϕ: 24.47 %:
+Accaptance rate on 33301 to 33401 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  55.84 %
+Accaptance rate on 33401 to 33501 for ϕ: 20.93 %:
+Accaptance rate on 33401 to 33501 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  56.00 %
+Accaptance rate on 33501 to 33601 for ϕ: 23.15 %:
+Accaptance rate on 33501 to 33601 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  56.17 %
+Accaptance rate on 33601 to 33701 for ϕ: 22.30 %:
+Accaptance rate on 33601 to 33701 for σ_ϵ: 41.00 %:
+-------------
+Percentage done:  56.34 %
+Accaptance rate on 33701 to 33801 for ϕ: 24.18 %:
+Accaptance rate on 33701 to 33801 for σ_ϵ: 38.00 %:
+-------------
+Percentage done:  56.50 %
+Accaptance rate on 33801 to 33901 for ϕ: 21.40 %:
+Accaptance rate on 33801 to 33901 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  56.67 %
+Accaptance rate on 33901 to 34001 for ϕ: 21.65 %:
+Accaptance rate on 33901 to 34001 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  56.84 %
+Accaptance rate on 34001 to 34101 for ϕ: 24.25 %:
+Accaptance rate on 34001 to 34101 for σ_ϵ: 36.00 %:
+-------------
+Percentage done:  57.00 %
+Accaptance rate on 34101 to 34201 for ϕ: 23.20 %:
+Accaptance rate on 34101 to 34201 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  57.17 %
+Accaptance rate on 34201 to 34301 for ϕ: 23.33 %:
+Accaptance rate on 34201 to 34301 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  57.34 %
+Accaptance rate on 34301 to 34401 for ϕ: 24.60 %:
+Accaptance rate on 34301 to 34401 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  57.50 %
+Accaptance rate on 34401 to 34501 for ϕ: 23.33 %:
+Accaptance rate on 34401 to 34501 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  57.67 %
+Accaptance rate on 34501 to 34601 for ϕ: 24.40 %:
+Accaptance rate on 34501 to 34601 for σ_ϵ: 32.00 %:
+-------------
+Percentage done:  57.84 %
+Accaptance rate on 34601 to 34701 for ϕ: 23.23 %:
+Accaptance rate on 34601 to 34701 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  58.00 %
+Accaptance rate on 34701 to 34801 for ϕ: 24.07 %:
+Accaptance rate on 34701 to 34801 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  58.17 %
+Accaptance rate on 34801 to 34901 for ϕ: 25.52 %:
+Accaptance rate on 34801 to 34901 for σ_ϵ: 32.00 %:
+-------------
+Percentage done:  58.34 %
+Accaptance rate on 34901 to 35001 for ϕ: 28.50 %:
+Accaptance rate on 34901 to 35001 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  58.50 %
+Accaptance rate on 35001 to 35101 for ϕ: 26.92 %:
+Accaptance rate on 35001 to 35101 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  58.67 %
+Accaptance rate on 35101 to 35201 for ϕ: 26.38 %:
+Accaptance rate on 35101 to 35201 for σ_ϵ: 33.00 %:
+-------------
+Percentage done:  58.84 %
+Accaptance rate on 35201 to 35301 for ϕ: 26.17 %:
+Accaptance rate on 35201 to 35301 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  59.00 %
+Accaptance rate on 35301 to 35401 for ϕ: 24.65 %:
+Accaptance rate on 35301 to 35401 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  59.17 %
+Accaptance rate on 35401 to 35501 for ϕ: 23.33 %:
+Accaptance rate on 35401 to 35501 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  59.34 %
+Accaptance rate on 35501 to 35601 for ϕ: 23.60 %:
+Accaptance rate on 35501 to 35601 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  59.50 %
+Accaptance rate on 35601 to 35701 for ϕ: 22.95 %:
+Accaptance rate on 35601 to 35701 for σ_ϵ: 32.00 %:
+-------------
+Percentage done:  59.67 %
+Accaptance rate on 35701 to 35801 for ϕ: 25.07 %:
+Accaptance rate on 35701 to 35801 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  59.84 %
+Accaptance rate on 35801 to 35901 for ϕ: 26.85 %:
+Accaptance rate on 35801 to 35901 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  60.00 %
+Accaptance rate on 35901 to 36001 for ϕ: 25.37 %:
+Accaptance rate on 35901 to 36001 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  60.17 %
+Accaptance rate on 36001 to 36101 for ϕ: 23.05 %:
+Accaptance rate on 36001 to 36101 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  60.34 %
+Accaptance rate on 36101 to 36201 for ϕ: 24.75 %:
+Accaptance rate on 36101 to 36201 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  60.50 %
+Accaptance rate on 36201 to 36301 for ϕ: 22.68 %:
+Accaptance rate on 36201 to 36301 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  60.67 %
+Accaptance rate on 36301 to 36401 for ϕ: 24.98 %:
+Accaptance rate on 36301 to 36401 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  60.83 %
+Accaptance rate on 36401 to 36501 for ϕ: 25.82 %:
+Accaptance rate on 36401 to 36501 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  61.00 %
+Accaptance rate on 36501 to 36601 for ϕ: 25.42 %:
+Accaptance rate on 36501 to 36601 for σ_ϵ: 39.00 %:
+-------------
+Percentage done:  61.17 %
+Accaptance rate on 36601 to 36701 for ϕ: 26.82 %:
+Accaptance rate on 36601 to 36701 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  61.33 %
+Accaptance rate on 36701 to 36801 for ϕ: 25.07 %:
+Accaptance rate on 36701 to 36801 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  61.50 %
+Accaptance rate on 36801 to 36901 for ϕ: 24.50 %:
+Accaptance rate on 36801 to 36901 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  61.67 %
+Accaptance rate on 36901 to 37001 for ϕ: 25.82 %:
+Accaptance rate on 36901 to 37001 for σ_ϵ: 33.00 %:
+-------------
+Percentage done:  61.83 %
+Accaptance rate on 37001 to 37101 for ϕ: 23.35 %:
+Accaptance rate on 37001 to 37101 for σ_ϵ: 33.00 %:
+-------------
+Percentage done:  62.00 %
+Accaptance rate on 37101 to 37201 for ϕ: 26.22 %:
+Accaptance rate on 37101 to 37201 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  62.17 %
+Accaptance rate on 37201 to 37301 for ϕ: 25.32 %:
+Accaptance rate on 37201 to 37301 for σ_ϵ: 32.00 %:
+-------------
+Percentage done:  62.33 %
+Accaptance rate on 37301 to 37401 for ϕ: 21.75 %:
+Accaptance rate on 37301 to 37401 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  62.50 %
+Accaptance rate on 37401 to 37501 for ϕ: 22.45 %:
+Accaptance rate on 37401 to 37501 for σ_ϵ: 35.00 %:
+-------------
+Percentage done:  62.67 %
+Accaptance rate on 37501 to 37601 for ϕ: 24.95 %:
+Accaptance rate on 37501 to 37601 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  62.83 %
+Accaptance rate on 37601 to 37701 for ϕ: 23.93 %:
+Accaptance rate on 37601 to 37701 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  63.00 %
+Accaptance rate on 37701 to 37801 for ϕ: 23.33 %:
+Accaptance rate on 37701 to 37801 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  63.17 %
+Accaptance rate on 37801 to 37901 for ϕ: 23.30 %:
+Accaptance rate on 37801 to 37901 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  63.33 %
+Accaptance rate on 37901 to 38001 for ϕ: 24.65 %:
+Accaptance rate on 37901 to 38001 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  63.50 %
+Accaptance rate on 38001 to 38101 for ϕ: 21.38 %:
+Accaptance rate on 38001 to 38101 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  63.67 %
+Accaptance rate on 38101 to 38201 for ϕ: 22.95 %:
+Accaptance rate on 38101 to 38201 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  63.83 %
+Accaptance rate on 38201 to 38301 for ϕ: 23.05 %:
+Accaptance rate on 38201 to 38301 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  64.00 %
+Accaptance rate on 38301 to 38401 for ϕ: 24.98 %:
+Accaptance rate on 38301 to 38401 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  64.17 %
+Accaptance rate on 38401 to 38501 for ϕ: 21.95 %:
+Accaptance rate on 38401 to 38501 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  64.33 %
+Accaptance rate on 38501 to 38601 for ϕ: 22.35 %:
+Accaptance rate on 38501 to 38601 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  64.50 %
+Accaptance rate on 38601 to 38701 for ϕ: 22.70 %:
+Accaptance rate on 38601 to 38701 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  64.67 %
+Accaptance rate on 38701 to 38801 for ϕ: 25.47 %:
+Accaptance rate on 38701 to 38801 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  64.83 %
+Accaptance rate on 38801 to 38901 for ϕ: 24.22 %:
+Accaptance rate on 38801 to 38901 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  65.00 %
+Accaptance rate on 38901 to 39001 for ϕ: 23.08 %:
+Accaptance rate on 38901 to 39001 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  65.17 %
+Accaptance rate on 39001 to 39101 for ϕ: 21.60 %:
+Accaptance rate on 39001 to 39101 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  65.33 %
+Accaptance rate on 39101 to 39201 for ϕ: 23.90 %:
+Accaptance rate on 39101 to 39201 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  65.50 %
+Accaptance rate on 39201 to 39301 for ϕ: 22.48 %:
+Accaptance rate on 39201 to 39301 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  65.67 %
+Accaptance rate on 39301 to 39401 for ϕ: 21.07 %:
+Accaptance rate on 39301 to 39401 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  65.83 %
+Accaptance rate on 39401 to 39501 for ϕ: 24.05 %:
+Accaptance rate on 39401 to 39501 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  66.00 %
+Accaptance rate on 39501 to 39601 for ϕ: 24.40 %:
+Accaptance rate on 39501 to 39601 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  66.17 %
+Accaptance rate on 39601 to 39701 for ϕ: 23.45 %:
+Accaptance rate on 39601 to 39701 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  66.33 %
+Accaptance rate on 39701 to 39801 for ϕ: 21.95 %:
+Accaptance rate on 39701 to 39801 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  66.50 %
+Accaptance rate on 39801 to 39901 for ϕ: 22.95 %:
+Accaptance rate on 39801 to 39901 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  66.67 %
+Accaptance rate on 39901 to 40001 for ϕ: 22.07 %:
+Accaptance rate on 39901 to 40001 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  66.83 %
+Accaptance rate on 40001 to 40101 for ϕ: 22.80 %:
+Accaptance rate on 40001 to 40101 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  67.00 %
+Accaptance rate on 40101 to 40201 for ϕ: 22.57 %:
+Accaptance rate on 40101 to 40201 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  67.17 %
+Accaptance rate on 40201 to 40301 for ϕ: 23.40 %:
+Accaptance rate on 40201 to 40301 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  67.33 %
+Accaptance rate on 40301 to 40401 for ϕ: 22.27 %:
+Accaptance rate on 40301 to 40401 for σ_ϵ: 10.00 %:
+-------------
+Percentage done:  67.50 %
+Accaptance rate on 40401 to 40501 for ϕ: 23.52 %:
+Accaptance rate on 40401 to 40501 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  67.67 %
+Accaptance rate on 40501 to 40601 for ϕ: 24.32 %:
+Accaptance rate on 40501 to 40601 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  67.84 %
+Accaptance rate on 40601 to 40701 for ϕ: 24.55 %:
+Accaptance rate on 40601 to 40701 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  68.00 %
+Accaptance rate on 40701 to 40801 for ϕ: 24.15 %:
+Accaptance rate on 40701 to 40801 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  68.17 %
+Accaptance rate on 40801 to 40901 for ϕ: 23.63 %:
+Accaptance rate on 40801 to 40901 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  68.34 %
+Accaptance rate on 40901 to 41001 for ϕ: 20.77 %:
+Accaptance rate on 40901 to 41001 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  68.50 %
+Accaptance rate on 41001 to 41101 for ϕ: 25.07 %:
+Accaptance rate on 41001 to 41101 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  68.67 %
+Accaptance rate on 41101 to 41201 for ϕ: 23.33 %:
+Accaptance rate on 41101 to 41201 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  68.84 %
+Accaptance rate on 41201 to 41301 for ϕ: 22.80 %:
+Accaptance rate on 41201 to 41301 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  69.00 %
+Accaptance rate on 41301 to 41401 for ϕ: 23.55 %:
+Accaptance rate on 41301 to 41401 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  69.17 %
+Accaptance rate on 41401 to 41501 for ϕ: 22.23 %:
+Accaptance rate on 41401 to 41501 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  69.34 %
+Accaptance rate on 41501 to 41601 for ϕ: 21.18 %:
+Accaptance rate on 41501 to 41601 for σ_ϵ: 32.00 %:
+-------------
+Percentage done:  69.50 %
+Accaptance rate on 41601 to 41701 for ϕ: 21.55 %:
+Accaptance rate on 41601 to 41701 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  69.67 %
+Accaptance rate on 41701 to 41801 for ϕ: 23.05 %:
+Accaptance rate on 41701 to 41801 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  69.84 %
+Accaptance rate on 41801 to 41901 for ϕ: 23.90 %:
+Accaptance rate on 41801 to 41901 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  70.00 %
+Accaptance rate on 41901 to 42001 for ϕ: 21.68 %:
+Accaptance rate on 41901 to 42001 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  70.17 %
+Accaptance rate on 42001 to 42101 for ϕ: 23.60 %:
+Accaptance rate on 42001 to 42101 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  70.34 %
+Accaptance rate on 42101 to 42201 for ϕ: 22.55 %:
+Accaptance rate on 42101 to 42201 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  70.50 %
+Accaptance rate on 42201 to 42301 for ϕ: 24.60 %:
+Accaptance rate on 42201 to 42301 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  70.67 %
+Accaptance rate on 42301 to 42401 for ϕ: 25.40 %:
+Accaptance rate on 42301 to 42401 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  70.84 %
+Accaptance rate on 42401 to 42501 for ϕ: 25.72 %:
+Accaptance rate on 42401 to 42501 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  71.00 %
+Accaptance rate on 42501 to 42601 for ϕ: 25.90 %:
+Accaptance rate on 42501 to 42601 for σ_ϵ: 32.00 %:
+-------------
+Percentage done:  71.17 %
+Accaptance rate on 42601 to 42701 for ϕ: 25.02 %:
+Accaptance rate on 42601 to 42701 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  71.34 %
+Accaptance rate on 42701 to 42801 for ϕ: 23.57 %:
+Accaptance rate on 42701 to 42801 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  71.50 %
+Accaptance rate on 42801 to 42901 for ϕ: 22.78 %:
+Accaptance rate on 42801 to 42901 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  71.67 %
+Accaptance rate on 42901 to 43001 for ϕ: 23.67 %:
+Accaptance rate on 42901 to 43001 for σ_ϵ: 12.00 %:
+-------------
+Percentage done:  71.84 %
+Accaptance rate on 43001 to 43101 for ϕ: 22.40 %:
+Accaptance rate on 43001 to 43101 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  72.00 %
+Accaptance rate on 43101 to 43201 for ϕ: 23.30 %:
+Accaptance rate on 43101 to 43201 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  72.17 %
+Accaptance rate on 43201 to 43301 for ϕ: 23.57 %:
+Accaptance rate on 43201 to 43301 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  72.34 %
+Accaptance rate on 43301 to 43401 for ϕ: 23.47 %:
+Accaptance rate on 43301 to 43401 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  72.50 %
+Accaptance rate on 43401 to 43501 for ϕ: 21.75 %:
+Accaptance rate on 43401 to 43501 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  72.67 %
+Accaptance rate on 43501 to 43601 for ϕ: 23.45 %:
+Accaptance rate on 43501 to 43601 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  72.84 %
+Accaptance rate on 43601 to 43701 for ϕ: 26.05 %:
+Accaptance rate on 43601 to 43701 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  73.00 %
+Accaptance rate on 43701 to 43801 for ϕ: 26.40 %:
+Accaptance rate on 43701 to 43801 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  73.17 %
+Accaptance rate on 43801 to 43901 for ϕ: 26.50 %:
+Accaptance rate on 43801 to 43901 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  73.33 %
+Accaptance rate on 43901 to 44001 for ϕ: 26.57 %:
+Accaptance rate on 43901 to 44001 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  73.50 %
+Accaptance rate on 44001 to 44101 for ϕ: 23.15 %:
+Accaptance rate on 44001 to 44101 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  73.67 %
+Accaptance rate on 44101 to 44201 for ϕ: 24.15 %:
+Accaptance rate on 44101 to 44201 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  73.83 %
+Accaptance rate on 44201 to 44301 for ϕ: 25.25 %:
+Accaptance rate on 44201 to 44301 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  74.00 %
+Accaptance rate on 44301 to 44401 for ϕ: 24.85 %:
+Accaptance rate on 44301 to 44401 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  74.17 %
+Accaptance rate on 44401 to 44501 for ϕ: 22.50 %:
+Accaptance rate on 44401 to 44501 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  74.33 %
+Accaptance rate on 44501 to 44601 for ϕ: 22.50 %:
+Accaptance rate on 44501 to 44601 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  74.50 %
+Accaptance rate on 44601 to 44701 for ϕ: 23.52 %:
+Accaptance rate on 44601 to 44701 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  74.67 %
+Accaptance rate on 44701 to 44801 for ϕ: 24.10 %:
+Accaptance rate on 44701 to 44801 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  74.83 %
+Accaptance rate on 44801 to 44901 for ϕ: 25.20 %:
+Accaptance rate on 44801 to 44901 for σ_ϵ: 33.00 %:
+-------------
+Percentage done:  75.00 %
+Accaptance rate on 44901 to 45001 for ϕ: 25.02 %:
+Accaptance rate on 44901 to 45001 for σ_ϵ: 35.00 %:
+-------------
+Percentage done:  75.17 %
+Accaptance rate on 45001 to 45101 for ϕ: 23.95 %:
+Accaptance rate on 45001 to 45101 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  75.33 %
+Accaptance rate on 45101 to 45201 for ϕ: 24.30 %:
+Accaptance rate on 45101 to 45201 for σ_ϵ: 12.00 %:
+-------------
+Percentage done:  75.50 %
+Accaptance rate on 45201 to 45301 for ϕ: 23.25 %:
+Accaptance rate on 45201 to 45301 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  75.67 %
+Accaptance rate on 45301 to 45401 for ϕ: 24.47 %:
+Accaptance rate on 45301 to 45401 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  75.83 %
+Accaptance rate on 45401 to 45501 for ϕ: 23.90 %:
+Accaptance rate on 45401 to 45501 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  76.00 %
+Accaptance rate on 45501 to 45601 for ϕ: 23.08 %:
+Accaptance rate on 45501 to 45601 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  76.17 %
+Accaptance rate on 45601 to 45701 for ϕ: 23.63 %:
+Accaptance rate on 45601 to 45701 for σ_ϵ: 34.00 %:
+-------------
+Percentage done:  76.33 %
+Accaptance rate on 45701 to 45801 for ϕ: 22.70 %:
+Accaptance rate on 45701 to 45801 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  76.50 %
+Accaptance rate on 45801 to 45901 for ϕ: 24.32 %:
+Accaptance rate on 45801 to 45901 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  76.67 %
+Accaptance rate on 45901 to 46001 for ϕ: 22.65 %:
+Accaptance rate on 45901 to 46001 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  76.83 %
+Accaptance rate on 46001 to 46101 for ϕ: 23.60 %:
+Accaptance rate on 46001 to 46101 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  77.00 %
+Accaptance rate on 46101 to 46201 for ϕ: 22.35 %:
+Accaptance rate on 46101 to 46201 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  77.17 %
+Accaptance rate on 46201 to 46301 for ϕ: 23.15 %:
+Accaptance rate on 46201 to 46301 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  77.33 %
+Accaptance rate on 46301 to 46401 for ϕ: 25.40 %:
+Accaptance rate on 46301 to 46401 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  77.50 %
+Accaptance rate on 46401 to 46501 for ϕ: 24.50 %:
+Accaptance rate on 46401 to 46501 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  77.67 %
+Accaptance rate on 46501 to 46601 for ϕ: 22.27 %:
+Accaptance rate on 46501 to 46601 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  77.83 %
+Accaptance rate on 46601 to 46701 for ϕ: 22.02 %:
+Accaptance rate on 46601 to 46701 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  78.00 %
+Accaptance rate on 46701 to 46801 for ϕ: 22.43 %:
+Accaptance rate on 46701 to 46801 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  78.17 %
+Accaptance rate on 46801 to 46901 for ϕ: 22.18 %:
+Accaptance rate on 46801 to 46901 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  78.33 %
+Accaptance rate on 46901 to 47001 for ϕ: 24.90 %:
+Accaptance rate on 46901 to 47001 for σ_ϵ: 35.00 %:
+-------------
+Percentage done:  78.50 %
+Accaptance rate on 47001 to 47101 for ϕ: 24.00 %:
+Accaptance rate on 47001 to 47101 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  78.67 %
+Accaptance rate on 47101 to 47201 for ϕ: 24.32 %:
+Accaptance rate on 47101 to 47201 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  78.83 %
+Accaptance rate on 47201 to 47301 for ϕ: 24.60 %:
+Accaptance rate on 47201 to 47301 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  79.00 %
+Accaptance rate on 47301 to 47401 for ϕ: 25.20 %:
+Accaptance rate on 47301 to 47401 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  79.17 %
+Accaptance rate on 47401 to 47501 for ϕ: 25.02 %:
+Accaptance rate on 47401 to 47501 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  79.33 %
+Accaptance rate on 47501 to 47601 for ϕ: 25.15 %:
+Accaptance rate on 47501 to 47601 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  79.50 %
+Accaptance rate on 47601 to 47701 for ϕ: 23.77 %:
+Accaptance rate on 47601 to 47701 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  79.67 %
+Accaptance rate on 47701 to 47801 for ϕ: 22.70 %:
+Accaptance rate on 47701 to 47801 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  79.83 %
+Accaptance rate on 47801 to 47901 for ϕ: 23.45 %:
+Accaptance rate on 47801 to 47901 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  80.00 %
+Accaptance rate on 47901 to 48001 for ϕ: 23.38 %:
+Accaptance rate on 47901 to 48001 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  80.17 %
+Accaptance rate on 48001 to 48101 for ϕ: 22.75 %:
+Accaptance rate on 48001 to 48101 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  80.34 %
+Accaptance rate on 48101 to 48201 for ϕ: 22.32 %:
+Accaptance rate on 48101 to 48201 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  80.50 %
+Accaptance rate on 48201 to 48301 for ϕ: 24.57 %:
+Accaptance rate on 48201 to 48301 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  80.67 %
+Accaptance rate on 48301 to 48401 for ϕ: 23.80 %:
+Accaptance rate on 48301 to 48401 for σ_ϵ: 15.00 %:
+-------------
+Percentage done:  80.84 %
+Accaptance rate on 48401 to 48501 for ϕ: 23.20 %:
+Accaptance rate on 48401 to 48501 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  81.00 %
+Accaptance rate on 48501 to 48601 for ϕ: 24.05 %:
+Accaptance rate on 48501 to 48601 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  81.17 %
+Accaptance rate on 48601 to 48701 for ϕ: 24.32 %:
+Accaptance rate on 48601 to 48701 for σ_ϵ: 34.00 %:
+-------------
+Percentage done:  81.34 %
+Accaptance rate on 48701 to 48801 for ϕ: 23.90 %:
+Accaptance rate on 48701 to 48801 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  81.50 %
+Accaptance rate on 48801 to 48901 for ϕ: 24.05 %:
+Accaptance rate on 48801 to 48901 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  81.67 %
+Accaptance rate on 48901 to 49001 for ϕ: 24.95 %:
+Accaptance rate on 48901 to 49001 for σ_ϵ: 36.00 %:
+-------------
+Percentage done:  81.84 %
+Accaptance rate on 49001 to 49101 for ϕ: 23.63 %:
+Accaptance rate on 49001 to 49101 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  82.00 %
+Accaptance rate on 49101 to 49201 for ϕ: 23.52 %:
+Accaptance rate on 49101 to 49201 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  82.17 %
+Accaptance rate on 49201 to 49301 for ϕ: 23.33 %:
+Accaptance rate on 49201 to 49301 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  82.34 %
+Accaptance rate on 49301 to 49401 for ϕ: 24.75 %:
+Accaptance rate on 49301 to 49401 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  82.50 %
+Accaptance rate on 49401 to 49501 for ϕ: 23.63 %:
+Accaptance rate on 49401 to 49501 for σ_ϵ: 33.00 %:
+-------------
+Percentage done:  82.67 %
+Accaptance rate on 49501 to 49601 for ϕ: 23.88 %:
+Accaptance rate on 49501 to 49601 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  82.84 %
+Accaptance rate on 49601 to 49701 for ϕ: 23.63 %:
+Accaptance rate on 49601 to 49701 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  83.00 %
+Accaptance rate on 49701 to 49801 for ϕ: 24.63 %:
+Accaptance rate on 49701 to 49801 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  83.17 %
+Accaptance rate on 49801 to 49901 for ϕ: 22.80 %:
+Accaptance rate on 49801 to 49901 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  83.34 %
+Accaptance rate on 49901 to 50001 for ϕ: 23.57 %:
+Accaptance rate on 49901 to 50001 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  83.50 %
+Accaptance rate on 50001 to 50101 for ϕ: 23.00 %:
+Accaptance rate on 50001 to 50101 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  83.67 %
+Accaptance rate on 50101 to 50201 for ϕ: 23.90 %:
+Accaptance rate on 50101 to 50201 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  83.84 %
+Accaptance rate on 50201 to 50301 for ϕ: 23.05 %:
+Accaptance rate on 50201 to 50301 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  84.00 %
+Accaptance rate on 50301 to 50401 for ϕ: 24.02 %:
+Accaptance rate on 50301 to 50401 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  84.17 %
+Accaptance rate on 50401 to 50501 for ϕ: 22.63 %:
+Accaptance rate on 50401 to 50501 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  84.34 %
+Accaptance rate on 50501 to 50601 for ϕ: 23.63 %:
+Accaptance rate on 50501 to 50601 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  84.50 %
+Accaptance rate on 50601 to 50701 for ϕ: 23.23 %:
+Accaptance rate on 50601 to 50701 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  84.67 %
+Accaptance rate on 50701 to 50801 for ϕ: 24.73 %:
+Accaptance rate on 50701 to 50801 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  84.84 %
+Accaptance rate on 50801 to 50901 for ϕ: 23.90 %:
+Accaptance rate on 50801 to 50901 for σ_ϵ: 33.00 %:
+-------------
+Percentage done:  85.00 %
+Accaptance rate on 50901 to 51001 for ϕ: 24.27 %:
+Accaptance rate on 50901 to 51001 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  85.17 %
+Accaptance rate on 51001 to 51101 for ϕ: 23.35 %:
+Accaptance rate on 51001 to 51101 for σ_ϵ: 37.00 %:
+-------------
+Percentage done:  85.34 %
+Accaptance rate on 51101 to 51201 for ϕ: 23.72 %:
+Accaptance rate on 51101 to 51201 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  85.50 %
+Accaptance rate on 51201 to 51301 for ϕ: 22.63 %:
+Accaptance rate on 51201 to 51301 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  85.67 %
+Accaptance rate on 51301 to 51401 for ϕ: 21.00 %:
+Accaptance rate on 51301 to 51401 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  85.83 %
+Accaptance rate on 51401 to 51501 for ϕ: 23.18 %:
+Accaptance rate on 51401 to 51501 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  86.00 %
+Accaptance rate on 51501 to 51601 for ϕ: 22.78 %:
+Accaptance rate on 51501 to 51601 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  86.17 %
+Accaptance rate on 51601 to 51701 for ϕ: 22.65 %:
+Accaptance rate on 51601 to 51701 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  86.33 %
+Accaptance rate on 51701 to 51801 for ϕ: 24.22 %:
+Accaptance rate on 51701 to 51801 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  86.50 %
+Accaptance rate on 51801 to 51901 for ϕ: 22.60 %:
+Accaptance rate on 51801 to 51901 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  86.67 %
+Accaptance rate on 51901 to 52001 for ϕ: 22.63 %:
+Accaptance rate on 51901 to 52001 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  86.83 %
+Accaptance rate on 52001 to 52101 for ϕ: 22.80 %:
+Accaptance rate on 52001 to 52101 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  87.00 %
+Accaptance rate on 52101 to 52201 for ϕ: 22.13 %:
+Accaptance rate on 52101 to 52201 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  87.17 %
+Accaptance rate on 52201 to 52301 for ϕ: 22.85 %:
+Accaptance rate on 52201 to 52301 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  87.33 %
+Accaptance rate on 52301 to 52401 for ϕ: 24.27 %:
+Accaptance rate on 52301 to 52401 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  87.50 %
+Accaptance rate on 52401 to 52501 for ϕ: 22.20 %:
+Accaptance rate on 52401 to 52501 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  87.67 %
+Accaptance rate on 52501 to 52601 for ϕ: 24.30 %:
+Accaptance rate on 52501 to 52601 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  87.83 %
+Accaptance rate on 52601 to 52701 for ϕ: 25.35 %:
+Accaptance rate on 52601 to 52701 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  88.00 %
+Accaptance rate on 52701 to 52801 for ϕ: 26.07 %:
+Accaptance rate on 52701 to 52801 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  88.17 %
+Accaptance rate on 52801 to 52901 for ϕ: 24.30 %:
+Accaptance rate on 52801 to 52901 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  88.33 %
+Accaptance rate on 52901 to 53001 for ϕ: 23.23 %:
+Accaptance rate on 52901 to 53001 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  88.50 %
+Accaptance rate on 53001 to 53101 for ϕ: 24.07 %:
+Accaptance rate on 53001 to 53101 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  88.67 %
+Accaptance rate on 53101 to 53201 for ϕ: 23.65 %:
+Accaptance rate on 53101 to 53201 for σ_ϵ: 33.00 %:
+-------------
+Percentage done:  88.83 %
+Accaptance rate on 53201 to 53301 for ϕ: 24.43 %:
+Accaptance rate on 53201 to 53301 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  89.00 %
+Accaptance rate on 53301 to 53401 for ϕ: 24.73 %:
+Accaptance rate on 53301 to 53401 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  89.17 %
+Accaptance rate on 53401 to 53501 for ϕ: 23.23 %:
+Accaptance rate on 53401 to 53501 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  89.33 %
+Accaptance rate on 53501 to 53601 for ϕ: 23.25 %:
+Accaptance rate on 53501 to 53601 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  89.50 %
+Accaptance rate on 53601 to 53701 for ϕ: 20.72 %:
+Accaptance rate on 53601 to 53701 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  89.67 %
+Accaptance rate on 53701 to 53801 for ϕ: 23.30 %:
+Accaptance rate on 53701 to 53801 for σ_ϵ: 33.00 %:
+-------------
+Percentage done:  89.83 %
+Accaptance rate on 53801 to 53901 for ϕ: 25.60 %:
+Accaptance rate on 53801 to 53901 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  90.00 %
+Accaptance rate on 53901 to 54001 for ϕ: 25.77 %:
+Accaptance rate on 53901 to 54001 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  90.17 %
+Accaptance rate on 54001 to 54101 for ϕ: 24.50 %:
+Accaptance rate on 54001 to 54101 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  90.33 %
+Accaptance rate on 54101 to 54201 for ϕ: 26.42 %:
+Accaptance rate on 54101 to 54201 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  90.50 %
+Accaptance rate on 54201 to 54301 for ϕ: 25.12 %:
+Accaptance rate on 54201 to 54301 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  90.67 %
+Accaptance rate on 54301 to 54401 for ϕ: 25.72 %:
+Accaptance rate on 54301 to 54401 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  90.83 %
+Accaptance rate on 54401 to 54501 for ϕ: 25.55 %:
+Accaptance rate on 54401 to 54501 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  91.00 %
+Accaptance rate on 54501 to 54601 for ϕ: 25.40 %:
+Accaptance rate on 54501 to 54601 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  91.17 %
+Accaptance rate on 54601 to 54701 for ϕ: 26.02 %:
+Accaptance rate on 54601 to 54701 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  91.33 %
+Accaptance rate on 54701 to 54801 for ϕ: 23.63 %:
+Accaptance rate on 54701 to 54801 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  91.50 %
+Accaptance rate on 54801 to 54901 for ϕ: 24.80 %:
+Accaptance rate on 54801 to 54901 for σ_ϵ: 12.00 %:
+-------------
+Percentage done:  91.67 %
+Accaptance rate on 54901 to 55001 for ϕ: 26.38 %:
+Accaptance rate on 54901 to 55001 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  91.83 %
+Accaptance rate on 55001 to 55101 for ϕ: 24.20 %:
+Accaptance rate on 55001 to 55101 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  92.00 %
+Accaptance rate on 55101 to 55201 for ϕ: 25.62 %:
+Accaptance rate on 55101 to 55201 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  92.17 %
+Accaptance rate on 55201 to 55301 for ϕ: 24.55 %:
+Accaptance rate on 55201 to 55301 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  92.33 %
+Accaptance rate on 55301 to 55401 for ϕ: 25.15 %:
+Accaptance rate on 55301 to 55401 for σ_ϵ: 29.00 %:
+-------------
+Percentage done:  92.50 %
+Accaptance rate on 55401 to 55501 for ϕ: 22.93 %:
+Accaptance rate on 55401 to 55501 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  92.67 %
+Accaptance rate on 55501 to 55601 for ϕ: 23.88 %:
+Accaptance rate on 55501 to 55601 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  92.84 %
+Accaptance rate on 55601 to 55701 for ϕ: 22.73 %:
+Accaptance rate on 55601 to 55701 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  93.00 %
+Accaptance rate on 55701 to 55801 for ϕ: 23.50 %:
+Accaptance rate on 55701 to 55801 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  93.17 %
+Accaptance rate on 55801 to 55901 for ϕ: 23.70 %:
+Accaptance rate on 55801 to 55901 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  93.34 %
+Accaptance rate on 55901 to 56001 for ϕ: 21.73 %:
+Accaptance rate on 55901 to 56001 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  93.50 %
+Accaptance rate on 56001 to 56101 for ϕ: 22.55 %:
+Accaptance rate on 56001 to 56101 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  93.67 %
+Accaptance rate on 56101 to 56201 for ϕ: 21.63 %:
+Accaptance rate on 56101 to 56201 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  93.84 %
+Accaptance rate on 56201 to 56301 for ϕ: 23.88 %:
+Accaptance rate on 56201 to 56301 for σ_ϵ: 26.00 %:
+-------------
+Percentage done:  94.00 %
+Accaptance rate on 56301 to 56401 for ϕ: 23.93 %:
+Accaptance rate on 56301 to 56401 for σ_ϵ: 21.00 %:
+-------------
+Percentage done:  94.17 %
+Accaptance rate on 56401 to 56501 for ϕ: 22.25 %:
+Accaptance rate on 56401 to 56501 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  94.34 %
+Accaptance rate on 56501 to 56601 for ϕ: 24.18 %:
+Accaptance rate on 56501 to 56601 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  94.50 %
+Accaptance rate on 56601 to 56701 for ϕ: 24.45 %:
+Accaptance rate on 56601 to 56701 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  94.67 %
+Accaptance rate on 56701 to 56801 for ϕ: 25.57 %:
+Accaptance rate on 56701 to 56801 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  94.84 %
+Accaptance rate on 56801 to 56901 for ϕ: 25.05 %:
+Accaptance rate on 56801 to 56901 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  95.00 %
+Accaptance rate on 56901 to 57001 for ϕ: 23.20 %:
+Accaptance rate on 56901 to 57001 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  95.17 %
+Accaptance rate on 57001 to 57101 for ϕ: 26.05 %:
+Accaptance rate on 57001 to 57101 for σ_ϵ: 8.00 %:
+-------------
+Percentage done:  95.34 %
+Accaptance rate on 57101 to 57201 for ϕ: 24.55 %:
+Accaptance rate on 57101 to 57201 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  95.50 %
+Accaptance rate on 57201 to 57301 for ϕ: 25.17 %:
+Accaptance rate on 57201 to 57301 for σ_ϵ: 30.00 %:
+-------------
+Percentage done:  95.67 %
+Accaptance rate on 57301 to 57401 for ϕ: 25.72 %:
+Accaptance rate on 57301 to 57401 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  95.84 %
+Accaptance rate on 57401 to 57501 for ϕ: 23.50 %:
+Accaptance rate on 57401 to 57501 for σ_ϵ: 17.00 %:
+-------------
+Percentage done:  96.00 %
+Accaptance rate on 57501 to 57601 for ϕ: 23.67 %:
+Accaptance rate on 57501 to 57601 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  96.17 %
+Accaptance rate on 57601 to 57701 for ϕ: 23.88 %:
+Accaptance rate on 57601 to 57701 for σ_ϵ: 28.00 %:
+-------------
+Percentage done:  96.34 %
+Accaptance rate on 57701 to 57801 for ϕ: 21.45 %:
+Accaptance rate on 57701 to 57801 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  96.50 %
+Accaptance rate on 57801 to 57901 for ϕ: 23.77 %:
+Accaptance rate on 57801 to 57901 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  96.67 %
+Accaptance rate on 57901 to 58001 for ϕ: 24.20 %:
+Accaptance rate on 57901 to 58001 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  96.84 %
+Accaptance rate on 58001 to 58101 for ϕ: 24.35 %:
+Accaptance rate on 58001 to 58101 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  97.00 %
+Accaptance rate on 58101 to 58201 for ϕ: 23.03 %:
+Accaptance rate on 58101 to 58201 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  97.17 %
+Accaptance rate on 58201 to 58301 for ϕ: 23.95 %:
+Accaptance rate on 58201 to 58301 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  97.34 %
+Accaptance rate on 58301 to 58401 for ϕ: 24.10 %:
+Accaptance rate on 58301 to 58401 for σ_ϵ: 14.00 %:
+-------------
+Percentage done:  97.50 %
+Accaptance rate on 58401 to 58501 for ϕ: 22.73 %:
+Accaptance rate on 58401 to 58501 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  97.67 %
+Accaptance rate on 58501 to 58601 for ϕ: 22.40 %:
+Accaptance rate on 58501 to 58601 for σ_ϵ: 16.00 %:
+-------------
+Percentage done:  97.84 %
+Accaptance rate on 58601 to 58701 for ϕ: 23.82 %:
+Accaptance rate on 58601 to 58701 for σ_ϵ: 25.00 %:
+-------------
+Percentage done:  98.00 %
+Accaptance rate on 58701 to 58801 for ϕ: 24.22 %:
+Accaptance rate on 58701 to 58801 for σ_ϵ: 18.00 %:
+-------------
+Percentage done:  98.17 %
+Accaptance rate on 58801 to 58901 for ϕ: 24.05 %:
+Accaptance rate on 58801 to 58901 for σ_ϵ: 24.00 %:
+-------------
+Percentage done:  98.33 %
+Accaptance rate on 58901 to 59001 for ϕ: 24.50 %:
+Accaptance rate on 58901 to 59001 for σ_ϵ: 27.00 %:
+-------------
+Percentage done:  98.50 %
+Accaptance rate on 59001 to 59101 for ϕ: 23.03 %:
+Accaptance rate on 59001 to 59101 for σ_ϵ: 23.00 %:
+-------------
+Percentage done:  98.67 %
+Accaptance rate on 59101 to 59201 for ϕ: 22.25 %:
+Accaptance rate on 59101 to 59201 for σ_ϵ: 13.00 %:
+-------------
+Percentage done:  98.83 %
+Accaptance rate on 59201 to 59301 for ϕ: 22.10 %:
+Accaptance rate on 59201 to 59301 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  99.00 %
+Accaptance rate on 59301 to 59401 for ϕ: 24.45 %:
+Accaptance rate on 59301 to 59401 for σ_ϵ: 31.00 %:
+-------------
+Percentage done:  99.17 %
+Accaptance rate on 59401 to 59501 for ϕ: 23.90 %:
+Accaptance rate on 59401 to 59501 for σ_ϵ: 19.00 %:
+-------------
+Percentage done:  99.33 %
+Accaptance rate on 59501 to 59601 for ϕ: 22.75 %:
+Accaptance rate on 59501 to 59601 for σ_ϵ: 12.00 %:
+-------------
+Percentage done:  99.50 %
+Accaptance rate on 59601 to 59701 for ϕ: 25.57 %:
+Accaptance rate on 59601 to 59701 for σ_ϵ: 20.00 %:
+-------------
+Percentage done:  99.67 %
+Accaptance rate on 59701 to 59801 for ϕ: 26.72 %:
+Accaptance rate on 59701 to 59801 for σ_ϵ: 22.00 %:
+-------------
+Percentage done:  99.83 %
+Accaptance rate on 59801 to 59901 for ϕ: 27.07 %:
+Accaptance rate on 59801 to 59901 for σ_ϵ: 28.00 %:
+Ending Gibbs sampler using CPMMH.
+2042.105254112
+0.23287958333333333
+0.2203
+1.0
