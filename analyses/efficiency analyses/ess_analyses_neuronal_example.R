@@ -166,10 +166,10 @@ load_results <- function(seed) {
   print(paste0("CPMMH-0999: ", ess_min_per_min_cpmmh))
   
   print("Rel")
-  print(paste0("Kalman: ", ess_min_per_min_kalman/ess_min_per_min_pmmh))
-  print(paste0("PMMH: ", ess_min_per_min_pmmh/ess_min_per_min_pmmh))
-  print(paste0("CPMMH-09: ", ess_min_per_min_cpmmh09/ess_min_per_min_pmmh))
-  print(paste0("CPMMH-0999: ", ess_min_per_min_cpmmh/ess_min_per_min_pmmh))
+  print(paste0("Kalman: ", round(ess_min_per_min_kalman/ess_min_per_min_pmmh,1)))
+  print(paste0("PMMH: ", round(ess_min_per_min_pmmh/ess_min_per_min_pmmh,1)))
+  print(paste0("CPMMH-09: ", round(ess_min_per_min_cpmmh09/ess_min_per_min_pmmh,1)))
+  print(paste0("CPMMH-0999: ", round(ess_min_per_min_cpmmh/ess_min_per_min_pmmh,1)))
   
   print("Nbr NA")
   print(paste0("Nbr NA in ess:s: ", nbr_na))
@@ -184,11 +184,11 @@ res = load_results(1*100)
 print(round(res,2))
 
 
-res = array(dim=c(5,4,3))
+#res = array(dim=c(5,4,3))
 
-for (dataset in 1:5){ 
-  res[dataset,,] <-load_results(dataset*100)
-}
+#for (dataset in 1:5){ 
+#  res[dataset,,] <-load_results(dataset*100)
+#}
 
 # print mean over the five data sets
-print(round(apply(res,c(2,3),mean),2))
+#print(round(apply(res,c(2,3),mean),2))

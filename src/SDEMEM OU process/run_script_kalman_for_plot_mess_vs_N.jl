@@ -83,7 +83,8 @@ run_time_kalman = @elapsed chain_ϕ_kalman, chain_σ_ϵ_kalman, chain_η_kalman,
                                                                                                              startval_ϕ,
                                                                                                              startval_σ_ϵ,
                                                                                                              prior_parameters_η,
-                                                                                                             prior_parameters_σ_ϵ);
+                                                                                                             prior_parameters_σ_ϵ,
+																											 true);
 println(run_time_kalman)
 println(sum(accept_vec_kalman[1,:])/(M_subjects*R))
 println(sum(accept_vec_kalman[2,:])/R)

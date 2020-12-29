@@ -4,9 +4,7 @@
 # Set up for run:
 
 # need this since I use a LU project
-#SBATCH -A lu2019-2-19
-#SBATCH -p lu
-
+#SBATCH -A snic2019-3-630
 
 # use gpu nodes
 #SBATCH -N 1

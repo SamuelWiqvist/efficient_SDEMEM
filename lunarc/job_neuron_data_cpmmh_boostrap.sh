@@ -40,4 +40,4 @@ pwd
 export JULIA_NUM_THREADS=1
 
 # run program
-julia /home/samwiq/'SDEMEM and CPMMH'/SDEMEM_and_CPMMH/src/'SDEMEM OU neuron data'/run_script_cpmmh_bootstrap.jl 0.999 10 $1
+julia /home/samwiq/'SDEMEM and CPMMH'/SDEMEM_and_CPMMH/src/'SDEMEM OU neuron data'/run_script_cpmmh_bootstrap.jl 0.99 100 $1

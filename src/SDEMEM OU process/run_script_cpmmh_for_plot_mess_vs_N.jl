@@ -50,6 +50,7 @@ startval_σ_ϵ = 0.2
 # Set correct start values
 startval_ϕ = ϕ
 startval_σ_ϵ = σ_ϵ
+startval_η = η
 
 Σ_i_σ_ϵ = 0.02^2
 
@@ -91,6 +92,7 @@ run_time_cpmmh = @elapsed chain_ϕ_cpmmh, chain_σ_ϵ_cpmmh, chain_η_cpmmh, acc
                                                                                                         α_power,
                                                                                                         startval_ϕ,
                                                                                                         startval_σ_ϵ,
+                                                                                                        startval_η, 
                                                                                                         prior_parameters_η,
                                                                                                         prior_parameters_σ_ϵ,
                                                                                                         nbr_particles,

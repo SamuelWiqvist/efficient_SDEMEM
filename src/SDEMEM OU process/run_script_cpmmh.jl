@@ -16,6 +16,10 @@ nbr_particles = parse(Int,ARGS[1])
 ρ = parse(Float64,ARGS[2])
 seed = parse(Int,ARGS[3])
 
+#nbr_particles = 100
+#ρ = 0.99
+#seed = 100
+
 y,x,t_vec,dt,η,σ_ϵ,ϕ,prior_parameters_η,prior_parameters_σ_ϵ = set_up(M=M_subjects,N=N_time,seed=seed)
 
 # run MH-Gibbs
@@ -40,6 +44,19 @@ for j = 1:3
 end
 
 startval_σ_ϵ = 0.2
+
+
+startval_η = η
+
+for j = 1:3
+
+    # get paramaters
+    μ_0_j, M_0_j, α_j, β_j = prior_parameters_η[j,:]
+
+    startval_η[j,1] = μ_0_j # set start value to mean
+    startval_η[j+3,1] = (α_j - 1)/β_j
+
+end
 
 Σ_i_σ_ϵ = 0.02^2
 
@@ -81,6 +98,7 @@ run_time_cpmmh = @elapsed chain_ϕ_cpmmh, chain_σ_ϵ_cpmmh, chain_η_cpmmh, acc
                                                                                                         α_power,
                                                                                                         startval_ϕ,
                                                                                                         startval_σ_ϵ,
+                                                                                                        startval_η, 
                                                                                                         prior_parameters_η,
                                                                                                         prior_parameters_σ_ϵ,
                                                                                                         nbr_particles,

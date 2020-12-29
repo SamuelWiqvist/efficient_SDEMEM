@@ -81,8 +81,13 @@ cat > ${FILES[$i]} << EOF
 # Set up for run:
 
 # need this since I use a LU project
-#SBATCH -A lu2020-2-7
-#SBATCH -p lu
+
+# need this since I use a LU project
+# #SBATCH -A lu2020-2-7
+# #SBATCH -p lu
+
+#SBATCH -A snic2019-3-630 ##SBATCH -A snic2016-x-xxx
+
 
 
 # use gpu nodes

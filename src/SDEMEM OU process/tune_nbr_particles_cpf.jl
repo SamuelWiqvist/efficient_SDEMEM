@@ -14,8 +14,9 @@ N_time = 200
 M_subjects = 40
 nbr_particles_cor = 50
 
-y,x,t_vec,dt,η,σ_ϵ,ϕ,prior_parameters_η,prior_parameters_σ_ϵ = set_up(M=M_subjects,N=N_time,seed=100)
+y,x,t_vec,dt,η,σ_ϵ,ϕ,prior_parameters_η,prior_parameters_σ_ϵ = set_up(M=M_subjects,N=N_time,seed=500)
 
+#σ_ϵ = 0.31
 
 # estimate correlation
 nbr_pf_eval_corr = 100
@@ -62,8 +63,9 @@ var_loglik_target = 2.16^2/(1-corr_ll^2)
 function loglik_est(nbr_particles, nbr_pf_eval=100)
 
     ll = zeros(nbr_pf_eval)
-
     for i = 1:nbr_pf_eval
+        println(i)
+
         ll[i] = sum(cpf(y, σ_ϵ, ϕ, dt, randn(nbr_particles,N_time + 1,M_subjects), randn(N_time,2,M_subjects), nbr_particles, true))
     end
 
@@ -72,8 +74,8 @@ function loglik_est(nbr_particles, nbr_pf_eval=100)
 end
 
 
-nbr_pf_eval = 100
-nbr_particles = [20,50,100,150,200,250,500]
+nbr_pf_eval = 10000
+nbr_particles = [5,10,15,20] #,50,100,500]
 
 loglik_matrix = zeros(nbr_pf_eval, length(nbr_particles))
 run_times = zeros(length(nbr_particles))
@@ -85,12 +87,41 @@ for i in 1:length(nbr_particles)
     run_times[i]  = @elapsed loglik_matrix[:,i]  = loglik_est(nbr_particles[i], nbr_pf_eval)
 end
 
+mean_vals = mean(loglik_matrix, dims = 1)
+println(mean_vals)
+
+quantile_vals = zeros(2, length(nbr_particles))
+
+for i in 1:length(nbr_particles)
+    quantile_vals[:,i] = quantile(loglik_matrix[:,i], [0.1, 0.9])
+end
+
 using PyPlot
+
+s_1 = """10th and 90th
+         quantile"""
+
+PyPlot.figure(figsize=(25,15))
+PyPlot.plot(nbr_particles, mean_vals', "-*", color = "k", label = "Mean")
+PyPlot.plot(nbr_particles, quantile_vals[1,:], "--*", color = "k", label = s_1)
+PyPlot.plot(nbr_particles, quantile_vals[2,:], "--*", color = "k") #label = "90th quantile")
+PyPlot.xticks(fontsize=16)
+PyPlot.yticks(fontsize=16)
+PyPlot.xlabel("Nbr particles.", fontsize=16)
+PyPlot.ylabel("Loglik est.", fontsize=16)
+PyPlot.legend(loc="upper left", bbox_to_anchor=(1, 0.5), fontsize=16)
+display(gcf())
+PyPlot.savefig("figures/avg_loglik_val_bootstap_ou.png")
+
+print(quantile_vals[1,:])
+print(mean_vals)
+print(quantile_vals[2,:])
 
 PyPlot.figure(figsize=(20,10))
 PyPlot.plot(nbr_particles, mean(loglik_matrix, dims = 1)[:], "--*")
 PyPlot.xlabel("Nbr particles.")
 PyPlot.ylabel("Avg. loglik est. val.")
+display(gcf())
 PyPlot.savefig("figures/avg_loglik_val_vs_nbr_particels_cpf_099.png")
 
 PyPlot.figure(figsize=(20,10))
@@ -98,10 +129,14 @@ PyPlot.plot(nbr_particles, var(loglik_matrix, dims = 1)[:], "--*")
 PyPlot.plot(nbr_particles, var_loglik_target*ones(length(nbr_particles),1), "k")
 PyPlot.xlabel("Nbr particles.")
 PyPlot.ylabel("Var of loglik est.")
-PyPlot.savefig("figures/loglik_var_vs_nbr_particles_cpf_099.png")
+display(gcf())
+
+#PyPlot.savefig("figures/loglik_var_vs_nbr_particles_cpf_099.png")
 
 PyPlot.figure(figsize=(20,10))
 PyPlot.plot(nbr_particles, run_times/100, "--*")
 PyPlot.xlabel("Nbr particles.")
 PyPlot.ylabel("Run time (sec)")
-PyPlot.savefig("figures/run_time_vs_nbr_particls_cpf_099.png")
+display(gcf())
+
+#PyPlot.savefig("figures/run_time_vs_nbr_particls_cpf_099.png")

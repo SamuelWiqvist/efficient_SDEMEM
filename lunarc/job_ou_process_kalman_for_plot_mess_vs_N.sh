@@ -84,7 +84,7 @@ cat > ${FILES[$i]} << EOF
 # #SBATCH -A lu2020-2-7
 # #SBATCH -p lu
 
-#SBATCH -A SNIC 2019-3-630
+#SBATCH -A snic2019-3-630 ##SBATCH -A snic2016-x-xxx
 
 
 # use gpu nodes

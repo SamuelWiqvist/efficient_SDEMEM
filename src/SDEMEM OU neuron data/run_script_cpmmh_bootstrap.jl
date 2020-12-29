@@ -25,7 +25,7 @@ for i = 1:M_subjects; T_vec[i] = length(y[i].mV); end
 
 # run MH-Gibbs
 
-R = 100000 #15000 #10000
+R = 35000 #15000 #10000
 burn_in = 2000
 
 job = string(M_subjects)*"_"*string(ρ)*"_"*string(nbr_particles[1])*"_"*"bootstrap"

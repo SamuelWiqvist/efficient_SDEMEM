@@ -15,8 +15,8 @@ include(pwd()*"/src/SDEMEM OU process/mcmc.jl")
 N_time = 200
 M_subjects = 40
 
-nbr_particles_pf = 1000
-nbr_particles_cpf = 1000
+nbr_particles_pf = 5
+nbr_particles_cpf = 5
 
 y,x,t_vec,dt,η,σ_ϵ,ϕ,prior_parameters_η,prior_parameters_σ_ϵ = set_up(M=M_subjects,N=N_time,seed=100)
 
@@ -25,6 +25,8 @@ PyPlot.plot(Array(x'))
 
 PyPlot.figure()
 PyPlot.plot(Array(y'))
+
+σ_ϵ = 0.31
 
 @time loglik_kalman, path_kalman = kalman(y, σ_ϵ, ϕ, dt, true)
 
@@ -44,15 +46,18 @@ subject = rand(1:M_subjects)
 PyPlot.figure()
 PyPlot.plot(path_kalman[subject], "r")
 PyPlot.plot(y[subject,:], "g")
+display(gcf())
 
 PyPlot.figure()
 PyPlot.plot(path_pf[subject][:,:]', "r")
 PyPlot.plot(y[subject,:], "g")
+display(gcf())
 
 
 PyPlot.figure()
 PyPlot.plot(path_corr_pf[subject][:,:]', "r")
 PyPlot.plot(y[subject,:], "g")
+display(gcf())
 
 
 loglik_pf_m = zeros(M_subjects,100)

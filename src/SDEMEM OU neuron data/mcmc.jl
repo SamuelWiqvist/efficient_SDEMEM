@@ -97,10 +97,13 @@ function gibbs_exact(R::Int,
 
         for m = 1:M
 
-            jacobian_old =  sum(chain_ϕ[m,:,r-1])
-            jacobian_star = sum(ϕ_star[m,:])
+            # TODO remove jacobian!
+            #jacobian_old =  sum(chain_ϕ[m,:,r-1])
+            #jacobian_star = sum(ϕ_star[m,:])
 
-            log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] + jacobian_old)
+            #log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] + jacobian_old)
+            log_α = (loglik_star_y[m] + loglik_star_ϕ[m]) - (loglik_old_y[m] + loglik_old_ϕ[m])
+           
             α_prob_accept_ϕ[m] = min(1, exp(log_α))
 
             # correct if we have  NaNs
@@ -124,15 +127,18 @@ function gibbs_exact(R::Int,
         # secound gibbs stage, update σ_ϵ
         log_σ_ϵ_star = chain_log_σ_ϵ[r-1] + sqrt(exp(log_λ_i_σ_ϵ)*Σ_i_σ_ϵ)*randn()
 
-        jacobian_old =  chain_log_σ_ϵ[r-1]
-        jacobian_star = log_σ_ϵ_star
+        # TODO remove jacobian!
+        #jacobian_old =  chain_log_σ_ϵ[r-1]
+        #jacobian_star = log_σ_ϵ_star
 
         loglik_star_y = kalman(y, exp(log_σ_ϵ_star), chain_ϕ[:,:,r], dt)
 
         prior_old_σ_ϵ = normlogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],chain_log_σ_ϵ[r-1])
         prior_star_σ_ϵ = normlogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],log_σ_ϵ_star)
 
-        log_α = (sum(loglik_star_y) + prior_star_σ_ϵ + jacobian_star) - (sum(loglik_old_y) + prior_star_σ_ϵ + jacobian_old)
+        #log_α = (sum(loglik_star_y) + prior_star_σ_ϵ + jacobian_star) - (sum(loglik_old_y) + prior_old_σ_ϵ + jacobian_old)
+        log_α = (sum(loglik_star_y) + prior_star_σ_ϵ) - (sum(loglik_old_y) + prior_old_σ_ϵ)
+
         α_prob_accept_σ_ϵ = min(1, exp(log_α))
 
         # correct if we have  NaNs
@@ -320,10 +326,12 @@ function gibbs_cpmmh(R::Int,
         for m = 1:M
 
 
-            jacobian_old =  sum(chain_ϕ[m,:,r-1])
-            jacobian_star = sum(ϕ_star[m,:])
+            #jacobian_old =  sum(chain_ϕ[m,:,r-1])
+            #jacobian_star = sum(ϕ_star[m,:])
 
-            log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] + jacobian_old)
+            #log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] + jacobian_old)
+            log_α = (loglik_star_y[m] + loglik_star_ϕ[m]) - (loglik_old_y[m] + loglik_old_ϕ[m])
+            
             α_prob_accept_ϕ[m] = min(1, exp(log_α))
 
             # correct if we have  NaNs
@@ -351,8 +359,8 @@ function gibbs_cpmmh(R::Int,
         # secound gibbs stage, update log_σ_ϵ
         log_σ_ϵ_star = chain_log_σ_ϵ[r-1] + sqrt(exp(log_λ_i_σ_ϵ)*Σ_i_σ_ϵ)*randn()
 
-        jacobian_old =  chain_log_σ_ϵ[r-1]
-        jacobian_star = log_σ_ϵ_star
+        #jacobian_old =  chain_log_σ_ϵ[r-1]
+        #jacobian_star = log_σ_ϵ_star
 
         loglik_star_y = particel_filter(y, exp(log_σ_ϵ_star), chain_ϕ[:,:,r], dt, u_prop_old, u_resample_old,  nbr_particles, run_sort)
 
@@ -360,7 +368,9 @@ function gibbs_cpmmh(R::Int,
         prior_old_log_σ_ϵ = normlogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],chain_log_σ_ϵ[r-1])
         prior_star_log_σ_ϵ = normlogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],log_σ_ϵ_star)
 
-        log_α = (sum(loglik_star_y) + prior_star_log_σ_ϵ + jacobian_star) - (sum(loglik_old_y) + prior_star_log_σ_ϵ + jacobian_old)
+        #log_α = (sum(loglik_star_y) + prior_star_log_σ_ϵ + jacobian_star) - (sum(loglik_old_y) + prior_old_log_σ_ϵ + jacobian_old)
+        log_α = (sum(loglik_star_y) + prior_star_log_σ_ϵ) - (sum(loglik_old_y) + prior_old_log_σ_ϵ)
+
         α_prob_accept_σ_ϵ = min(1, exp(log_α))
 
         # correct if we have  NaNs

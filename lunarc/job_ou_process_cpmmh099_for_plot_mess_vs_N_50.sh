@@ -81,8 +81,11 @@ cat > ${FILES[$i]} << EOF
 # Set up for run:
 
 # need this since I use a LU project
-#SBATCH -A lu2020-2-7
-#SBATCH -p lu
+# #SBATCH -A lu2020-2-7
+# #SBATCH -p lu
+
+#SBATCH -A snic2019-3-630 ##SBATCH -A snic2016-x-xxx
+
 
 # use gpu nodes
 #SBATCH -N 1
@@ -90,7 +93,7 @@ cat > ${FILES[$i]} << EOF
 #SBATCH --exclusive
 
 # time consumption HH:MM:SS
-#SBATCH -t 10:00:00
+#SBATCH -t 5:00:00
 
 # name for script
 #SBATCH -J ou_cpmmh_099_50

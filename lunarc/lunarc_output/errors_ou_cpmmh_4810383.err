@@ -1,0 +1,11 @@
+ERROR: LoadError: MethodError: no method matching gibbs_cpmmh(::Int64, ::Array{Float64,2}, ::Float64, ::Float64, ::Array{Array{Float64,2},1}, ::Float64, ::Float64, ::Array{Float64,2}, ::Float64, ::Float64, ::Float64, ::Array{Float64,1}, ::Float64, ::Int64, ::Int64, ::Float64, ::Array{Float64,2}, ::Float64, ::Array{Float64,2}, ::Array{Float64,1}, ::Int64, ::Float64)
+Closest candidates are:
+  gibbs_cpmmh(::Int64, ::Array, ::Real, ::Real, ::Array, ::Real, ::Real, ::Array, ::Real, ::Real, ::Real, ::Array{T,1} where T, ::Real, ::Real, ::Real, ::Real, ::Array, ::Real, ::Array, ::Array, !Matched::Array, !Matched::Int64, !Matched::Real) at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU process/mcmc.jl:423
+Stacktrace:
+ [1] top-level scope at util.jl:213
+ [2] include at ./boot.jl:317 [inlined]
+ [3] include_relative(::Module, ::String) at ./loading.jl:1038
+ [4] include(::Module, ::String) at ./sysimg.jl:29
+ [5] exec_options(::Base.JLOptions) at ./client.jl:229
+ [6] _start() at ./client.jl:421
+in expression starting at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU process/run_script_cpmmh_long_run.jl:87

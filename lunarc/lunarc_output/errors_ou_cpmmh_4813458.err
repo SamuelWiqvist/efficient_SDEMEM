@@ -1,0 +1,10 @@
+ERROR: LoadError: UndefVarError: η_0_j not defined
+Stacktrace:
+ [1] top-level scope at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU process/run_script_cpmmh.jl:51 [inlined]
+ [2] top-level scope at ./none:0
+ [3] include at ./boot.jl:317 [inlined]
+ [4] include_relative(::Module, ::String) at ./loading.jl:1038
+ [5] include(::Module, ::String) at ./sysimg.jl:29
+ [6] exec_options(::Base.JLOptions) at ./client.jl:229
+ [7] _start() at ./client.jl:421
+in expression starting at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU process/run_script_cpmmh.jl:46

@@ -1,0 +1,14 @@
+ERROR: LoadError: DomainError with -1.0:
+sqrt will only return a complex result if called with a complex argument. Try sqrt(Complex(x)).
+Stacktrace:
+ [1] throw_complex_domainerror(::Symbol, ::Float64) at ./math.jl:31
+ [2] sqrt at ./math.jl:479 [inlined]
+ [3] calc_loglik_ϕ(::Array{Float64,2}, ::Array{Float64,1}) at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU process/mcmc.jl:647
+ [4] gibbs_cpmmh(::Int64, ::Array{Float64,2}, ::Float64, ::Float64, ::Array{Array{Float64,2},1}, ::Float64, ::Float64, ::Array{Float64,2}, ::Float64, ::Float64, ::Float64, ::Array{Float64,1}, ::Float64, ::Int64, ::Int64, ::Float64, ::Array{Float64,2}, ::Float64, ::Array{Float64,1}, ::Array{Float64,2}, ::Array{Float64,1}, ::Int64, ::Float64) at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU process/mcmc.jl:477
+ [5] top-level scope at util.jl:213
+ [6] include at ./boot.jl:317 [inlined]
+ [7] include_relative(::Module, ::String) at ./loading.jl:1038
+ [8] include(::Module, ::String) at ./sysimg.jl:29
+ [9] exec_options(::Base.JLOptions) at ./client.jl:229
+ [10] _start() at ./client.jl:421
+in expression starting at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU process/run_script_cpmmh.jl:78

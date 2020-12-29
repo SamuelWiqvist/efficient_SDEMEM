@@ -1,0 +1,12 @@
+ERROR: LoadError: ArgumentError: cannot parse "0.5s" as Float64
+Stacktrace:
+ [1] _parse_failure(::Type, ::String, ::Int64, ::Int64) at ./parse.jl:349 (repeats 2 times)
+ [2] tryparse_internal at ./parse.jl:345 [inlined]
+ [3] parse(::Type{Float64}, ::String) at ./parse.jl:355
+ [4] top-level scope at none:0
+ [5] include at ./boot.jl:317 [inlined]
+ [6] include_relative(::Module, ::String) at ./loading.jl:1038
+ [7] include(::Module, ::String) at ./sysimg.jl:29
+ [8] exec_options(::Base.JLOptions) at ./client.jl:229
+ [9] _start() at ./client.jl:421
+in expression starting at /home/samwiq/SDEMEM and CPMMH/SDEMEM_and_CPMMH/src/SDEMEM OU process/run_script_cpmmh_long_run.jl:21

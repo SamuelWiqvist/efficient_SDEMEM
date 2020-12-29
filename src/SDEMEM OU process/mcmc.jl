@@ -33,7 +33,8 @@ function gibbs_exact(R::Int,
                      startval_ϕ::Array,
                      startval_σ_ϵ::Real,
                      prior_parameters_η::Array,
-                     prior_parameters_σ_ϵ::Array)
+                     prior_parameters_σ_ϵ::Array,
+					 start_from_true_param::Bool=false)
 
     println("Starting Gibbs sampler using Kalman.")
 
@@ -53,17 +54,21 @@ function gibbs_exact(R::Int,
     chain_σ_ϵ[1] = startval_σ_ϵ
     print_interval = 1000
 
-    # sample star values for η
-    for j = 1:3
+	if start_from_true_param
+		chain_η[:,1] = η
+	else
+		# sample star values for η
+		for j = 1:3
 
-        # get paramaters
-        μ_0_j, M_0_j, α_j, β_j = prior_parameters_η[j,:]
+		    # get paramaters
+		    μ_0_j, M_0_j, α_j, β_j = prior_parameters_η[j,:]
 
-        chain_η[j,1] = μ_0_j # set start value to mean
-        chain_η[j+3,1] = (α_j - 1)/β_j
+		    chain_η[j,1] = μ_0_j # set start value to mean
+		    chain_η[j+3,1] = (α_j - 1)/β_j
 
-    end
+		end
 
+	end 
     accept_vec[:,1] = [M;1;3] # we accapt the start values
 
     α_prob_accept_σ_ϵ = 0.
@@ -87,10 +92,13 @@ function gibbs_exact(R::Int,
 
         for m = 1:M
 
-            jacobian_old =  sum(chain_ϕ[m,:,r-1])
-            jacobian_star = sum(ϕ_star[m,:])
+            # TODO remove jacobian!
+            #jacobian_old =  sum(chain_ϕ[m,:,r-1])
+            #jacobian_star = sum(ϕ_star[m,:])
 
-            log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] - jacobian_old)
+            #log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] - jacobian_old)
+            log_α = (loglik_star_y[m] + loglik_star_ϕ[m]) - (loglik_old_y[m] + loglik_old_ϕ[m])
+
             α_prob_accept_ϕ[m] = min(1, exp(log_α))
 
 
@@ -120,7 +128,7 @@ function gibbs_exact(R::Int,
         prior_old_σ_ϵ = gammalogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],chain_σ_ϵ[r-1])
         prior_star_σ_ϵ = gammalogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],σ_ϵ_star)
 
-        log_α = (sum(loglik_star_y) + prior_star_σ_ϵ) - (sum(loglik_old_y) + prior_star_σ_ϵ)
+        log_α = (sum(loglik_star_y) + prior_star_σ_ϵ) - (sum(loglik_old_y) + prior_old_σ_ϵ)
         α_prob_accept_σ_ϵ = min(1, exp(log_α))
 
         # correct if we have  NaNs
@@ -169,8 +177,8 @@ function gibbs_exact(R::Int,
 
         print_progress(r,print_interval,accept_vec,M)
 
-        log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ = adaptive_update_σ_ϵ(r,update_interval,start_update,log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ,γ_σ_ϵ_0,α_power,chain_σ_ϵ,α_prob_accept_σ_ϵ)
-        adaptive_update_ϕ!(r,update_interval,start_update,log_λ_i_ϕ,μ_i_ϕ,Σ_i_ϕ,γ_ϕ_0,α_power,M,chain_ϕ,α_prob_accept_ϕ)
+        log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ = adaptive_update_σ_ϵ(r,update_interval,start_update,log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ,γ_σ_ϵ_0,α_power,chain_σ_ϵ,α_prob_accept_σ_ϵ,α_star_σ_ϵ)
+        adaptive_update_ϕ!(r,update_interval,start_update,log_λ_i_ϕ,μ_i_ϕ,Σ_i_ϕ,γ_ϕ_0,α_power,M,chain_ϕ,α_prob_accept_ϕ,α_star_ϕ)
 
     end
 
@@ -284,11 +292,14 @@ function naive_gibbs_cpmmh(R::Int,
         loglik_star_ϕ = calc_loglik_ϕ(ϕ_star, chain_η[:,r-1])
 
         for m = 1:M
+            
+            # TODO remove jacobian!
+            #jacobian_old =  sum(chain_ϕ[m,:,r-1])
+            #jacobian_star = sum(ϕ_star[m,:])
 
-            jacobian_old =  sum(chain_ϕ[m,:,r-1])
-            jacobian_star = sum(ϕ_star[m,:])
-
-            log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] - jacobian_old)
+            #log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] - jacobian_old)
+            log_α = (loglik_star_y[m] + loglik_star_ϕ[m]) - (loglik_old_y[m] + loglik_old_ϕ[m])
+            
             α_prob_accept_ϕ[m] = min(1, exp(log_α))
 
             if any(isnan,ϕ_star[m,:]) == true || loglik_star_y[m] == NaN
@@ -327,7 +338,7 @@ function naive_gibbs_cpmmh(R::Int,
         prior_old_σ_ϵ = gammalogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],chain_σ_ϵ[r-1])
         prior_star_σ_ϵ = gammalogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],σ_ϵ_star)
 
-        log_α = (sum(loglik_star_y) + prior_star_σ_ϵ) - (sum(loglik_old_y) + prior_star_σ_ϵ)
+        log_α = (sum(loglik_star_y) + prior_star_σ_ϵ) - (sum(loglik_old_y) + prior_old_σ_ϵ)
         α_prob_accept_σ_ϵ = min(1, exp(log_α))
 
         # correct if we have  NaNs
@@ -377,8 +388,8 @@ function naive_gibbs_cpmmh(R::Int,
 
         print_progress(r,print_interval,accept_vec,M)
 
-        log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ = adaptive_update_σ_ϵ(r,update_interval,start_update,log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ,γ_σ_ϵ_0,α_power,chain_σ_ϵ,α_prob_accept_σ_ϵ)
-        adaptive_update_ϕ!(r,update_interval,start_update,log_λ_i_ϕ,μ_i_ϕ,Σ_i_ϕ,γ_ϕ_0,α_power,M,chain_ϕ,α_prob_accept_ϕ)
+        log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ = adaptive_update_σ_ϵ(r,update_interval,start_update,log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ,γ_σ_ϵ_0,α_power,chain_σ_ϵ,α_prob_accept_σ_ϵ,α_star_σ_ϵ)
+        adaptive_update_ϕ!(r,update_interval,start_update,log_λ_i_ϕ,μ_i_ϕ,Σ_i_ϕ,γ_ϕ_0,α_power,M,chain_ϕ,α_prob_accept_ϕ, α_star_ϕ)
 
 
 
@@ -414,6 +425,7 @@ function gibbs_cpmmh(R::Int,
                      α_power::Real,
                      startval_ϕ::Array,
                      startval_σ_ϵ::Real,
+                     startval_η::Array,
                      prior_parameters_η::Array,
                      prior_parameters_σ_ϵ::Array,
                      nbr_particles::Int,
@@ -442,17 +454,7 @@ function gibbs_cpmmh(R::Int,
         run_sort = false
     end
 
-
-    # sample star values for η
-    for j = 1:3
-
-        # get paramaters
-        μ_0_j, M_0_j, α_j, β_j = prior_parameters_η[j,:]
-
-        chain_η[j,1] = μ_0_j # set start value to mean
-        chain_η[j+3,1] = (α_j - 1)/β_j # set start value to mode
-
-    end
+    chain_η[:,1] = startval_η 
 
     accept_vec[:,1] = [M;1;3] # we accapt the start values
 
@@ -488,10 +490,16 @@ function gibbs_cpmmh(R::Int,
 
         for m = 1:M
 
-            jacobian_old =  sum(chain_ϕ[m,:,r-1])
-            jacobian_star = sum(ϕ_star[m,:])
 
-            log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] - jacobian_old)
+            # TODO remove jacobian!
+            # jacobian correct 
+            #jacobian_old =  sum(chain_ϕ[m,:,r-1])
+            #jacobian_star = sum(ϕ_star[m,:])
+
+            # no prior here since we have a normal prior on the log scale 
+            #log_α = (loglik_star_y[m] + loglik_star_ϕ[m] + jacobian_star) - (loglik_old_y[m] + loglik_old_ϕ[m] - jacobian_old)
+            log_α = (loglik_star_y[m] + loglik_star_ϕ[m]) - (loglik_old_y[m] + loglik_old_ϕ[m])
+
             α_prob_accept_ϕ[m] = min(1, exp(log_α))
 
             if any(isnan,ϕ_star[m,:]) == true || loglik_star_y[m] == NaN
@@ -521,7 +529,8 @@ function gibbs_cpmmh(R::Int,
         prior_old_σ_ϵ = gammalogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],chain_σ_ϵ[r-1])
         prior_star_σ_ϵ = gammalogpdf(prior_parameters_σ_ϵ[1],1/prior_parameters_σ_ϵ[2],σ_ϵ_star)
 
-        log_α = (sum(loglik_star_y) + prior_star_σ_ϵ) - (sum(loglik_old_y) + prior_star_σ_ϵ)
+        # TODO fix???
+        log_α = (sum(loglik_star_y) + prior_star_σ_ϵ) - (sum(loglik_old_y) + prior_old_σ_ϵ)
         α_prob_accept_σ_ϵ = min(1, exp(log_α))
 
         # correct if we have  NaNs
@@ -571,8 +580,8 @@ function gibbs_cpmmh(R::Int,
 
         print_progress(r,print_interval,accept_vec,M)
 
-        log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ = adaptive_update_σ_ϵ(r,update_interval,start_update,log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ,γ_σ_ϵ_0,α_power,chain_σ_ϵ,α_prob_accept_σ_ϵ)
-        adaptive_update_ϕ!(r,update_interval,start_update,log_λ_i_ϕ,μ_i_ϕ,Σ_i_ϕ,γ_ϕ_0,α_power,M,chain_ϕ,α_prob_accept_ϕ)
+        log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ = adaptive_update_σ_ϵ(r,update_interval,start_update,log_λ_i_σ_ϵ,μ_i_σ_ϵ,Σ_i_σ_ϵ,γ_σ_ϵ_0,α_power,chain_σ_ϵ,α_prob_accept_σ_ϵ,α_star_σ_ϵ)
+        adaptive_update_ϕ!(r,update_interval,start_update,log_λ_i_ϕ,μ_i_ϕ,Σ_i_ϕ,γ_ϕ_0,α_power,M,chain_ϕ,α_prob_accept_ϕ,α_star_ϕ)
 
     end
 
@@ -603,9 +612,9 @@ end
 # algorithm 4 in https://people.eecs.berkeley.edu/~jordan/sail/readings/andrieu-thoms.pdf)
 function adaptive_update_σ_ϵ(r::Int,update_interval::Int,start_update::Int,
     log_λ_i_σ_ϵ::Real,μ_i_σ_ϵ::Real,Σ_i_σ_ϵ::Real,γ_σ_ϵ_0::Real,α_power::Real,
-    chain_σ_ϵ::Array,α_prob_accept_σ_ϵ::Real)
+    chain_σ_ϵ::Array,α_prob_accept_σ_ϵ::Real,α_star_σ_ϵ::Real)
 
-    if mod(r-1,update_interval) == 0 && r-1 >= start_update
+    if mod(r-1,update_interval) == 0 && r-1 >= start_update && r < 60000
 
         #γ = γ_σ_ϵ_0/(r-start_update)^α_power
         γ = γ_σ_ϵ_0/(r)^α_power
@@ -624,9 +633,9 @@ end
 # algorithm 4 in https://people.eecs.berkeley.edu/~jordan/sail/readings/andrieu-thoms.pdf)
 function adaptive_update_ϕ!(r::Int,update_interval::Int,start_update::Int,
     log_λ_i_ϕ::Vector,μ_i_ϕ::Array,Σ_i_ϕ::Array,γ_ϕ_0::Real,α_power::Real,
-    M::Int,chain_ϕ::Array,α_prob_accept_ϕ::Vector)
+    M::Int,chain_ϕ::Array,α_prob_accept_ϕ::Vector,α_star_ϕ::Real)
 
-    if mod(r-1,update_interval) == 0 && r-1 >= start_update
+    if mod(r-1,update_interval) == 0 && r-1 >= start_update && r < 60000
 
         #γ = γ_ϕ_0/(r-start_update)^α_power
         γ = γ_ϕ_0/(r)^α_power
@@ -821,6 +830,16 @@ function particlefilter(y::Vector, σ_ϵ::Real, ϕ::Array, dt::Real, u_prop::Arr
     # set start values
     xinit = zeros(N) + std(y)*u_prop[:,1] #(std(y[m,:]) + σ_ϵ)*randn(N)
 
+    #==    
+    if N > 20
+        xinit = zeros(N) + std(y)*u_prop[:,1] #(std(y[m,:]) + σ_ϵ)*randn(N)
+    elseif N <= 20 && N > 5
+        xinit = zeros(N) + std(y)/10*u_prop[:,1] #(std(y[m,:]) + σ_ϵ)*randn(N)
+    else
+        xinit = zeros(N) + std(y)/20*u_prop[:,1] #(std(y[m,:]) + σ_ϵ)*randn(N)
+    end
+    ==#
+
     for t in 1:T
 
         if t == 1 # first iteration
@@ -906,9 +925,6 @@ function calc_weigths(w::Array, x::Array, y::Real, σ_ϵ::Real, t::Int)
     # calc sum of weigths
     w_sum = sum(w_temp)
 
-    # update loglik
-    #loglik =  loglik + constant + log(w_sum) - log(N)
-
     # normalize weigths
     for i in 1:N; w_temp[i] = w_temp[i]/w_sum; end
 
@@ -958,8 +974,8 @@ function log_normalpdf(μ::Real, σ::Real, x::Real)
   R = σ^2
   ϵ = x-μ
   return -0.5*(log(det(R)) + ϵ*inv(R)*ϵ)
-
 end
+
 
 # Systematic resampling. Code adapted from Andrew Golightly.
 function sysresample2(wts::Array,N::Int64,uni::Real)

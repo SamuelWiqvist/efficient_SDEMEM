@@ -4,10 +4,11 @@
 # Set up for run:
 
 # need this since I use a LU project
-# #SBATCH -A snic2019-3-630
+#SBATCH -A snic2019-3-630
 
-#SBATCH -A lu2019-2-19
-#SBATCH -p lu
+# #SBATCH -A lu2020-2-7
+# #SBATCH -p lu
+
 
 # use gpu nodes
 #SBATCH -N 1
@@ -15,7 +16,7 @@
 #SBATCH --exclusive
 
 # time consumption HH:MM:SS
-#SBATCH -t 10:00:00
+#SBATCH -t 5:00:00
 
 # name for script
 #SBATCH -J ou_cpmmh

@@ -1,8 +1,8 @@
 # Code for the paper: "Efficient inference for stochastic differential mixed-effects models using correlated particles pseudo-marginal algorithms"
 
-DOI: https://doi.org/10.1016/j.csda.2020.107151
+The code presented here is updated compared to the version we used for the CSDA article. However, the difference are minor and do not effect the main conclusions of the paper. The results in the CSDA article are computed with the code at tag csda.
 
-N.B.: The results in the CSDA article are computed with the code at tag csda.
+DOI: https://doi.org/10.1016/j.csda.2020.107151
 
 ### File structure
 
