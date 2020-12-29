@@ -1,8 +1,8 @@
 # Code for the paper: "Efficient inference for stochastic differential mixed-effects models using correlated particles pseudo-marginal algorithms"
 
-Link to paper: https://arxiv.org/abs/1907.09851
+DOI: https://doi.org/10.1016/j.csda.2020.107151
 
-N.B.: The results in the pre-print v3 at arXiv are computed using the version of the code at tag preprint_v3.
+N.B.: The results in the CSDA article are computed with the code at tag csda.
 
 ### File structure
 
@@ -10,9 +10,9 @@ N.B.: The results in the pre-print v3 at arXiv are computed using the version of
 
 /src/SDEMEM tumor growth: source code for tumor growth SDEMEM
 
-/src/SDEMEM OU neuron data: source code for the neuronal data example 
+/src/SDEMEM OU neuron data: source code for the neuronal data example
 
-/analyses: notebooks and scripts used to analyse the results for the Ornstein-Uhlenbeck SDEMEM adn the neuronal data example
+/analyses: notebooks and scripts used to analyse the results for the Ornstein-Uhlenbeck SDEMEM and the neuronal data example
 
 /lunarc: run scripts for the LUNARC cluster (http://www.lunarc.lu.se/) (used for the Ornstein-Uhlenbeck SDEMEM and the neuronal data example)
 
@@ -26,4 +26,4 @@ The algorithms in the paper are implemented in `Julia` (Ornstein-Uhlenbeck SDEME
 
 ### Data
 
-The data used for for the  Ornstein-Uhlenbeck SDEMEM and the tumor growth model can be generated from the code. To acess the neuronal data, please contact the authers.
+The data used for for the  Ornstein-Uhlenbeck SDEMEM and the tumor growth model can be generated from the code. To access the neuronal data, please contact the authors.

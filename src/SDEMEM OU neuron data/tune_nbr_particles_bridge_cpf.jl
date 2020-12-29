@@ -6,7 +6,7 @@ import Statistics.std
 import Statistics.cor
 using Printf
 using CSV
-
+using Random
 
 include(pwd()*"/src/SDEMEM OU neuron data/ou_sdemem.jl")
 include(pwd()*"/src/SDEMEM OU neuron data/mcmc.jl")
@@ -41,48 +41,57 @@ log_σ_ϵ  = posterior_mean_kalman[1,1]
 # estimate correlation
 nbr_pf_eval_corr = 100
 
-nbr_particles_cor = 50
+nbr_particles_cor = 1
 
 ll1 = zeros(nbr_pf_eval_corr)
 ll2 = zeros(nbr_pf_eval_corr)
 
-ρ = 0.999
+ρ = 0.9
+corr_ll_vec = zeros(25)
 
-for i = 1:nbr_pf_eval_corr
+Random.seed!(1)
 
-    nbr_particles = nbr_particles_cor*ones(Int64, M_subjects)
+for j in 1:25
 
-    # set number of obs for each data set
-    T_vec = zeros(Int64, M_subjects)
-    for i = 1:M_subjects; T_vec[i] = length(y[i].mV); end
+    for i = 1:nbr_pf_eval_corr
+
+        nbr_particles = nbr_particles_cor*ones(Int64, M_subjects)
+
+        # set number of obs for each data set
+        T_vec = zeros(Int64, M_subjects)
+        for i = 1:M_subjects; T_vec[i] = length(y[i].mV); end
 
 
-    u_prop_old = [randn(nbr_particles[1], T_vec[1]+1)]
-    u_resample_old = [randn(T_vec[1], 2)]
+        u_prop_old = [randn(nbr_particles[1], T_vec[1]+1)]
+        u_resample_old = [randn(T_vec[1], 2)]
 
-    for i in 2:M_subjects;
-        append!(u_prop_old, [randn(nbr_particles[i],T_vec[i]+1)])
-        append!(u_resample_old, [randn(T_vec[i],2)])
+        for i in 2:M_subjects;
+            append!(u_prop_old, [randn(nbr_particles[i],T_vec[i]+1)])
+            append!(u_resample_old, [randn(T_vec[i],2)])
+        end
+
+        u_prop_new = [randn(nbr_particles[1], T_vec[1]+1)]
+        u_resample_new = [randn(T_vec[1], 2)]
+
+        for i in 2:M_subjects;
+            append!(u_prop_new, [randn(nbr_particles[i],T_vec[i]+1)])
+            append!(u_resample_new, [randn(T_vec[i],2)])
+        end
+
+        # correlat with old standard normal numbers
+        u_prop_tilde = ρ*u_prop_old + sqrt(1-ρ^2)*u_prop_new
+        u_resample_tilde = ρ*u_resample_old + sqrt(1-ρ^2)*u_resample_new
+
+        ll1[i] = sum(bridge_pf(y, exp(log_σ_ϵ), ϕ, dt, u_prop_old, u_resample_old, nbr_particles,true))
+        ll2[i] = sum(bridge_pf(y, exp(log_σ_ϵ), ϕ, dt, u_prop_tilde, u_resample_tilde, nbr_particles,true))
+
     end
 
-    u_prop_new = [randn(nbr_particles[1], T_vec[1]+1)]
-    u_resample_new = [randn(T_vec[1], 2)]
-
-    for i in 2:M_subjects;
-        append!(u_prop_new, [randn(nbr_particles[i],T_vec[i]+1)])
-        append!(u_resample_new, [randn(T_vec[i],2)])
-    end
-
-    # correlat with old standard normal numbers
-    u_prop_tilde = ρ*u_prop_old + sqrt(1-ρ^2)*u_prop_new
-    u_resample_tilde = ρ*u_resample_old + sqrt(1-ρ^2)*u_resample_new
-
-    ll1[i] = sum(bridge_pf(y, exp(log_σ_ϵ), ϕ, dt, u_prop_old, u_resample_old, nbr_particles,true))
-    ll2[i] = sum(bridge_pf(y, exp(log_σ_ϵ), ϕ, dt, u_prop_tilde, u_resample_tilde, nbr_particles,true))
+        corr_ll_vec[j] = cor(ll1,ll2)
 
 end
 
-corr_ll = cor(ll1,ll2)
+corr_ll = mean(corr_ll_vec)
 
 
 var_loglik_target = 2.16^2/(1-corr_ll^2)

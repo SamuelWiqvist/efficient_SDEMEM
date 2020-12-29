@@ -1,7 +1,7 @@
 library(mcmcse)
 library(readr)
 
-#setwd("~/Documents/projects/cpmmh for sdemems/code")
+setwd("~/Documents/projects/cpmmh for sdemems/code")
 setwd("~/Documents/projects/cpmmh for sdemems/public github/efficient_SDEMEM")
 
 load_results <- function(seed) {
@@ -226,8 +226,6 @@ for (dataset in 1:5){
 
 # print mean over the five data sets
 print(round(apply(res,c(2,3),mean),2))
-
-print(round(apply(res,c(2,3),median),2))
 
 
 print(round(apply(res,c(2,3),mean),2))

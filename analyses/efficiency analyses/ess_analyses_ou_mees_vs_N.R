@@ -87,7 +87,7 @@ for (n in N){
   save_path = paste('./data/SDEMEM OU/cpmmh for plot mess vs N/', 'run_time_ess_mess', '_', 
                     toString(rhp_level), '_', toString(N_val), '.csv', sep = "")
   
-  write.csv(data.frame(data_temp), save_path)
+  #write.csv(data.frame(data_temp), save_path)
 
 }
 
